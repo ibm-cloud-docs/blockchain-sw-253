@@ -125,6 +125,9 @@ scc "blockchain-project" added to: ["system:serviceaccounts:blockchain-project"]
 
 To apply the image pull secrets, go to the **OpenShift Container Platform**.
 
+The required global pull secret is automatically copied from the `openshift-config` namespace to the `ibp` namespace. However, if the `ibm-entitlement-keyimage` pull secret is missing from the `ibp` namespace, manually copy the secret to the `ibp` namespace and reference it in your YAML file, as described below. 
+{: note}
+
 1. In the left navigation, click **Workloads** > **Secrets**.
 2. In the search box next to the **Name** drop down, type **pull-secret**.
 3. From the listing page, select **pull-secret**.
