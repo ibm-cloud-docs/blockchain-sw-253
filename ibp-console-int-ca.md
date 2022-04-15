@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: intermediate CA, root CA, parent server, Certificate Authority, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -31,7 +31,7 @@ Intermediate CAs are optional. Because an intermediate CA has its root certifica
 
 Another reason to include an intermediate CA would be when you have a very large organization with multiple departments and you don’t want a single CA to generate certificates for all of the departments. Intermediate CAs provide a mechanism for scoping the certificates that a CA manages to a smaller department or sub-group. This pattern though incurs significant increase if there will only be a small number of members in the organization.
 
-As an alternative to deploying multiple intermediate CAs, you can limit the scope of a CA by [overriding the CA configuration](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-customization) to specify available `affiliations` (similar to departments) instead. When a CA is configured with affiliations, the affiliation of the registrar must be equal to or a prefix of the affiliation of the identity being registered. See the Fabric CA topic on [registering identities](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#registering-a-new-identity){: external} for more details.
+As an alternative to deploying multiple intermediate CAs, you can limit the scope of a CA by [overriding the CA configuration](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-customization) to specify available `affiliations` (similar to departments) instead. When a CA is configured with affiliations, the affiliation of the registrar must be equal to or a prefix of the affiliation of the identity being registered. See the Fabric CA topic on [registering identities](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#registering-a-new-identity){: external} for more details.
 
 
 
@@ -78,7 +78,7 @@ This process can be performed using the console or the APIs, if you are an exper
 ## Part One: Actions you perform from the root CA
 {: #ibp-ica-part-one}
 
-1. **Deploy a root CA.** Before you can deploy an intermediate CA, a root CA must already exist in your {{site.data.keyword.blockchainfull_notm}} instance. See the [Build a network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-CA-org1CA) tutorial for instructions on how to create a CA.
+1. **Deploy a root CA.** Before you can deploy an intermediate CA, a root CA must already exist in your {{site.data.keyword.blockchainfull_notm}} instance. See the [Build a network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-CA-org1CA) tutorial for instructions on how to create a CA.
 
 2. **Register the intermediate CA admin identity with the root CA.** In order for an intermediate CA to be able to register and enroll identities, the intermediate CA admin identity must be registered with the root CA.
     - Click the root CA tile to open it and click **Register user**.
@@ -287,18 +287,18 @@ It will take a few minutes for the CA to deploy. You'll know it is ready when a 
 ### Register and enroll identities against the intermediate CA
 {: #ibp-ica-next-steps-reg-enroll}
 
-Your intermediate CA is now operational and can be used to register and enroll identities just like you do with the root CA. See the topic on [Creating and managing identities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities) to learn more.
+Your intermediate CA is now operational and can be used to register and enroll identities just like you do with the root CA. See the topic on [Creating and managing identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities) to learn more.
 
 ### Create organization MSPs using the intermediate CA
 {: #ibp-ica-next-steps-msp}
 
 When you build organization MSP definitions for your peer or ordering nodes, you can now reference the intermediate CA as the "root CA" instead of your root CA.
 ![Int CA MSP](images/int-ca-msp.png "MSP using intermediate CA"){: caption="Figure 3. MSP using intermediate CA" caption-side="bottom"}
-If you want to learn more about creating MSPs, see [Managing organizations](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations).
+If you want to learn more about creating MSPs, see [Managing organizations](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations).
 
 ### Scale down the root CA
 {: #ibp-ica-next-steps-scale}
 
-Because the intermediate CA can process all requests that the root CA handles, you can effectively turn off your root CA by scaling down the root CA CPU to 0.001 CPU. Taking this action renders the root CA non-functional while in this state. As long as you don't need the root CA to issue identities or enroll other intermediate CAs, it can be safely scaled down. See the topic on [Reallocating resources](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components) for the steps to scale down the CPU. If the root CA is needed later, for example to enroll another intermediate CA, you can always repeat the steps to scale back up the CPU. The minimum CPU required for a CA to be operational is `0.1 CPU`.
+Because the intermediate CA can process all requests that the root CA handles, you can effectively turn off your root CA by scaling down the root CA CPU to 0.001 CPU. Taking this action renders the root CA non-functional while in this state. As long as you don't need the root CA to issue identities or enroll other intermediate CAs, it can be safely scaled down. See the topic on [Reallocating resources](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components) for the steps to scale down the CPU. If the root CA is needed later, for example to enroll another intermediate CA, you can always repeat the steps to scale back up the CPU. The minimum CPU required for a CA to be operational is `0.1 CPU`.
 
-By default, certificates generated by {{site.data.keyword.blockchainfull_notm}} Platform CAs expire after one year and peer and ordering node TLS certificates expire after 15 years. Exactly thirty days before **peer** and **ordering node** certificates are due to expire, the platform automatically attempts to contact the CA and renew the certificates. If the CA is not online, the automatic renewal fails and enrollment to generate a new certificate needs to be performed manually. If automatic renewal of these certificates is important for your business, careful consideration should be given to scaling down a root CA or intermediate CA. See the topic on [Certificate expiration and renewal](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt) to learn more about the process.
+By default, certificates generated by {{site.data.keyword.blockchainfull_notm}} Platform CAs expire after one year and peer and ordering node TLS certificates expire after 15 years. Exactly thirty days before **peer** and **ordering node** certificates are due to expire, the platform automatically attempts to contact the CA and renew the certificates. If the CA is not online, the automatic renewal fails and enrollment to generate a new certificate needs to be performed manually. If automatic renewal of these certificates is important for your business, careful consideration should be given to scaling down a root CA or intermediate CA. See the topic on [Certificate expiration and renewal](/docs/blockchain-sw-253?topic=blockchain-sw-253-cert-mgmt) to learn more about the process.

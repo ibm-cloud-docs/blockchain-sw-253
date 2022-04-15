@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy,
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -53,7 +53,7 @@ It also includes an entire set of playbooks that can be used to deploy your peer
 
 
 There are two main scenarios that the playbooks address:
-- **Deploying the {{site.data.keyword.blockchainfull_notm}} Platform on a Kubernetes cluster**.  If you are using your own Kubernetes distribution, you can purchase an [{{site.data.keyword.blockchainfull_notm}} 2.5.2 license](/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp) and then use the `install-ibp.yml` playbook to deploy the platform onto your Kubernetes cluster. The alternative is to install the service manually by following instructions for [OpenShift Container Platform](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp) or [Kubernetes](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp).
+- **Deploying the {{site.data.keyword.blockchainfull_notm}} Platform on a Kubernetes cluster**.  If you are using your own Kubernetes distribution, you can purchase an [{{site.data.keyword.blockchainfull_notm}} 2.5.2 license](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp) and then use the `install-ibp.yml` playbook to deploy the platform onto your Kubernetes cluster. The alternative is to install the service manually by following instructions for [OpenShift Container Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or [Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp).
 
     This option is not applicable if you are planning to install the {{site.data.keyword.blockchainfull_notm}} Platform service from the {{site.data.keyword.cloud_notm}} catalog because the Cloud catalog installs it for you.
     {: note}
@@ -73,7 +73,7 @@ There are two main scenarios that the playbooks address:
 
 **Console wallet identities**  
 
-When you use the Ansible playbooks to deploy blockchain nodes, the identities that are required to operate the nodes in the network are generated for you. Don't worry, you have the opportunity to configure the node enroll ID and secrets. But the identities aren't added to the console wallet in the browser. That is a simple manual import step that you need to perform after the playbooks finish and is described in the [tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible-build#ansible-build-next-steps) on using the playbooks to build your network.
+When you use the Ansible playbooks to deploy blockchain nodes, the identities that are required to operate the nodes in the network are generated for you. Don't worry, you have the opportunity to configure the node enroll ID and secrets. But the identities aren't added to the console wallet in the browser. That is a simple manual import step that you need to perform after the playbooks finish and is described in the [tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible-build#ansible-build-next-steps) on using the playbooks to build your network.
 
 ## Getting started
 {: #ansible-getting-started}
@@ -100,8 +100,8 @@ Advanced users can review the [Ansible collection documentation](https://ibm-blo
 
  To get started with the playbooks see:
 
-- [Installing the {{site.data.keyword.blockchainfull_notm}} Platform using an Ansible playbook](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible-install-ibp), if you want to use the Ansible playbook to install an instance of the {{site.data.keyword.blockchainfull_notm}} Platform service to your Kubernetes cluster.
--  [Building an {{site.data.keyword.blockchainfull_notm}} Platform network using Ansible playbooks](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible-build) if you already have an existing instance of the {{site.data.keyword.blockchainfull_notm}} Platform deployed and want to use the Ansible playbooks to deploy your network components.
+- [Installing the {{site.data.keyword.blockchainfull_notm}} Platform using an Ansible playbook](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible-install-ibp), if you want to use the Ansible playbook to install an instance of the {{site.data.keyword.blockchainfull_notm}} Platform service to your Kubernetes cluster.
+-  [Building an {{site.data.keyword.blockchainfull_notm}} Platform network using Ansible playbooks](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible-build) if you already have an existing instance of the {{site.data.keyword.blockchainfull_notm}} Platform deployed and want to use the Ansible playbooks to deploy your network components.
 
 ## Where to find support
 {: #ansible-support}

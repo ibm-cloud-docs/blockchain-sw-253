@@ -2,11 +2,11 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-v2-apis">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-v2-apis">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-v2-apis">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis">2.5.3</a>
 </p>
 
 
@@ -43,19 +44,19 @@ After you review the instructions in this topic on how to use the APIs, you can 
 ## Prerequisites
 {: #ibp-v2-apis-prereq}
 
-The APIs target your {{site.data.keyword.blockchainfull_notm}} Platform console to authenticate calls and communicate with your nodes. Therefore you must deploy the {{site.data.keyword.blockchainfull_notm}} Platform console before you can start using the {{site.data.keyword.blockchainfull_notm}} Platform console APIs. If you have not yet deployed the console on your cluster, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp).
+The APIs target your {{site.data.keyword.blockchainfull_notm}} Platform console to authenticate calls and communicate with your nodes. Therefore you must deploy the {{site.data.keyword.blockchainfull_notm}} Platform console before you can start using the {{site.data.keyword.blockchainfull_notm}} Platform console APIs. If you have not yet deployed the console on your cluster, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
 
 To use the APIs, you will need to gather the following information:
 
 - The console **API Endpoint**. This is the URL that you use to access the console using your browser.
-- A username and password that you can use to access the console. To create an [API key](#x8051010){: term}, you must have an account with a [manager role](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-users).
+- A username and password that you can use to access the console. To create an [API key](#x8051010){: term}, you must have an account with a [manager role](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users).
 
 ## Connect to your console using API keys
 {: #console-icp-manage-api-key}
 
 Each console provides its own identity and access management. You can use your console username and password to generate an API key and secret that can authorize your API calls.
 
-Each API key is associated with a role that governs the user's permissions. The API keys use the same access policy roles as exist for users who login to the console using a username and password. Refer to the table in the [Managing users](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-users) section for the list of actions each role is allowed to perform. Because only manager roles can create API keys, a console administrator needs to create API keys for reader and writer users. The API keys never expire. As a result, the console administrator should delete API keys that are not being used.
+Each API key is associated with a role that governs the user's permissions. The API keys use the same access policy roles as exist for users who login to the console using a username and password. Refer to the table in the [Managing users](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users) section for the list of actions each role is allowed to perform. Because only manager roles can create API keys, a console administrator needs to create API keys for reader and writer users. The API keys never expire. As a result, the console administrator should delete API keys that are not being used.
 
 Before you proceed, it is worth reviewing the topic on [Understanding how the API key works](/docs/containers?topic=containers-users#removing_check_infra) paying particular attention to the question `What happens if the user who set up the API key for a region and resource group leaves the company?`. The impact of this particular action could disable your network.
 {: important}  
@@ -290,9 +291,9 @@ https://openshiftcluster.us-south.containers.appdomain.cloud:443/ak/api/v2/compo
 ```
 {: codeblock}
 
-In order to create nodes using the {{site.data.keyword.blockchainfull_notm}} APIs, you need to use the APIs in a certain sequence in conjunction with Fabric CA client. To learn how to create nodes, see [Build a network by using APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#ibp-v2-apis-build-with-apis).
+In order to create nodes using the {{site.data.keyword.blockchainfull_notm}} APIs, you need to use the APIs in a certain sequence in conjunction with Fabric CA client. To learn how to create nodes, see [Build a network by using APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#ibp-v2-apis-build-with-apis).
 
-You can also use the APIs to import and then operate nodes that reside in other clusters. For more information, see [Import a network by using APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#ibp-v2-apis-import-with-apis).
+You can also use the APIs to import and then operate nodes that reside in other clusters. For more information, see [Import a network by using APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#ibp-v2-apis-import-with-apis).
 
 ## Limitations
 {: #ibp-v2-apis-limitations}
@@ -319,7 +320,7 @@ You can use APIs to create blockchain components in your instance of the {{site.
     - You also need to [register an organization administrator](#ibp-v2-apis-config-register-admin) and then [generate certificates for the admin](#ibp-v2-apis-config-enroll-admin) inside an MSP folder. You do not have to complete this step if you have already registered your admin identity.
     - [Register the new component with your TLS CA](#ibp-v2-apis-config-register-component-tls).
 
-    You can also complete these steps by using your {{site.data.keyword.blockchainfull_notm}} Platform console. For more information,  see [Creating and managing identities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities).
+    You can also complete these steps by using your {{site.data.keyword.blockchainfull_notm}} Platform console. For more information,  see [Creating and managing identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities).
 
 3. [Create an MSP definition for your organization](#ibp-v2-apis-msp) by calling [`POST /ak/api/v2/components/msp`](/apidocs/blockchain?#import-an-msp).
 
@@ -336,7 +337,7 @@ You can use APIs to create blockchain components in your instance of the {{site.
 
 
 
-The service credential that is used for API authentication must have the `Manager` role in IAM to be able to create components. See the table on [user roles](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-role-mapping)
+The service credential that is used for API authentication must have the `Manager` role in IAM to be able to create components. See the table on [user roles](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-role-mapping)
 for more information.
 {: note}
 
@@ -359,7 +360,7 @@ If you are using a multizone cluster, you can use the APIs to deploy a blockchai
 ## Creating a node with a custom configuration
 {: #ibp-v2-apis-custom}
 
-If you are using the {{site.data.keyword.blockchainfull_notm}} APIs to deploy a CA, peer, or ordering node, you have the option of customizing the node configuration by using a configuration override JSON string. The nodes that are deployed by the {{site.data.keyword.blockchainfull_notm}} Console and APIs are configured with the default Fabric values that are provided in the  `fabric-ca-server-config.yaml`, `orderer.yaml`, and `core.yaml` files. You can customize your node settings by providing a configuration override JSON to the APIs that create or update your nodes. You can use the configuration override to deploy a High Availability CA or use a Hardware Security Module (HSM) while using the {{site.data.keyword.blockchainfull_notm}} APIs. For more information about the configuration override, High Availability CAs, or HSMs, see [Advanced deployment options](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment).
+If you are using the {{site.data.keyword.blockchainfull_notm}} APIs to deploy a CA, peer, or ordering node, you have the option of customizing the node configuration by using a configuration override JSON string. The nodes that are deployed by the {{site.data.keyword.blockchainfull_notm}} Console and APIs are configured with the default Fabric values that are provided in the  `fabric-ca-server-config.yaml`, `orderer.yaml`, and `core.yaml` files. You can customize your node settings by providing a configuration override JSON to the APIs that create or update your nodes. You can use the configuration override to deploy a High Availability CA or use a Hardware Security Module (HSM) while using the {{site.data.keyword.blockchainfull_notm}} APIs. For more information about the configuration override, High Availability CAs, or HSMs, see [Advanced deployment options](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment).
 
 ### Example: Creating a custom Certificate Authority
 
@@ -442,11 +443,11 @@ curl -X POST \
 ```
 {: codeblock}
 
-For more information about deploying a customized CA, and which fields you can customize after a CA is created, see [Customizing a CA configuration](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-customization).
+For more information about deploying a customized CA, and which fields you can customize after a CA is created, see [Customizing a CA configuration](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-customization).
 
 ### Create a high availability CA
 
-You can use configuration override to deploy a CA with replica sets that share the same database, ensuring that the data is consistent between replicas. This configuration ensures that the CA will be available in the event of a Kubernetes worker node failure. To deploy an HA CA, you need to deploy a PostgreSQL database on {{site.data.keyword.cloud_notm}} or in the environment of your choice. You then need to use the information about your database to create a connection file that will be used by your CA. For more information, see [Building a high availability Certificate Authority](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-ha-ca#ibp-console-build-ha-ca).
+You can use configuration override to deploy a CA with replica sets that share the same database, ensuring that the data is consistent between replicas. This configuration ensures that the CA will be available in the event of a Kubernetes worker node failure. To deploy an HA CA, you need to deploy a PostgreSQL database on {{site.data.keyword.cloud_notm}} or in the environment of your choice. You then need to use the information about your database to create a connection file that will be used by your CA. For more information, see [Building a high availability Certificate Authority](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-ha-ca#ibp-console-build-ha-ca).
 
 To use the APIs to deploy an HA CA, you need to provide the database connection file to the `"db"` section of the config override JSON string. For example, the API request below will deploy a CA with two replicas that connect to a database located on {{site.data.keyword.cloud_notm}}.
 ```
@@ -508,7 +509,7 @@ curl -X POST \
 
 ### Deploy a node that uses an HSM
 
-{{site.data.keyword.blockchainfull_notm}} Platform allows you to deploy CA, peer, or orderer nodes that use an HSM to store their private key. To use an HSM with your blockchain network, you need to first set up an HSM on {{site.data.keyword.cloud_notm}} or in your own environment. You then need to set up a PKCS #11 proxy that allows your nodes to communicate with your HSM. You can then create a node with the private key that is stored in an HSM partition by providing the HSM endpoint along with the slot key and pin before the node is deployed. For more information, see [Configuring a node to use an HSM](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
+{{site.data.keyword.blockchainfull_notm}} Platform allows you to deploy CA, peer, or orderer nodes that use an HSM to store their private key. To use an HSM with your blockchain network, you need to first set up an HSM on {{site.data.keyword.cloud_notm}} or in your own environment. You then need to set up a PKCS #11 proxy that allows your nodes to communicate with your HSM. You can then create a node with the private key that is stored in an HSM partition by providing the HSM endpoint along with the slot key and pin before the node is deployed. For more information, see [Configuring a node to use an HSM](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
 
 If you are using the APIs to deploy a node, you need to provide the HSM endpoint to the HSM field of the API call. You also need to use the config override to provide the label and pin of the HSM slot that you will use and select `"PKCS11"` as the default crypto service provider. As an example The following API call deploys a peer node with an HSM.
 ```
@@ -589,7 +590,7 @@ You can also use the APIs to import {{site.data.keyword.blockchainfull_notm}} co
 
 
 
-The service credential that is used for API authentication must have the `Manager` role in IAM to be able to create components. See the table on [user roles](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-role-mapping)
+The service credential that is used for API authentication must have the `Manager` role in IAM to be able to create components. See the table on [user roles](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-role-mapping)
 for more information.
 {: note}
 

@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: create identities, manage identities, Certificate Authorities, register, enroll, TLS CA, wallet, certificate expiration, delete user
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-identities">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-identities">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-identities">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities">2.5.3</a>
 </p>
 
 
@@ -40,7 +41,7 @@ The nodes of the {{site.data.keyword.blockchainfull_notm}} Platform are based on
 
 A CA is similar to a publicly trusted notary that acts as an anchor of trust among multiple parties, with each organization in a consortium maintaining their own CA. Your CA creates the identities that belong to your organization and issue each identity a signing certificate and private key. These keys are what allow all of your nodes and applications to sign and verify their actions. For more information about how CAs are used to establish identity, see [the identity topic](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html){: external} in the Hyperledger Fabric documentation.
 
-When you create a CA by using the {{site.data.keyword.blockchainfull_notm}} Platform console, two CAs are created with the same endpoint URL: a root CA and a TLS CA. The root CA provides keys to your nodes and applications. The TLS CA provides certificates that are used to protect the communication within your network. To learn more about TLS on your network, see [Using your TLS CA](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-tlsca).
+When you create a CA by using the {{site.data.keyword.blockchainfull_notm}} Platform console, two CAs are created with the same endpoint URL: a root CA and a TLS CA. The root CA provides keys to your nodes and applications. The TLS CA provides certificates that are used to protect the communication within your network. To learn more about TLS on your network, see [Using your TLS CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-tlsca).
 
 When you create your nodes, you need to use your root CA to create the following identities that are required to deploy, operate, and interact with your network:
 - **CA admin:** Your CA contains a default CA admin identity. This identity has an enroll ID and secret, which are analogous to a username and password, that you specify during the deployment of your CA. You can use this admin username and password to operate your CA and create new identities. The CA admin of your root CA is also the admin of the TLS CA.
@@ -49,7 +50,7 @@ When you create your nodes, you need to use your root CA to create the following
 - **Peer or orderer admins:** {{site.data.keyword.blockchainfull_notm}} Platform nodes are deployed with the signing certificates of component administrators identities inside of them. These certificates allow the admins to operate the component from a remote client or by using the console.
 - **Applications:** Your applications need to sign their transactions before submitting them to be validated by the network. You need to create identities you can use to sign transactions from your client applications.
 
-You can use the console to create these identities by using the [registration process](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-register). After you register your admin identities, you need to issue each identity a signing certificate and private key, provide the signing certificate to your organization MSP definition, and add the identity to your console wallet. You can complete these steps for one admin identity when you [create your organization MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-create-msp). You can use separate identities as org admins or node admins, or you can use one identity to do both tasks. The [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network) uses one identity to be an admin for each organization created in the tutorial.
+You can use the console to create these identities by using the [registration process](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-register). After you register your admin identities, you need to issue each identity a signing certificate and private key, provide the signing certificate to your organization MSP definition, and add the identity to your console wallet. You can complete these steps for one admin identity when you [create your organization MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-create-msp). You can use separate identities as org admins or node admins, or you can use one identity to do both tasks. The [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network) uses one identity to be an admin for each organization created in the tutorial.
 
 
 ## Associating the identity of the CA admin
@@ -61,7 +62,7 @@ You can view the enroll ID of the associated admin on the left side of the CA pa
 
 To use a different identity as the CA admin, click the identity that is associated with the CA admin. This opens the **Associate identity** side panel. You can use the **Enroll an identity** tab to provide the enrollID and secret of another CA admin. You can specify an identity that exists in the wallet by using the **Select an existing identity** tab.
 
-You can only use admin identities to register new users. You can create new admins with restrictions on the type of users they are allowed to create. As a result, you can let another user operate your CA by providing them an admin that is not able to create admins or deploy nodes. This allows other members or departments of your organization to access your CA without compromising your network. For more information, see [Creating new CA admins](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-ca-admin).
+You can only use admin identities to register new users. You can create new admins with restrictions on the type of users they are allowed to create. As a result, you can let another user operate your CA by providing them an admin that is not able to create admins or deploy nodes. This allows other members or departments of your organization to access your CA without compromising your network. For more information, see [Creating new CA admins](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-ca-admin).
 {: note}
 
 
@@ -76,9 +77,9 @@ You need to enter the following information when you register a new identity wit
 - **Type**: When the CA was deployed, the administrator specified the types of identities issued by the CA. Common examples of identity types include peer, orderer, admin, and client (applications). Select the identity type for this user from the list of available types.
 - **Affiliation**: (Optional) Advanced users only. This field is only visible if affiliations are defined for your CA. An affiliation is the part of an organization that you want to associate with this user. For example, this could be a department or unit that operates an application or a peer. It is possible to restrict a particular CA admin to be able to register only users within their own department within an organization by setting their affiliation. CA affiliations are defined by using the Fabric CA [Affiliation Command](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/clientcli.html#affiliation-command){: external}. The default affiliation that is available when you clear the **Use root affiliation** checkbox is `ibp`.
 - **Maximum Enrollments**: Optionally, enter the number of times that you can enroll or generate certificates by using this identity. Specifying a limited number of enrollments helps protect the security of your nodes and applications. It defaults to unlimited enrollments.
-- **Attributes**: Optionally, you can specify any [attribute-based access control](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#attribute-based-access-control){: external} attributes for the user. For example, you can use this section to [create another CA admin](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-ca-identity) with authority to register and enroll new identities. You can see a full list of available Fabric CA attributes in the [Registering a new identity](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#registering-a-new-identity){: external} section of the Fabric CA users guide.
+- **Attributes**: Optionally, you can specify any [attribute-based access control](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#attribute-based-access-control){: external} attributes for the user. For example, you can use this section to [create another CA admin](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-ca-identity) with authority to register and enroll new identities. You can see a full list of available Fabric CA attributes in the [Registering a new identity](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#registering-a-new-identity){: external} section of the Fabric CA users guide.
 
-Click the **Register user** button on the CA overview panel to create a new user. Be sure that you have [set the identity](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-ca-identity)
+Click the **Register user** button on the CA overview panel to create a new user. Be sure that you have [set the identity](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-ca-identity)
 to a CA admin that has the ability to register new users before you attempt this task. In general, this is your `admin` user. If the button is gray, you have either not set an identity, or that the identity cannot create new identities.  
 
 Clicking **Register user** opens a series of side panels:
@@ -94,7 +95,7 @@ After you click **Register**, the new identity will be added to the list of **Au
 
 **Deleting a user**  
 If you need to delete a registered user, click the action menu next to any user and select
-**Delete user**. If that option is not available, it can be enabled on your CA by overriding the CA configuration. See an example of how to enable this feature in [Modifying a CA configuration after deployment](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-modify-json). Note this action does not revoke the associated certificates for the user. If you need to do that you would need to insert the associated signed certificate into the organization MSP under the `"revocation_list":` section. And then update that MSP definition everywhere that it occurs on the network.
+**Delete user**. If that option is not available, it can be enabled on your CA by overriding the CA configuration. See an example of how to enable this feature in [Modifying a CA configuration after deployment](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-ca-modify-json). Note this action does not revoke the associated certificates for the user. If you need to do that you would need to insert the associated signed certificate into the organization MSP under the `"revocation_list":` section. And then update that MSP definition everywhere that it occurs on the network.
 
 ### Creating new CA admins
 {: #ibp-console-identities-ca-admin}
@@ -106,9 +107,9 @@ On the second side panel, click the **Add Attribute** button. Provide an **attri
 ## Enrolling an identity
 {: #ibp-console-identities-enroll}
 
-You can generate the signing certificate and private key for each user that is registered with your CA. If you registered additional admin identities with your CA, you can generate the certificate and key for the admin identity and then include the certificate when you [create your organization MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-create-msp).
+You can generate the signing certificate and private key for each user that is registered with your CA. If you registered additional admin identities with your CA, you can generate the certificate and key for the admin identity and then include the certificate when you [create your organization MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-create-msp).
 
-Before you enroll an identity, you need to [Associate the identity of the CA admin](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-ca-identity) to be able to operate the CA. If the identity is not set, you will not be able to view the **Registered Users** table on the CA panel. In the Registered users table, navigate to the action menu ![action menu](../../icons/overflow-menu.svg) for the user and click **Enroll identity**  to generate the certificate and key for any user registered with the CA.
+Before you enroll an identity, you need to [Associate the identity of the CA admin](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-ca-identity) to be able to operate the CA. If the identity is not set, you will not be able to view the **Registered Users** table on the CA panel. In the Registered users table, navigate to the action menu ![action menu](../../icons/overflow-menu.svg) for the user and click **Enroll identity**  to generate the certificate and key for any user registered with the CA.
 
 - Under the **Certificate Authorities** dropdown, select **Root Certificate Authority**.
 - Enter the user's **Enroll secret**.
@@ -118,7 +119,7 @@ Before you enroll an identity, you need to [Associate the identity of the CA adm
     - You can find the corresponding private key in the **Private Key** field. Again, you need to export the private key to your local system for use with a client application created with the VS Code extension.
     - The certificate and private key that are created by clicking **Enroll Identity** is only generated once and not stored by the console or your browser. Clicking the **Enroll Identity** button is counted against the maximum number of enrollments that you set for the identity. You should store the signing certificate and private key by downloading the identity to your local file system or adding it to your console wallet. Enter a new name for this signing certificate and private key into the **Name** field in order to retrieve them.
 - **Important:** Click **Export identity** to download the certificate and key to your local file system as a single file in JSON format. You are responsible for securing and managing these keys.
-- Click **Add identity to wallet** to add these certificates to the console wallet. You can then find the name and keys of this identity in a new tile in your [wallet tab](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-wallet)
+- Click **Add identity to wallet** to add these certificates to the console wallet. You can then find the name and keys of this identity in a new tile in your [wallet tab](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-wallet)
 
 You can also use the Fabric CA client or Fabric SDKs to enroll the identities you create in the console. The console provides you with all of the information that need to compete these steps. Ensure that you have saved the **Enroll ID** and **Enroll secret** that you specified during registration.
 
@@ -129,16 +130,16 @@ The communication within your network is secured by TLS certificates. TLS encryp
 
 Each CA created by the {{site.data.keyword.blockchainfull_notm}} Platform console contains a root CA and a TLS CA. Both of these CAs use the same database and share the list of registered users. As a result, each identity that is registered with your root CA is automatically registered with your TLS CA as well. The CA admin of your root CA is also the admin for your TLS CA.
 
-You can use each identity in the Registered Users table to generate TLS certificates. Follow the same process as you used to [enroll an identity](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-enroll) by using your root CA. However, on the **Enroll identity** panel, select the **TLS Certificate Authority** from the **Certificate Authorities** drop-down list.
+You can use each identity in the Registered Users table to generate TLS certificates. Follow the same process as you used to [enroll an identity](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-enroll) by using your root CA. However, on the **Enroll identity** panel, select the **TLS Certificate Authority** from the **Certificate Authorities** drop-down list.
 
-Each peer or orderer node that you deploy needs to generate a public TLS certificate. When you create peer or orderer nodes, you can use the same enroll ID and secret that you used to generate the peer or orderer identity as the TLS enroll ID and secret because the TLS CA uses the same user repository as the organization CA. The node then uses this identity to generate its TLS certificate during deployment. This certificate is required by any application that needs to communicate with the orderer or peer. You can find the TLS certificate of a node by navigating to the node overview panel and clicking Settings. You can also find the TLS Certs of your peers and orderers in the connection profile that can be downloaded [from the organization MSP tile on the organizations tab](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#ibp-console-organizations-connx-profile).
+Each peer or orderer node that you deploy needs to generate a public TLS certificate. When you create peer or orderer nodes, you can use the same enroll ID and secret that you used to generate the peer or orderer identity as the TLS enroll ID and secret because the TLS CA uses the same user repository as the organization CA. The node then uses this identity to generate its TLS certificate during deployment. This certificate is required by any application that needs to communicate with the orderer or peer. You can find the TLS certificate of a node by navigating to the node overview panel and clicking Settings. You can also find the TLS Certs of your peers and orderers in the connection profile that can be downloaded [from the organization MSP tile on the organizations tab](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#ibp-console-organizations-connx-profile).
 
 When creating a peer or orderer with your console, you can also use the TLS CA to specify an additional domain name for each node. Enter the new domain name in the **TLS CSR hostname** field when deploying your orderer or peer. This hostname will be added to the list of common names in the TLS certificate issued to your node.
 
 ## Certificate renewal and expiration
 {: #ibp-console-identities-expiration}
 
-Certificates expire and need to be renewed regularly in a process referred to as "certificate rotation". In a production network, you need to monitor the expiration dates of the various certificates and make plans to renew them before they expire. The platform attempts to automatically renew the enrollment certificates of the peer and ordering nodes 30 days before they expire, but you are responsible for manually renewing the organization admin certificates for your nodes, system channels and application channels. It is recommended that you review the topic on [managing certificates](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt) to learn more about what is required.
+Certificates expire and need to be renewed regularly in a process referred to as "certificate rotation". In a production network, you need to monitor the expiration dates of the various certificates and make plans to renew them before they expire. The platform attempts to automatically renew the enrollment certificates of the peer and ordering nodes 30 days before they expire, but you are responsible for manually renewing the organization admin certificates for your nodes, system channels and application channels. It is recommended that you review the topic on [managing certificates](/docs/blockchain-sw-253?topic=blockchain-sw-253-cert-mgmt) to learn more about what is required.
 
 ## Storing identities in your console wallet
 {: #ibp-console-identities-wallet}
@@ -151,7 +152,7 @@ The wallet is a component of the console and not a separate service. It stores y
 ### Adding identities
 {: #ibp-console-identities-add}
 
-You can add an admin identity to your wallet when you [create your organization MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-create-msp). A CA managed by the console can also add an identity to your wallet during the [enrollment process](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-enroll).
+You can add an admin identity to your wallet when you [create your organization MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-create-msp). A CA managed by the console can also add an identity to your wallet during the [enrollment process](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-enroll).
 
 You can use the **Add identity** button on the overview panel to import an identity directly into the wallet. Clicking this button opens up a side panel that allows you to add an identity's signing certificate and private key.
 - **Name:** Enter an identity name that is used for your reference only.
@@ -186,7 +187,7 @@ Clicking an identity opens a side panel that displays its certificates and priva
 <img src="images/export_identity.png" alt="Export identity" style="border-style: none"/><br><br>
 Click **Update** to change the identity name in the wallet or paste a new set of keys into the panel. Click **Remove** when you no longer need to use this identity and want to delete its keys.
 
-{{site.data.keyword.blockchainfull_notm}} Platform can auto renew the enrolment (signing) certificates for the peer and ordering nodes and the peer TLS certificate. For the other certificates, you can see [certificate types and actions](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt#cert-mgmt-cert-types) to learn on how to maintain them.
+{{site.data.keyword.blockchainfull_notm}} Platform can auto renew the enrolment (signing) certificates for the peer and ordering nodes and the peer TLS certificate. For the other certificates, you can see [certificate types and actions](/docs/blockchain-sw-253?topic=blockchain-sw-253-cert-mgmt#cert-mgmt-cert-types) to learn on how to maintain them.
 
 A one stop solution is also available for easy management and maintenance on your certificates. You can store them in {{site.data.keyword.cloud_notm}} Certificate Manager and receive notification before they expire. See what [{{site.data.keyword.cloud_notm}} Certificate Manager](/docs/certificate-manager?topic=certificate-manager-getting-started) can do for you in details.
 
@@ -215,7 +216,7 @@ It is your company’s responsibility to ensure all certificates are up to date 
 In a production environment you have the option to generate and store private keys in an HSM. An HSM is a hardware appliance that performs cryptographic operations and provides the capability to ensure that the private keys never leave the HSM. The HSM then allows your peers to sign and endorse transactions without exposing their private keys. Fabric supports HSM devices that implement the [PKCS11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS11 is a cryptographic standard for secure operations, generation, and storage of keys.
 
 There are three ways you can use an HSM with the {{site.data.keyword.blockchainfull_notm}} Platform:
-1. Utilize the HSM appliance that is available in [{{site.data.keyword.cloud_notm}}](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-hsm-gemalto).
+1. Utilize the HSM appliance that is available in [{{site.data.keyword.cloud_notm}}](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-hsm-gemalto).
 2. Configure your own HSM.
 3. For test purposes only, configure open source [SoftHSM](https://github.com/opendnssec/SoftHSMv2){: external}. You can use SoftHSM for cryptographic operations of your peer, ordering node or CA inside an HSM partition.
 
@@ -226,12 +227,12 @@ After you have configured an HSM, you need to configure a HSM proxy that allows 
 
 After HSM is configured for a node, the HSM becomes the cryptographic service provider for the node.  When the HSM is subsequently used to generate and store a node's private key, and the node identity is exported or stored in the wallet, the private key is not visible.
 
-For more information about how to deploy the HSM proxy and use HSM with a CA, peer, or ordering node, see [Configuring a node to use HSM](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm)
+For more information about how to deploy the HSM proxy and use HSM with a CA, peer, or ordering node, see [Configuring a node to use HSM](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm)
 
 ## Associating identities
 {: #ibp-console-identities-associate-admin}
 
-You need to provide the signing certificate of your organization and node admins [to your organization MSP definition](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-create-msp). The nodes or channels that are created by the console uses the certificates from the MSP definition to check who is a valid administrator. As a result, the same signing certificate and private key that you used to add an admin cert to the MSP definition needs to be stored inside your console wallet.
+You need to provide the signing certificate of your organization and node admins [to your organization MSP definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-create-msp). The nodes or channels that are created by the console uses the certificates from the MSP definition to check who is a valid administrator. As a result, the same signing certificate and private key that you used to add an admin cert to the MSP definition needs to be stored inside your console wallet.
 
 When you use the console to create an orderer or peer, you will encounter an **Associate identity** panel. Select an identity in the wallet whose certificate is also inside your organization MSP definition. You will also need to select an admin identity in the **Associate identity** section when you create or edit a channel. This allows your console to know which identity to use when it communicates with your peers, orderers, and ordering service consortium. The identity that is currently associated with a peer or ordering service is visible on the left side of the node panel, below the name, Node location, and Fabric version.
 

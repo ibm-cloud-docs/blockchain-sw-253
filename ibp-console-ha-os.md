@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: high availability, Ordering Service, Raft
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 content-type: tutorial
 
 ---
@@ -35,7 +35,7 @@ After you understand how to spread the ordering nodes across regions, it is poss
 
 Although you cannot choose which worker node an ordering node is deployed to, the console is configured with an `anti-affinity` policy. This means that for high availability, whenever you deploy a blockchain node on a multi-node cluster, the console attempts to spread ordering nodes that belong to the same organization across the worker nodes if sufficient resources are available. If your cluster is configured with multiple zones, you can designate which zone the ordering node is deployed to when you create it, or you can let the console choose for you. In this case, it also leverages the anti-affinity policy across zones.
 
-A minimum of five ordering nodes is recommended for a production ordering service. In Raft, a majority of the total number of nodes is needed to form a [quorum](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-quorum). In other words, if you have one node, you need that node available to have a quorum because the majority of one is one. Similarly, if you have two nodes, you will need both available, since the majority of two is two. In a similar vein, the majority of five is three. This means that in a five node configuration, the loss of two nodes can be tolerated and ensures zero downtime. You can see in the diagram that **Region 1** contains two ordering nodes, **Region 2** contains one ordering node, and **Region 3** contains two ordering nodes. Spreading the nodes across the regions guarantees that if any single region goes down, or if the ordering nodes within it need to be offline for maintenance, that quorum can be maintained by the nodes in the other regions.
+A minimum of five ordering nodes is recommended for a production ordering service. In Raft, a majority of the total number of nodes is needed to form a [quorum](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-quorum). In other words, if you have one node, you need that node available to have a quorum because the majority of one is one. Similarly, if you have two nodes, you will need both available, since the majority of two is two. In a similar vein, the majority of five is three. This means that in a five node configuration, the loss of two nodes can be tolerated and ensures zero downtime. You can see in the diagram that **Region 1** contains two ordering nodes, **Region 2** contains one ordering node, and **Region 3** contains two ordering nodes. Spreading the nodes across the regions guarantees that if any single region goes down, or if the ordering nodes within it need to be offline for maintenance, that quorum can be maintained by the nodes in the other regions.
 
 
 The tutorial walks you through the following steps:
@@ -49,11 +49,11 @@ The tutorial walks you through the following steps:
 {: #ibp-console-hadr-mr-os-prereq}
 
 This tutorial assumes that you have three Kubernetes clusters that are deployed across three different regions and that you have  deployed the blockchain service in each of those clusters.
-* [Install the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console).  
+* [Install the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console).  
 
     Deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform in each cluster and verify that you can log in to the console.
 
-* [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network)  
+* [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network)  
 
     We assume that you are already familiar with the console and using it to deploy a CA, register users, enroll identities, create a Membership Service Provider (MSP), and create an ordering service. If you have not used the console before, you should review the Build a Network tutorial because a similar process is used in throughout the following instructions.
 
@@ -120,7 +120,7 @@ Each ordering node in the ordering service needs a certificate and private key t
 Because you have already associated the CA admin identity, you can now use the CA tile to create these identities by completing the following steps:
 
 1. Click the `Multiregion OS CA` tile in the **Nodes** tab and ensure the `admin` identity that you created for the CA is visible in the table. Then click the **Register user** button.
-2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `osadmin` and a **secret** of `osadminpw`. Then, use the `Type` drop-down to set the type for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-register). Click **Next**.
+2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `osadmin` and a **secret** of `osadminpw`. Then, use the `Type` drop-down to set the type for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-register). Click **Next**.
 3. This tutorial does not configure attributes on identities. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the ordering nodes.  Use the information in the table below to register the ordering node user for the ordering nodes with an **Enroll ID** of `os1` and **secret** `os1pw`.  This is an ordering node identity, so be sure to select `orderer` from the **Type** drop-down list.
 
@@ -178,7 +178,7 @@ After you create the MSP, you should be able to see the ordering service organiz
 2. Make sure that the option to Create an ordering service is selected. Then, click **Next**.
 3. Give your ordering service a **Display name** of `Multiregion Ordering Service`.
 4. Choose **One ordering node** because we are creating a single node ordering service and then adding the other four nodes to it.
-5. For more granular control of which zone the node gets deployed in, if your Kubernetes cluster is configured for multiple zones the console includes an advanced deployment option labeled `Deployment zone selection`. Selecting this option allows you to place the node in a specific zone inside your cluster. Or the anti-affinity policy of the console will automatically deploy your ordering nodes to different worker nodes within each zone based on the resources available. Learn more about the available [zone selection options](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-on-k8s-zone). If you prefer to let the system choose the zone for you, you can leave this advanced option unchecked. Click **Next**.
+5. For more granular control of which zone the node gets deployed in, if your Kubernetes cluster is configured for multiple zones the console includes an advanced deployment option labeled `Deployment zone selection`. Selecting this option allows you to place the node in a specific zone inside your cluster. Or the anti-affinity policy of the console will automatically deploy your ordering nodes to different worker nodes within each zone based on the resources available. Learn more about the available [zone selection options](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-on-k8s-zone). If you prefer to let the system choose the zone for you, you can leave this advanced option unchecked. Click **Next**.
 6. On the **Add ordering service** page
     * Select `Multiregion OS CA` as your CA.
     * Then, select the **enroll ID** for the node identity that you created for your ordering service from the drop-down list, `os1`.
@@ -455,11 +455,11 @@ The following screen capture shows what the ordering service looks like on the c
 
 * Create application channels
 
-    The multiregion ordering service is now configured for HA across regions and is ready for peer organizations to create application channels. If the peers do not reside in any of the consoles that are used in this tutorial, you need to export our five-node ordering service and import it along with the orderer organization MSP into the console where the peer resides. This allows the peer organization admin to create application channels that are based on the ordering service. For instructions on how to create an application channel, see the [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-channel).
+    The multiregion ordering service is now configured for HA across regions and is ready for peer organizations to create application channels. If the peers do not reside in any of the consoles that are used in this tutorial, you need to export our five-node ordering service and import it along with the orderer organization MSP into the console where the peer resides. This allows the peer organization admin to create application channels that are based on the ordering service. For instructions on how to create an application channel, see the [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-channel).
 
 * Multi-organization ordering service
 
-    For simplicity, we use a single organization for all five ordering nodes in this tutorial. But it is possible when you build an HA ordering service that multiple organizations will want to contribute their own ordering nodes to the ordering service. In that case, the process is largely the same. The major difference is that each organization that wants to contribute an ordering node needs to have their own CA and own organization MSP definition. The process to add ordering nodes from separate organizations is described in the [Adding and removing ordering service nodes](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-add-remove-orderer) topic and the resulting architecture in this case would be similar to:
+    For simplicity, we use a single organization for all five ordering nodes in this tutorial. But it is possible when you build an HA ordering service that multiple organizations will want to contribute their own ordering nodes to the ordering service. In that case, the process is largely the same. The major difference is that each organization that wants to contribute an ordering node needs to have their own CA and own organization MSP definition. The process to add ordering nodes from separate organizations is described in the [Adding and removing ordering service nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-add-remove-orderer) topic and the resulting architecture in this case would be similar to:
 
     ![Multiregion multi-organization ordering service](images/mr-ha-os-multiorg.png "Multiregion multi-organization ordering service"){: caption="Figure 6. Multiregion, multi-organization ordering service" caption-side="bottom"}
 

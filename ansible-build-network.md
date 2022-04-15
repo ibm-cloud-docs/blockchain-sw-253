@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -33,7 +33,7 @@ The Ansible scripts can be used to build the following network that includes two
 
 Before using the playbook, you need to complete the following steps:
 - Deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster.
-- Review the topic on [Getting started with Ansible playbooks on the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible).
+- Review the topic on [Getting started with Ansible playbooks on the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible).
 - If you have not already installed the prerequisites locally, install [Docker](https://docs.docker.com/get-docker/){: external}.
 
 ## Step one: Gather console connection information
@@ -56,7 +56,7 @@ After you deploy an {{site.data.keyword.blockchainfull_notm}} Platform service i
     
 2. (Optional) Get an [API key](#x8051010){: term} and `secret` that you can use to access your {{site.data.keyword.blockchainfull_notm}} Platform console. If you want to skip getting an API key and secret, you can also use your console **username** and **password** instead of an API key and secret, although that would not be recommended in a production setting.
 
-    If you prefer to use an API `key` and `secret`, then you need to use the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#console-icp-manage-api-key) to generate them. Save the value of the `"api_key"` and `"api_secret"` to be used in step three.
+    If you prefer to use an API `key` and `secret`, then you need to use the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#console-icp-manage-api-key) to generate them. Save the value of the `"api_key"` and `"api_secret"` to be used in step three.
 
 ## Step two: Clone the Ansible collection
 {: #ansible-build-clone}
@@ -168,7 +168,7 @@ By now, you are probably interested in scripting these commands together to stan
 
 At this point you've experienced how powerful the Ansible playbooks can be for programmatically deploying network components, creating channels and installing and instantiating smart contracts.  But it is likely that you will want to script them together to build reproducible networks. That's why in the `tutorial` folder a set of scripts are provided that run groups of playbooks together in a logical order:
 
-- `build_network.sh` - This is a script that runs a set of playbooks that create an entire simple network, the same one that can be created if you manually build the network by completing the [Build a network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network) tutorial.  When you call the script with the `build` option, it configures a single node ordering service, a peer organization and a peer. It installs the `FabCar` smart contract on the peer, creates a channel and joins the peer to the channel.  If you run the script with the `destroy` option it removes all of these artifacts from your cluster. For details, see [Building a network](https://ibm-blockchain.github.io/ansible-collection/tutorials/building.html).
+- `build_network.sh` - This is a script that runs a set of playbooks that create an entire simple network, the same one that can be created if you manually build the network by completing the [Build a network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network) tutorial.  When you call the script with the `build` option, it configures a single node ordering service, a peer organization and a peer. It installs the `FabCar` smart contract on the peer, creates a channel and joins the peer to the channel.  If you run the script with the `destroy` option it removes all of these artifacts from your cluster. For details, see [Building a network](https://ibm-blockchain.github.io/ansible-collection/tutorials/building.html).
 
 - `join_network.sh` - Run this script when you want to join a peer organization to an existing channel.  For more details see [Joining a network](https://ibm-blockchain.github.io/ansible-collection/tutorials/joining.html).
 

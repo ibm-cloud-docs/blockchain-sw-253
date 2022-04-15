@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: security, encryption, storage, tls, iam, roles, keys, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-security">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-security">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-security">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-security">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-security">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-security">2.5.3</a>
 </p>
 
 {{site.data.keyword.blockchainfull}} Platform provides a scalable, highly reliable platform that helps customers deploy applications and data quickly and securely. This document provides information about securing your {{site.data.keyword.blockchainfull_notm}} Platform service instance, where the blockchain console runs, and best practices for securing the  Kubernetes cluster where the blockchain nodes are deployed.
@@ -50,9 +51,9 @@ Considerations include:
 
 
 
-Identity and access management allows the owner of a console to control which users can access to the console and their privileges within it. IAM is built into the blockchain console and includes local console authentication and role management. When the console is initially provisioned you need to specify the email address of the user who is designated as the console administrator, also known as the **Manager**. This administrator can then add and grant other users access to the console by using the **Users** tab. It is also possible to change the console administrator. Every user that accesses the console must be assigned an access policy with a user role defined. The policy determines what actions the user can perform within the console. Other users can be assigned with **Manager**, **Writer**, or **Reader** roles when a console manager adds them to the console. The definition of each role is provided in the [Role to permissions mapping table](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-role-mapping). For the steps required to add new users, see [Managing users from the console](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#console-icp-manage-users).
+Identity and access management allows the owner of a console to control which users can access to the console and their privileges within it. IAM is built into the blockchain console and includes local console authentication and role management. When the console is initially provisioned you need to specify the email address of the user who is designated as the console administrator, also known as the **Manager**. This administrator can then add and grant other users access to the console by using the **Users** tab. It is also possible to change the console administrator. Every user that accesses the console must be assigned an access policy with a user role defined. The policy determines what actions the user can perform within the console. Other users can be assigned with **Manager**, **Writer**, or **Reader** roles when a console manager adds them to the console. The definition of each role is provided in the [Role to permissions mapping table](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-role-mapping). For the steps required to add new users, see [Managing users from the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users).
 
-Note that users can also be managed with [APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#console-icp-manage-users-apis).
+Note that users can also be managed with [APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#console-icp-manage-users-apis).
 
 
 ### Ports
@@ -71,11 +72,11 @@ The {{site.data.keyword.blockchainfull_notm}} Platform network is based on trust
 
 Because these public and private key pairs are essential to how the {{site.data.keyword.blockchainfull_notm}} Platform functions, **key management** is a critical aspect of security. If a private key is compromised or lost, hostile actors might be able to access your data and functionality. Although you use the {{site.data.keyword.blockchainfull_notm}} Platform console to generate the certificates and private keys, they are not _permanently_ stored by the browser or the cloud database. Public and private keys are temporarily stored in the browser and added to the member's wallet so that the console can use the private key to digitally sign transactions. Customers are ultimately responsible for exporting the keys and managing their storage, backup, and disaster recovery.
 
-If a private key is lost and cannot be recovered, you will need to generate a new private key by registering and enrolling a new identity with your Certificate Authority. You should also then remove and replace your signCert in any components or organizations where you had used the lost or corrupted identity. See [Updating an organization MSP definition](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#ibp-console-govern-update-msp) for detailed steps.
+If a private key is lost and cannot be recovered, you will need to generate a new private key by registering and enrolling a new identity with your Certificate Authority. You should also then remove and replace your signCert in any components or organizations where you had used the lost or corrupted identity. See [Updating an organization MSP definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#ibp-console-govern-update-msp) for detailed steps.
 
-In order to secure private keys in a production environment, the {{site.data.keyword.blockchainfull_notm}} Platform includes the option to configure a [Hardware Security Module](#x6704988){: term} (HSM) to generate and store the private keys for a node. An HSM is an optional hardware appliance that performs cryptographic operations and ensures that the cryptographic keys never leave the HSM. You are responsible for configuring an HSM device that implements the [PKCS #11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}.  PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys. You will also need to configure a PKCS #11 proxy to communicate with your HSM. The platform supports ECDSA Sign and Verify cryptographic controls and EC Key generation. When an HSM is implemented for a node, the private key for the node is not stored in the browser wallet. Rather, the private key is accessed from the HSM via the proxy. When you register other node admin or client application identities with a CA by using the console, their private keys are not stored inside the HSM because they need the private key to transact on the network. For instructions on how to use HSM with the {{site.data.keyword.blockchainfull_notm}} Platform, see [Configuring a node to use a Hardware Security Module (HSM)](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
+In order to secure private keys in a production environment, the {{site.data.keyword.blockchainfull_notm}} Platform includes the option to configure a [Hardware Security Module](#x6704988){: term} (HSM) to generate and store the private keys for a node. An HSM is an optional hardware appliance that performs cryptographic operations and ensures that the cryptographic keys never leave the HSM. You are responsible for configuring an HSM device that implements the [PKCS #11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}.  PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys. You will also need to configure a PKCS #11 proxy to communicate with your HSM. The platform supports ECDSA Sign and Verify cryptographic controls and EC Key generation. When an HSM is implemented for a node, the private key for the node is not stored in the browser wallet. Rather, the private key is accessed from the HSM via the proxy. When you register other node admin or client application identities with a CA by using the console, their private keys are not stored inside the HSM because they need the private key to transact on the network. For instructions on how to use HSM with the {{site.data.keyword.blockchainfull_notm}} Platform, see [Configuring a node to use a Hardware Security Module (HSM)](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
 
-You also have the option to bring your own certificates from your own non-{{site.data.keyword.blockchainfull_notm}} Platform CA when you create a peer node or ordering service. If you use your own certificates, you will need to manually build the peer or ordering service MSP definition file that includes those certificates and import the file into the console **Organizations** tab. See [Using certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca) for the steps required.
+You also have the option to bring your own certificates from your own non-{{site.data.keyword.blockchainfull_notm}} Platform CA when you create a peer node or ordering service. If you use your own certificates, you will need to manually build the peer or ordering service MSP definition file that includes those certificates and import the file into the console **Organizations** tab. See [Using certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca) for the steps required.
 
 ### Membership Service Providers (MSPs)
 {: #ibp-security-ibp-msp}
@@ -104,12 +105,12 @@ Note that organization MSPs are stored in browser storage and must be exported t
 
 Hyperledger Fabric allows for finer grained control over user access to specified resources through the use of access control lists (ACLs). ACLs allow access to a channel resource to be restricted to an organization and a role within that organization. The available set of ACLs are from the underlying Fabric architecture and are selected during channel creation or update. Note that access control lists are restrictive, rather than additive. If access to a resource is specified to an organization, it means that **only that organization** will have access to the resource. For example, if the default access to a particular resource is the Readers of all organizations, and that access is changed to the Admin of Org1, then only the Admin of Org1 will have access to the resource. Because access to certain resources is fundamental to the smooth operation of a channel, it is highly recommended to make access control decisions carefully. If you decide to limit access to a resource, make sure that the access to that resource is added, as needed, for each organization.
 
-You can use the blockchain console to select which ACLs to apply to resources on a channel. See this information under [Creating a channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-channels-create) for instructions on how to configure access control for a channel.
+You can use the blockchain console to select which ACLs to apply to resources on a channel. See this information under [Creating a channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-channels-create) for instructions on how to configure access control for a channel.
 
 ### API authentication
 {: #ibp-security-ibp-apis}
 
-In order to use the blockchain [APIs](https://cloud.ibm.com/apidocs/blockchain){: external} to create and manage network components, your application needs to be able to authenticate and connect to your network.   See this topic on how to [Connect to your console using API keys](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#console-icp-manage-api-key) for more details.
+In order to use the blockchain [APIs](https://cloud.ibm.com/apidocs/blockchain){: external} to create and manage network components, your application needs to be able to authenticate and connect to your network.   See this topic on how to [Connect to your console using API keys](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#console-icp-manage-api-key) for more details.
 
 ## Best practices for security on the customer Kubernetes cluster
 {: #ibp-security-Kubernetes}
@@ -171,7 +172,7 @@ The Kubernetes Container Platform provides the underlying network, including the
 ### Membership Service Providers (MSPs)
 {: #ibp-security-kubernetes-msp}
 
-Organizations in a blockchain network are represented by [MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-msp) definitions. You can use the blockchain console to add a new organization to the network by creating a new MSP definition in the **Organizations** tab. If you are the admin of an ordering service, you can use the console to add that organization MSP to a consortium using the **Ordering service** tab. Finally, if you are an administrator of a channel, you can add that organization to an existing channel so the organization can transact on the network using the **Channels** tab (this task might require the signature of other organizations). See the topic on [Join the consortium hosted by the ordering service](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-add-org) for detailed steps.
+Organizations in a blockchain network are represented by [MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-msp) definitions. You can use the blockchain console to add a new organization to the network by creating a new MSP definition in the **Organizations** tab. If you are the admin of an ordering service, you can use the console to add that organization MSP to a consortium using the **Ordering service** tab. Finally, if you are an administrator of a channel, you can add that organization to an existing channel so the organization can transact on the network using the **Channels** tab (this task might require the signature of other organizations). See the topic on [Join the consortium hosted by the ordering service](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-add-org) for detailed steps.
 
 ### Storage
 {: #ibp-security-kubernetes-storage}
@@ -190,7 +191,7 @@ Customers are responsible for encrypting their own storage and the encryption mu
 ### Data privacy
 {: #ibp-security-kubernetes-privacy}
 
-When you have data privacy requirements, [Private Data collections](https://hyperledger-fabric.readthedocs.io/en/release-2.2/private-data/private-data.html#what-is-private-data){: external} provide a way to further isolate specific data from the rest of the channel members. The combination of the use of channels and private data offer various solutions for achieving [Data Residency](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-about-data-residency).
+When you have data privacy requirements, [Private Data collections](https://hyperledger-fabric.readthedocs.io/en/release-2.2/private-data/private-data.html#what-is-private-data){: external} provide a way to further isolate specific data from the rest of the channel members. The combination of the use of channels and private data offer various solutions for achieving [Data Residency](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-about-data-residency).
 
 ### GDPR
 {: #ibp-security-kubernetes-gdpr}
@@ -210,9 +211,9 @@ Because {{site.data.keyword.blockchainfull_notm}} Platform is based on Hyperledg
 
 - **Ledger data:** Implicit in the blockchain permissioned network is the notion that an agreed upon policy of multiple endorsers is required to sign (approve) a transaction before it can be committed to the ledger. Before any information can be added to the ledger, a clear and well-established process for defining the ledger information must exist. Data on the ledger is immutable.
 
-- **Smart contracts:** All smart contracts should be reviewed by channel members before they are installed and executed on peers in their organization. Likewise, all updates to smart contract should be reviewed before the updates are applied to a peer. See this topic on [Upgrading a smart contract](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v14#ibp-console-smart-contracts-upgrade) for the steps that are required.
+- **Smart contracts:** All smart contracts should be reviewed by channel members before they are installed and executed on peers in their organization. Likewise, all updates to smart contract should be reviewed before the updates are applied to a peer. See this topic on [Upgrading a smart contract](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v14#ibp-console-smart-contracts-upgrade) for the steps that are required.
 
-- **HSM integration:** After you have configured an HSM for your environment, you have the option of configuring your nodes to use the HSM to generate and store private keys. See [Configuring a CA, peer, or ordering node to use the HSM](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm) for more information.
+- **HSM integration:** After you have configured an HSM for your environment, you have the option of configuring your nodes to use the HSM to generate and store private keys. See [Configuring a CA, peer, or ordering node to use the HSM](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm) for more information.
 
 ## Enable network policy
 {: #ibp-security-enable-network-policy}

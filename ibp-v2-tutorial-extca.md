@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: external CA, certificate, private key, MSP
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 content-type: tutorial
 services:
 account-plan: paid  
@@ -47,7 +47,7 @@ While it is always possible to use a CA that you create with the console to gene
 
 
 
-* [Install the {{site.data.keyword.blockchainfull}} Platform](/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console).
+* [Install the {{site.data.keyword.blockchainfull}} Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console).
 * This tutorial requires use of the {{site.data.keyword.blockchainfull_notm}} Platform console. Therefore, after you deploy the platform, ensure that you can successfully log in to the console.
 
 

@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,12 +23,13 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-organizations">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-organizations">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-organizations">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations">2.5.3</a>
 </p>
 
 You can use the {{site.data.keyword.blockchainfull}} Platform console to create a formal organization definition that is known as a Membership Services Provider (MSP). Your organization's MSP definition allows other members of the blockchain consortium to verify the identity of your nodes and applications. Your MSP definition also contains your organization's admin certificates.
 
-You can also use the console to manage which organizations are members of your channel. The administrator of the ordering service can use the organizations tab to add members to the blockchain [consortium](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-consortium). Members of the channel can then use the console to add members to new or existing channels.
+You can also use the console to manage which organizations are members of your channel. The administrator of the ordering service can use the organizations tab to add members to the blockchain [consortium](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-consortium). Members of the channel can then use the console to add members to new or existing channels.
 
 ![{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab](images/console_organizations_tab.png "{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab"){: caption="Figure 1. You can use the organizations panel to create, import, and manage organization MSP definitions" caption-side="bottom"}
 
@@ -51,12 +52,12 @@ Before your organization can join a consortium, it needs to create an organizati
 ## Managing MSPs in the console
 {: #ibp-console-organizations-manage}
 
-Navigate to the **Organizations** tab. You can use this tab to [create an MSP definition](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-create-msp) by using a Certificate Authority that exists in your console. You can also use this tab to [import an MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-import-msp) that was created by another organization.
+Navigate to the **Organizations** tab. You can use this tab to [create an MSP definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-create-msp) by using a Certificate Authority that exists in your console. You can also use this tab to [import an MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-import-msp) that was created by another organization.
 
 You can view all of the MSPs that you created or imported under **Available organizations**. You can use the MSP definitions in the organizations tab for important functions within your console:
 - If you are creating peer or ordering nodes, the MSP of your organization is used to identify the organization that the node belongs to.
 - MSPs are used by organizations to verify the signatures of actions by other organizations. For this reason, you should export your MSP to every organization in the channel and likewise import the MSP of every organization.
-- If your organization is one of the admins of the ordering service, you can [add new organizations to the consortium](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-add-consortium).
+- If your organization is one of the admins of the ordering service, you can [add new organizations to the consortium](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-add-consortium).
 - If you are a member of the channel, you can import the MSPs of other organization into your console and then add the members to new or existing channels.
 
 You can click an MSP definition in the organizations tab to view all of the nodes in the console that belong to each organization. Because each node was deployed with the administrator certificate from the MSP definition inside, you can use this panel to know which nodes are managed by which organization administrator.
@@ -229,7 +230,7 @@ To update your MSP:
 - Click **Update MSP definition**.
 - It is very important to re-export this MSP now and share it with all of the members of the consortium so they can import it into their console and ensure they are using the latest copy of the MSP definition and certificates.  
 
-If you need to add a new admin certificate to an existing organization MSP definition, refer to the topic on [managing certificates](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt).
+If you need to add a new admin certificate to an existing organization MSP definition, refer to the topic on [managing certificates](/docs/blockchain-sw-253?topic=blockchain-sw-253-cert-mgmt).
 
 ## Manually building an MSP JSON file
 {: #console-organizations-build-msp}
@@ -351,21 +352,21 @@ For example, your JSON file would look similar to:
 
 Save this definition as your MSP definition `JSON` file.
 
-You have constructed an MSP definition, which defines the organization for your peer or ordering service nodes, and uses certificates from an external CA. You can now return to the instructions that describe [How to use certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca).
+You have constructed an MSP definition, which defines the organization for your peer or ordering service nodes, and uses certificates from an external CA. You can now return to the instructions that describe [How to use certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca).
 
 ## Importing an MSP
 {: #console-organizations-import-msp}
 
 Only the orderer admin can add new organizations to the consortium. If you are the orderer admin, you will need to collect the MSP definitions of all the organizations who have been invited to the consortium and import the MSPs into the console. You can then add the MSPs to the ordering service, by using the orderer node.
 
-After an administrator creates an MSP definition, they can use the Organizations tab to download the MSP in JSON format to their local file system. They can then send you the MSP JSON file in an out of band operation. Navigate to the **Organizations** tab and use **Import MSP Definition** to import the MSP file into your console. Once an MSP definition is visible in the **Available organizations** section, you can then navigate to your orderer node to [add the organization to the consortium](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-add-consortium).
+After an administrator creates an MSP definition, they can use the Organizations tab to download the MSP in JSON format to their local file system. They can then send you the MSP JSON file in an out of band operation. Navigate to the **Organizations** tab and use **Import MSP Definition** to import the MSP file into your console. Once an MSP definition is visible in the **Available organizations** section, you can then navigate to your orderer node to [add the organization to the consortium](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-add-consortium).
 
 ## Adding an organization to a consortium
 {: #console-organizations-add-consortium}
 
 The consortium of organizations is hosted by the ordering service.
 
-If you are the administrator of the ordering service, you can use the console to add an organization to the consortium. Navigate to the **Nodes** tab and click the ordering service. On the ordering service panel, under **Consortium members**, click **Add organization**. A side panel opens where you can select from the list of available MSP definitions that you [imported into your organizations tab](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-import-msp). You can also use the **Upload JSON** option to import the MSP definition file created by another org directly.
+If you are the administrator of the ordering service, you can use the console to add an organization to the consortium. Navigate to the **Nodes** tab and click the ordering service. On the ordering service panel, under **Consortium members**, click **Add organization**. A side panel opens where you can select from the list of available MSP definitions that you [imported into your organizations tab](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-import-msp). You can also use the **Upload JSON** option to import the MSP definition file created by another org directly.
 
 ## Creating and editing a channel
 {: #console-organizations-create-channel}
@@ -378,7 +379,7 @@ After your organization is added to a consortium, you can create a channel by us
 2. Import the MSPs of organizations that you want to add to the new channel into your console in the **Organizations** tab. **Note** that organizations need to be added to the consortium before they can be added to a channel.
 3. Navigate to the **Channels** tab and click **Create channel**. This opens a side panel that allows you to specify the channel name, membership, and channel policies. You can add any organizations that were added to the consortium to the new channel.
 
-For more information about these steps, see [creating a channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-channel1) in the **Build a network** tutorial.
+For more information about these steps, see [creating a channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-channel1) in the **Build a network** tutorial.
 
 ### Updating an MSP in a channel definition
 {: #console-organizations-update-channel}
@@ -396,9 +397,9 @@ Over time you might need to update the certificates in an MSP definition that is
 
 If you want to stop using an instance of the {{site.data.keyword.blockchainfull_notm}} Platform, you need to remove your organization from the blockchain network before you delete your service instance. This ensures that the removed organization is not affecting the governance of the network after it has left the network. You can remove your organization by using the following steps:
 
-1. **Remove your organization from channels that you joined**. You need to [update the endorsement policy](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-endorse) of the smart contracts that are deployed on the channel to remove your organization from the policy. If you do not update the endorsement policy, your organization might be required to endorse transactions after you have left the channel, causing transactions to fail.
+1. **Remove your organization from channels that you joined**. You need to [update the endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-endorse) of the smart contracts that are deployed on the channel to remove your organization from the policy. If you do not update the endorsement policy, your organization might be required to endorse transactions after you have left the channel, causing transactions to fail.
 
-    You can then update to the channel to remove your organization from the list of channel members. Navigate to the **Channels** tab and click the **Settings** icon. You can use the **Organizations** section to remove your organization from the channel. The channel **update policy** is updated to remove your organization automatically. When you are ready, click **Update channel** to submit a channel update request. The request starts the [process for collecting the signatures](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-update-channel-signature-collection) that are required to update the channel, depending on your update policy.
+    You can then update to the channel to remove your organization from the list of channel members. Navigate to the **Channels** tab and click the **Settings** icon. You can use the **Organizations** section to remove your organization from the channel. The channel **update policy** is updated to remove your organization automatically. When you are ready, click **Update channel** to submit a channel update request. The request starts the [process for collecting the signatures](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-update-channel-signature-collection) that are required to update the channel, depending on your update policy.
 
     After you remove your organization from the channel, you can delete your peers on the {{site.data.keyword.blockchainfull_notm}} Platform. If transactions can be successfully submitted to the network after you remove your peers, your organization is no longer required to endorse transactions.
 
@@ -408,7 +409,7 @@ If you want to stop using an instance of the {{site.data.keyword.blockchainfull_
 
 3. **Delete your ordering nodes.** If you operate ordering nodes that are part of a multi-node ordering service, you need to remove your ordering nodes from the network before you remove your ordering organization. Your ordering nodes need to be removed from the consenter set of each channel before they are removed from the ordering service.
 
-    Navigate to the **Channels** tab and click the **Settings** icon to update the channel. You can use the **Consenter Set** section to remove your ordering node from the channel. When you are ready, click **Update channel** to submit the channel update request. The update request starts the [process for collecting the signatures](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-update-channel-signature-collection) that are required to update the channel, depending on the channel update policy. After you have you removed your ordering nodes, you can use the **Ordering service administrators** section to remove your organization from the set of orderer administrators.
+    Navigate to the **Channels** tab and click the **Settings** icon to update the channel. You can use the **Consenter Set** section to remove your ordering node from the channel. When you are ready, click **Update channel** to submit the channel update request. The update request starts the [process for collecting the signatures](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-update-channel-signature-collection) that are required to update the channel, depending on the channel update policy. After you have you removed your ordering nodes, you can use the **Ordering service administrators** section to remove your organization from the set of orderer administrators.
 
     After you remove your ordering nodes from the consenter set of each channel, you can remove your nodes from the ordering service. Navigate to the **Nodes** tab and click the ordering service of your network. On the **Ordering service** panel, click the **Ordering nodes** tab. Click your ordering node and then click **Delete**. Because Raft consensus requires that a majority of ordering nodes are up to maintain a quorum, you need to remove one ordering node at a time. After you have deleted your ordering nodes, you can remove your organization from the set of ordering service administrators. Find your organization MSP definition on the list of **Orderer administrators** and click the **Delete** icon in the corner of the organization definition tile.
 

@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-app">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-app">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-app">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app">2.5.3</a>
 </p>
 
 After you install smart contracts and deploy your nodes, you can use client applications to transact with other members of your network. Applications can invoke the business logic that is contained in smart contracts to create, transfer, or update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks that you manage from {{site.data.keyword.blockchainfull}} Platform console.
@@ -49,7 +50,7 @@ If you are the **network operator**, you will need to complete the following ste
 
 If you are the **application developer**, use the information that is provided by the network operator to complete following steps:
 1. Generate a certificate and private key by using the enroll ID and secret of the application identity, along with CA endpoint information inside your connection profile.
-2. Configure a connection by using the Fabric SDK gateway and enable [service discovery](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-sd).
+2. Configure a connection by using the Fabric SDK gateway and enable [service discovery](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-sd).
 3. Use the connection profile, channel name, smart contract name, and application keys to invoke the smart contract.  
 
 The connection profile that you downloaded from the {{site.data.keyword.blockchainfull_notm}} Platform console can be used to connect to your network by using the Node.js (JavaScript and TypeScript), Java, and Go Fabric SDKs.
@@ -174,9 +175,9 @@ For more details on smart contract-API compatibility, see:
 
 Applications need to sign the transactions they submit to {{site.data.keyword.blockchainfull_notm}} nodes, and attach a signing certificate that is used by nodes to verify that the transactions are being sent by the proper party. This ensures that transactions are submitted by the organizations that have permission to participate.
 
-The network operator needs to use the organization's CA to [register an application identity](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-register), which can then be used by the application developer to generate a certificate and private key. The operator can provide the enroll ID and secret of the identity, along the CA endpoint information, to be used by the SDK to generate certificates. By enrolling on the client side, the application developer ensures that no other party has access to the private key of the application. During registration, the network operator can set an enrollment limit of one for additional security. After the application developer enrolls, the enroll ID and secret cannot be used to generate another private key.
+The network operator needs to use the organization's CA to [register an application identity](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-register), which can then be used by the application developer to generate a certificate and private key. The operator can provide the enroll ID and secret of the identity, along the CA endpoint information, to be used by the SDK to generate certificates. By enrolling on the client side, the application developer ensures that no other party has access to the private key of the application. During registration, the network operator can set an enrollment limit of one for additional security. After the application developer enrolls, the enroll ID and secret cannot be used to generate another private key.
 
-If you are less worried about security, the network operator can enroll an application identity by using the [CA tab](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-enroll). The operator can then download the identity or export it to the console wallet. In order to use the certificates from the SDK, you need to convert the keys from base64 into PEM format. You can decode the certs by running the following command on your local system:
+If you are less worried about security, the network operator can enroll an application identity by using the [CA tab](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-enroll). The operator can then download the identity or export it to the console wallet. In order to use the certificates from the SDK, you need to convert the keys from base64 into PEM format. You can decode the certs by running the following command on your local system:
 
 ```
 export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
@@ -218,7 +219,7 @@ You need to ensure that the ports used by the Certificate Authorities, Peers, an
 
 Service discovery allows your applications to dynamically find the peer and ordering endpoints of your network. If you do not use service discovery, you need to manually add the endpoint information of peer and ordering nodes on your channel to your connection profile or your application. You would need to edit your connection profile or update your application each time a node is added or removed from your network.  
 
-Before you can take advantage of the [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} feature of Hyperledger Fabric, you must configure anchor peers on the channel. Service discovery allows your application to learn which peers on the channel outside your organization need to endorse a transaction. Without service discovery, you will need to get the endpoint information of these peers out of band from other organizations and add them to your connection profile. For more information, see [Configuring anchor peers](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-channels-anchor-peers).
+Before you can take advantage of the [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} feature of Hyperledger Fabric, you must configure anchor peers on the channel. Service discovery allows your application to learn which peers on the channel outside your organization need to endorse a transaction. Without service discovery, you will need to get the endpoint information of these peers out of band from other organizations and add them to your connection profile. For more information, see [Configuring anchor peers](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-channels-anchor-peers).
 
 Later in this topic, we use the connection profile to build a Fabric gateway that is configured for [service discovery](#ibp-console-app-sd-cfg).
 
@@ -363,7 +364,7 @@ After you generate the application signing certificate and private key and store
 
     If you navigate to your channel by using the console, you are able to see that another block was added by the transaction.
 
-Your transaction might fail if you did not configure an anchor peer on your channel. Unless you manually updated your connection profile, your application needs to use the [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} feature to learn about the peers it needs to submit the transaction to. For more information, see [Configuring anchor peers](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-channels-anchor-peers).
+Your transaction might fail if you did not configure an anchor peer on your channel. Unless you manually updated your connection profile, your application needs to use the [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} feature to learn about the peers it needs to submit the transaction to. For more information, see [Configuring anchor peers](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-channels-anchor-peers).
 {: note}
 
 ## Running the Commercial Paper sample
@@ -371,7 +372,7 @@ Your transaction might fail if you did not configure an anchor peer on your chan
 
 The [commercial paper tutorial](https://hyperledger-fabric.readthedocs.io/en/release-2.2/tutorial/commercial_paper.html){: external} in the Hyperledger Fabric documentation takes developers through a use case in which multiple parties buy, sell, and redeem commercial paper. It extends the [Developing applications topic](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html){: external} by providing sample smart contract and application code that allows you to create and trade assets on a local instance of Fabric.
 
-You can also deploy the commercial paper tutorial sample code onto an {{site.data.keyword.blockchainfull_notm}} Platform network. This allows you to quickly get started interacting with your network and use the sample to download the necessary dependencies. The sample code also includes examples of how you can import certificates into a [wallet](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/wallet.html){: external} and use your connection profile to build a [Fabric gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/gateway.html){: external}. The tutorial can be used by two different organizations to complete different transactions with a single asset. If you used the [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network) to deploy two peer organizations that are connected to a channel, you can interact with the tutorial by using both organizations.
+You can also deploy the commercial paper tutorial sample code onto an {{site.data.keyword.blockchainfull_notm}} Platform network. This allows you to quickly get started interacting with your network and use the sample to download the necessary dependencies. The sample code also includes examples of how you can import certificates into a [wallet](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/wallet.html){: external} and use your connection profile to build a [Fabric gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/gateway.html){: external}. The tutorial can be used by two different organizations to complete different transactions with a single asset. If you used the [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network) to deploy two peer organizations that are connected to a channel, you can interact with the tutorial by using both organizations.
 
 Use the following steps to deploy the sample on your network. You can review the tutorial in the Fabric Documentation [commercial paper tutorial](https://hyperledger-fabric.readthedocs.io/en/release-2.2/tutorial/commercial_paper.html){: external} for more details about the smart contracts and the application structure.
 
@@ -438,11 +439,11 @@ npm install
 
 You can find the commercial paper smart contract inside the `contract` folder of the `digibank` and `magnetocorp` directory. You need to install this smart contract on all the peers of the organizations that use the tutorial.
 
-Smart contracts running on peers using the Fabric v1.4.x image must be packaged in [.cds format](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4noah.html#packaging){: external}. These smart contracts are installed and then instantiated on a channel. For information on using smart contracts with Fabric v1.4.x peers, check out [Deploy a smart contract using Fabric v1.4.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v14).
+Smart contracts running on peers using the Fabric v1.4.x image must be packaged in [.cds format](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4noah.html#packaging){: external}. These smart contracts are installed and then instantiated on a channel. For information on using smart contracts with Fabric v1.4.x peers, check out [Deploy a smart contract using Fabric v1.4.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v14).
 
-Smart contracts running on peers using a Fabric v2.x image must be packed using the [.tar.gz format](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode_lifecycle.html#step-one-packaging-the-smart-contract){: external}. These smart contracts must be installed and proposed by you, then approved by other channel members before being committed on the channel. For information on using smart contracts with Fabric v2.x peers, check out [Deploying a smart contract using Fabric 2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+Smart contracts running on peers using a Fabric v2.x image must be packed using the [.tar.gz format](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode_lifecycle.html#step-one-packaging-the-smart-contract){: external}. These smart contracts must be installed and proposed by you, then approved by other channel members before being committed on the channel. For information on using smart contracts with Fabric v2.x peers, check out [Deploying a smart contract using Fabric 2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).
 
-You can use the [{{site.data.keyword.blockchainfull_notm}} VS code extension](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode) to package the smart contract. After you install the extension, use Visual Studio Code to open the `contracts` folder in your workspace. Open the _{{site.data.keyword.blockchainfull_notm}} Platform_ tab. In the _{{site.data.keyword.blockchainfull_notm}} Platform_ pane, go to the smart contract packages section and click **Package Open Project**. The VS code extension uses the files in the `contracts` folder to create a new package named `papernet-js@.0.0.1.cds`. Right-click this package to export it to your local file system. You can then use your console to install your smart contract and either instantiate or propose it.
+You can use the [{{site.data.keyword.blockchainfull_notm}} VS code extension](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode) to package the smart contract. After you install the extension, use Visual Studio Code to open the `contracts` folder in your workspace. Open the _{{site.data.keyword.blockchainfull_notm}} Platform_ tab. In the _{{site.data.keyword.blockchainfull_notm}} Platform_ pane, go to the smart contract packages section and click **Package Open Project**. The VS code extension uses the files in the `contracts` folder to create a new package named `papernet-js@.0.0.1.cds`. Right-click this package to export it to your local file system. You can then use your console to install your smart contract and either instantiate or propose it.
 
 ### Step three: Generate certificates for your wallet
 {: #ibp-console-app-commercial-paper-step-three-generate-certificates}
@@ -678,7 +679,7 @@ Issue program complete.
 ### Step six: Operate the sample as Digibank
 {: #ibp-console-app-commercial-paper-step-six-operate-as-digibank}
 
-After you create the commercial paper by operating as Magnetocorp, you can buy and redeem the commercial paper by operating the tutorial as Digibank. You can use the Digibank application code by using the same organization as Magnetocorp, or use the CA, peers, and connection profile of a different organization. If you competed the [Join a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network), this is a good opportunity operate the tutorial as Org2.
+After you create the commercial paper by operating as Magnetocorp, you can buy and redeem the commercial paper by operating the tutorial as Digibank. You can use the Digibank application code by using the same organization as Magnetocorp, or use the CA, peers, and connection profile of a different organization. If you competed the [Join a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network), this is a good opportunity operate the tutorial as Org2.
 
 Go to the `digibank/application` directory. You can follow the directions that are provided in **Step three** to create to generate the certificates and wallet that will sign the transaction as Digibank. You can then use the `buy.js` file to purchase the commercial paper from Magnetocorp, and then use `redeem.js` to redeem the paper. You can follow **Step four** and **Step five** to edit those files so that they point to the correct connection profile, channel and smart contract.
 
@@ -705,7 +706,7 @@ If you are using low-level SDK APIs to connect to your network, there are additi
 ## Highly available applications
 {: #console-app-ha}
 
-As a high availability best practice, it is strongly recommended that you deploy a minimum of two peers per organization for failover. You need to adapt your applications for high availability as well by downloading a [connection profile](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#ibp-console-organizations-connx-profile) and [enabling service discovery](#ibp-console-app-sd-cfg). Install smart contracts on both peers and join the peers to your channels.
+As a high availability best practice, it is strongly recommended that you deploy a minimum of two peers per organization for failover. You need to adapt your applications for high availability as well by downloading a [connection profile](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#ibp-console-organizations-connx-profile) and [enabling service discovery](#ibp-console-app-sd-cfg). Install smart contracts on both peers and join the peers to your channels.
 
 ## Using indexes with CouchDB
 {: #console-app-couchdb}

@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: HSM, Gemalto, IBM Cloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -24,7 +24,7 @@ service that provides cryptographic processing for key generation, encryption, d
 {: shortdesc}
 
 While this tutorial focuses specifically on using {{site.data.keyword.cloud_notm}} HSM, you can learn more about the overall configuration process for using any HSM that supports PCKS #11 with the {{site.data.keyword.blockchainfull_notm}} Platform, see
-[Configuring a node to use a Hardware Security Module](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
+[Configuring a node to use a Hardware Security Module](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
 
 ## Why would I want to use an HSM with my {{site.data.keyword.blockchainfull_notm}} Platform network?
 {: #ibp-hsm-gemalto-why}
@@ -341,7 +341,7 @@ Replace:
 - `DOCKER_USER` - Valid username with access to HSM client image in the container registry.
 - `DOCKER_PASSWORD` - Valid password or access token for the HSM client image in the container registry.
 - `DOCKER_EMAIL` - Email address for container registry user.
-- `NAMESPACE` - Name of the [Kubernetes namespace](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp#deploy-ocp-project) that you created for your {{site.data.keyword.blockchainfull_notm}} Platform deployment.
+- `NAMESPACE` - Name of the [Kubernetes namespace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-project) that you created for your {{site.data.keyword.blockchainfull_notm}} Platform deployment.
 
 These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
 
@@ -362,7 +362,7 @@ $ kubectl create secret generic hsmcrypto -n <NAMESPACE> --from-file=Chrystoki.c
 ```
 {: codeblock}
 
-Replace `<NAMESPACE>` with the name of your operator [Kubernetes namespace](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp#deploy-ocp-project). If you are not using {{site.data.keyword.cloud_notm}} HSM, you need to replace the values of the `--from-file` parameters with the set of certificates and configuration files that are required for your HSM client image.
+Replace `<NAMESPACE>` with the name of your operator [Kubernetes namespace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-project). If you are not using {{site.data.keyword.cloud_notm}} HSM, you need to replace the values of the `--from-file` parameters with the set of certificates and configuration files that are required for your HSM client image.
 
 When successful, the output looks similar to:
 ```
@@ -500,7 +500,7 @@ configmap/ibp-hsm-config created
 ### What's next
 {: #ibp-hsm-gemalto-next-steps}
 
-After you have used these instructions to configure your {{site.data.keyword.cloud_notm}} HSM and build the  **HSM client image**, you are ready to configure your blockchain nodes to use the HSM. When you create a CA, peer, or ordering node, select the [HSM Advanced deployment option](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm-node) to configure the node to use this HSM.
+After you have used these instructions to configure your {{site.data.keyword.cloud_notm}} HSM and build the  **HSM client image**, you are ready to configure your blockchain nodes to use the HSM. When you create a CA, peer, or ordering node, select the [HSM Advanced deployment option](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm-node) to configure the node to use this HSM.
 
 When a node is configured with HSM, a temporary Kubernetes job is started to run this HSM "enrollment" process. Before configuring a node to use HSM, ensure that you have enough resources in your cluster to support this job that takes approximately 0.1CPU and 100M memory.
 {: important}

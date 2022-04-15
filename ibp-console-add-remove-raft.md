@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: network components, Kubernetes, channel update, channels, governance, channel configuration, orderer, ordering node, ordering service, raft, tutorial
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -52,14 +52,14 @@ If you have already created an ordering service, you can reuse the CA, MSP, node
 ### Create the CA and organization for the new node
 {: #ibp-console-add-remove-orderer-add-orderer-create}
 
-If an organization other than the organization that created the ordering service wishes to create a new node, they will need to complete several steps. For the purpose of this tutorial, it is assumed that a user has followed the [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network) in their console and has created a peer, ordering service, and an application channel. Subsequent to this, **a separate user, with a separate console, wishes to add a node to that ordering service, which is called `Ordering Service`**.
+If an organization other than the organization that created the ordering service wishes to create a new node, they will need to complete several steps. For the purpose of this tutorial, it is assumed that a user has followed the [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network) in their console and has created a peer, ordering service, and an application channel. Subsequent to this, **a separate user, with a separate console, wishes to add a node to that ordering service, which is called `Ordering Service`**.
 
 As part of describing the process for creating a new node from a separate console, we will refer to "Console 1" and "Console 2". Console 1 is the originating console; it's where the ordering service was originally created. Console 2 is where a user is attempting to create a new node for this ordering service using a different organization in a different console.
 {: important}
 
 **Unless you have already created new nodes for this ordering service, do not reuse an existing CA and MSP**.
 
-The process of creating a CA, registering identities, and creating an MSP is identical to the process described in [Creating your ordering service organization CA](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-orderer-ca) from the Build a network tutorial. However, use the following values:
+The process of creating a CA, registering identities, and creating an MSP is identical to the process described in [Creating your ordering service organization CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-orderer-ca) from the Build a network tutorial. However, use the following values:
 
 **Task: Create a CA and register users**
 
@@ -204,7 +204,7 @@ Then click **Import an existing node**. After clicking **Add file**, find the JS
 This step can be completed by any channel member.
 {: important}
 
-Because this tutorial presumes that a user is adding a node to a channel that was created as part of the [Build a network tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network), the channel the `Ordering Service_2` node is being added to, `channel1`, does not yet have the newly created ordering service organization, `Ordering Service2 MSP`, as one of the administrators of the channel. While a new ordering node can be added to a channel even if the organization that owns the node is not an administrator of the ordering service, it is a best practice to add the organization that owns the node when you add the node.
+Because this tutorial presumes that a user is adding a node to a channel that was created as part of the [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network), the channel the `Ordering Service_2` node is being added to, `channel1`, does not yet have the newly created ordering service organization, `Ordering Service2 MSP`, as one of the administrators of the channel. While a new ordering node can be added to a channel even if the organization that owns the node is not an administrator of the ordering service, it is a best practice to add the organization that owns the node when you add the node.
 
 Because you are editing a part of the channel configuration that is governed by ordering service organization admins, you will be asked to send the channel configuration update to an ordering service organization admin to be signed as part of the configuration update process. **This organization can be any of the organizations that is an admin of the ordering service**, not just one of the organizations that owns one of the consenters that is already in the channel. In this tutorial, that means selecting `Ordering Service MSP`. Do not select `Ordering Service2 MSP` here as it is being added as part of this channel configuration update.
 
@@ -226,7 +226,7 @@ It is possible to add a node to the consenter and add the MSP of the organizatio
 
 After adding the organization, click on the **Consenter set** tab, select the `Ordering Service_2` node from the drop down list, and click **Add**. Note that you will only be able to add one node to a channel at a time.
 
-After the `Ordering Service MSP` has signed the channel configuration update, the organization that initiated the channel update will get a notification that it must sign and submit the channel configuration update. This notification, like all notifications, will be located in the upper right of the screen behind the **Notifications** icon, which resembles a bell. For more information about how signature collections work, see [Signature collection flow](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-update-channel-signature-collection).
+After the `Ordering Service MSP` has signed the channel configuration update, the organization that initiated the channel update will get a notification that it must sign and submit the channel configuration update. This notification, like all notifications, will be located in the upper right of the screen behind the **Notifications** icon, which resembles a bell. For more information about how signature collections work, see [Signature collection flow](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-update-channel-signature-collection).
 
 **It will take a few minutes for the new node to sync with the consenter set of the application channel**. The time involved depends on a number of factors, including the number of blocks in a channel. During this time, the ordering service may be down. After the node has been successfully added to the application channel, you will see it in the **Ordering nodes** tab.
 

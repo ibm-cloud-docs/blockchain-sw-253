@@ -6,7 +6,7 @@ lastupdated: "2022-04-01"
 
 keywords: vs code extension, Visual Studio Code extension, smart contract, development tools, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-develop-vscode">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-develop-vscode">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-develop-vscode">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode">2.5.3</a>
 </p>
 
 The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an environment within Visual Studio Code for developing, packaging, and testing smart contracts. You can use the tools to create your smart contract project and get started developing your business logic. You can then use the tools to test your smart contract either on your local machine by using a preconfigured instance of Hyperledger Fabric, or by connecting to an {{site.data.keyword.blockchainfull_notm}} Platform network, before you deploy the smart contract to the {{site.data.keyword.blockchainfull_notm}} Platform. This tutorial describes how to install and use the Developer Tools.
@@ -34,12 +35,12 @@ The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an env
 
 <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="images/SmartContractflow-251.png" width="750" alt="Click a box to get more details on the process." style="width:750px;" />
 <map name="home_map1" id="home_map1">
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-creating-a-project" alt="Create a smart contract project" title="Create a Smart contract project" shape="rect" coords="15, 50, 140, 104" />
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-creating-a-project" alt="Develop smart contract code in developer tooling" title="Develop smart contract in developer tooling" shape="rect" coords="161, 50, 288, 99" />
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract" alt="Package the smart contract" title="Package the smart contract" shape="rect" coords="305, 49, 433, 102" />
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-deploy" alt="Deploy locally to test and debug" title="Deploy locally to test and debug" shape="rect" coords="303, 119, 429, 170"/>
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-exporting-deleting-smart-contract-package" alt="Export the package" title="Export the package" shape="rect" coords="449, 49, 572, 100" />
-<area href="/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-connecting-ibp" alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" shape="rect" coords="605, 45, 740, 105" /></map>  
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-creating-a-project" alt="Create a smart contract project" title="Create a Smart contract project" shape="rect" coords="15, 50, 140, 104" />
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-creating-a-project" alt="Develop smart contract code in developer tooling" title="Develop smart contract in developer tooling" shape="rect" coords="161, 50, 288, 99" />
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract" alt="Package the smart contract" title="Package the smart contract" shape="rect" coords="305, 49, 433, 102" />
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-deploy" alt="Deploy locally to test and debug" title="Deploy locally to test and debug" shape="rect" coords="303, 119, 429, 170"/>
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-exporting-deleting-smart-contract-package" alt="Export the package" title="Export the package" shape="rect" coords="449, 49, 572, 100" />
+<area href="/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-connecting-ibp" alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" shape="rect" coords="605, 45, 740, 105" /></map>  
 
 
 The {{site.data.keyword.blockchainfull_notm}} Platform extension works seamlessly with any instance of the {{site.data.keyword.blockchainfull_notm}} Platform that uses Hyperledger Fabric versions 1.4 and later. This tutorial is oriented toward users of the high-level Fabric smart contract programming model. If you are using low-level smart contract APIs, you can find additional instructions in the [{{site.data.keyword.blockchainfull_notm}} Platform extension documentation](https://github.com/IBM-Blockchain/blockchain-vscode-extension/blob/master/README.md). For more information, see the [Writing Your First Chaincode](https://hyperledger-fabric.readthedocs.io/en/latest/chaincode4ade.html) tutorial in the Fabric documentation.
@@ -143,7 +144,7 @@ npm install --save fabric-contract-api@latest-1.4 fabric-shim@latest-1.4
 
 **Go**  
 
-Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you need to vendor the shim and then repackage any smart contracts written in Golang (Go) that use the [Go SDK](https://github.com/hyperledger/fabric-sdk-go). "Vendoring the shim"  effectively means that you are copying the dependencies into your project. Without this vendoring and repackaging, the Go smart contract cannot run on a peer using a Fabric 2.x image. If you are using the [IBM Developer Tools](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode) to develop and package your smart contract, the tooling performs the vendoring for you. This process is not required for smart contracts that are written in Java or Node.js, nor for Go smart contracts that use the [Go contract-api](https://github.com/hyperledger/fabric-contract-api-go){: external}.
+Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you need to vendor the shim and then repackage any smart contracts written in Golang (Go) that use the [Go SDK](https://github.com/hyperledger/fabric-sdk-go). "Vendoring the shim"  effectively means that you are copying the dependencies into your project. Without this vendoring and repackaging, the Go smart contract cannot run on a peer using a Fabric 2.x image. If you are using the [IBM Developer Tools](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode) to develop and package your smart contract, the tooling performs the vendoring for you. This process is not required for smart contracts that are written in Java or Node.js, nor for Go smart contracts that use the [Go contract-api](https://github.com/hyperledger/fabric-contract-api-go){: external}.
 
 **Java**  
 The `build.gradle` file for the smart contract must be updated:
@@ -175,7 +176,7 @@ If the smart contract was written using the **low-level APIs** provided by the F
 
 **Repackage smart contract**  
 
-After you have updated your smart contract, use [v2](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract) your smart contract.   
+After you have updated your smart contract, use [v2](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract) your smart contract.   
 
 ## Step three: Package a smart contract
 {: #packaging-a-smart-contract}
@@ -376,7 +377,7 @@ You can also use the extension to interact with your network on the {{site.data.
 
 You can download your connection profile from the {{site.data.keyword.blockchainfull_notm}} Platform console to build a gateway in the **Fabric Gateways** pane. You can then use the gateway to invoke the smart contracts that were deployed on your channel.
 
-Open the {{site.data.keyword.blockchainfull_notm}} Platform console that is associated with your instance of the {{site.data.keyword.blockchainfull_notm}} Platform. Navigate to the **Organizations** tab and click the **Organization MSP** tile for the organization that your client application will interact with. Click **Create connection profile** to open a side panel that allows you to [build and download your connection profile](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app#ibp-console-app-profile) to your local file system. Then, [create an application identity](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app#ibp-console-app-identities) by using your CA and save the enrollID and secret. Use the following steps to connect to the {{site.data.keyword.blockchainfull_notm}} Platform from VS Code.
+Open the {{site.data.keyword.blockchainfull_notm}} Platform console that is associated with your instance of the {{site.data.keyword.blockchainfull_notm}} Platform. Navigate to the **Organizations** tab and click the **Organization MSP** tile for the organization that your client application will interact with. Click **Create connection profile** to open a side panel that allows you to [build and download your connection profile](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-profile) to your local file system. Then, [create an application identity](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-identities) by using your CA and save the enrollID and secret. Use the following steps to connect to the {{site.data.keyword.blockchainfull_notm}} Platform from VS Code.
 
 1. Open the **{{site.data.keyword.blockchainfull_notm}} Platform** tab.
 2. Hover your mouse over the **Fabric Gateways** pane and click **+**.
@@ -433,7 +434,7 @@ You can then import the nodes of your network into the extension.
 8. Enter a name for your environment.
 9. Select the CAs and peers that belong to your organization, along with the ordering nodes of your channels, click **OK** when done.
 
-In steps 5 and 6, you can alternatively enter an API key and secret that you generate using the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#console-icp-manage-create-api-key).
+In steps 5 and 6, you can alternatively enter an API key and secret that you generate using the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#console-icp-manage-create-api-key).
 {: tip}
 
 You also need to import your admin identities into the wallet pane and associate them with your nodes. You need to associate an admin identity with your peers, CA, and an ordering node before you can connect with your network.

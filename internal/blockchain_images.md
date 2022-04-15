@@ -2,11 +2,11 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-15"
 
 keywords: IBM Blockchain Platform, images, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-blockchain-images">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-blockchain-images">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-blockchain-images">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-images">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-images">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images">2.5.3</a>
 </p>
 
 
@@ -37,7 +38,7 @@ A key benefit of using these images over the open source community version is th
 ## Supported Platforms
 {: #blockchain-images-supported-platforms}
 
-The {{site.data.keyword.blockchainfull_notm}} images must be deployed using a container environment on x86_64 or s390x hardware. Refer to the list of [Supported Platforms](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites).
+The {{site.data.keyword.blockchainfull_notm}} images must be deployed using a container environment on x86_64 or s390x hardware. Refer to the list of [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites).
 
 Although you can deploy the {{site.data.keyword.blockchainfull_notm}} images on Mac OS for testing purposes, the permissions on Mac OS might prevent you from instantiating a smart contract.
 {: note}
@@ -64,7 +65,7 @@ The images do not include the {{site.data.keyword.blockchainfull_notm}} Platform
 
 {{site.data.keyword.blockchainfull_notm}} Platform images can be purchased through an entitlement to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2. After you purchase the platform, you can access the [My IBM dashboard](https://myibm.ibm.com/dashboard/){: external} to obtain your entitlement key. You can then use the entitlement key to download the images from the {{site.data.keyword.IBM_notm}} Entitlement Registry.
 
-For more information on the pricing of the images, to the [Pricing](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-sw-pricing) topic.
+For more information on the pricing of the images, to the [Pricing](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-sw-pricing) topic.
 
 ## Get your entitlement key
 {: #blockchain-images-entitlement-key}
@@ -203,7 +204,7 @@ USE_WEBSOCKETS=true
 
 The console needs to check the health of any node being imported into the console. As a result, you need to enable the operations service for every node that is connected to a web proxy. For more information, see [The Operations Service](https://hyperledger-fabric.readthedocs.io/en/latest/operations_service.html).
 
-After the web proxy container is deployed, you can import the node into a console by creating a node JSON file. For more information about how to create the node file, see [Importing nodes from a locally deployed network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-import-nodes#ibp-console-import-icp). You need to use the following values when you create the file:
+After the web proxy container is deployed, you can import the node into a console by creating a node JSON file. For more information about how to create the node file, see [Importing nodes from a locally deployed network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-import-nodes#ibp-console-import-icp). You need to use the following values when you create the file:
 - Use the web proxy URL and port for the `"grpcwp_url"` field. You specified these values with the `EXTERNAL_ADDRESS` and `SERVER_HTTP_TLS_PORT` environment variables.
 - Use the node endpoint URL and port for the `"api_url"` field. You specified these values with the `BACKEND_ADDRESS` environment variable.
 - Encode the public TLS certificate of the node in base64 format and paste it in the`"pem"` field. This certificate was referenced by the `SERVER_TLS_CLIENT_CA_FILES` environment variable.
@@ -611,8 +612,8 @@ You can upgrade your deployment to the latest version of the {{site.data.keyword
 
 If you encounter issues that are related to Hyperledger Fabric or the underlying images, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page. When you open a case you need to select your product, {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
 
-{{site.data.keyword.IBM_notm}} provides support for issues that are related to the Hyperledger Fabric code or the steps to download and deploy the images that you can find in this documentation. {{site.data.keyword.IBM_notm}} does not provide support for issues that relate to the operation of the images or your underlying infrastructure. Deployment issues due to the specific circumstances of the customer environment will be the customer's responsibility to investigate. If you need assistance with the deployment and management of a Fabric network, use the [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about) offering.
+{{site.data.keyword.IBM_notm}} provides support for issues that are related to the Hyperledger Fabric code or the steps to download and deploy the images that you can find in this documentation. {{site.data.keyword.IBM_notm}} does not provide support for issues that relate to the operation of the images or your underlying infrastructure. Deployment issues due to the specific circumstances of the customer environment will be the customer's responsibility to investigate. If you need assistance with the deployment and management of a Fabric network, use the [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about) offering.
 
-You can take advantage of free blockchain developer resources and support forums to troubleshoot problems and get help from {{site.data.keyword.IBM_notm}} and the Fabric community. For more information, see [Resources and support forums](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support#blockchain-support-resources).
+You can take advantage of free blockchain developer resources and support forums to troubleshoot problems and get help from {{site.data.keyword.IBM_notm}} and the Fabric community. For more information, see [Resources and support forums](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-resources).
 
 

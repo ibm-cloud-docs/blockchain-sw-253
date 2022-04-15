@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: smart contract, private data, private data collection, anchor peer, instantiation, install smart contract
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -50,9 +50,9 @@ In this tutorial, we go through the steps to use the {{site.data.keyword.blockch
 
 Before you can install a smart contract, ensure that you have the following things ready.
 
-- You must either [build a network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network) or [join a network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network) by using your {{site.data.keyword.blockchainfull_notm}} Platform console.
-- Because smart contracts are installed onto peers, ensure that you [add peers](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-peer-org1) to your console.
-- Smart contracts are instantiated on a channel. Therefore, you must [create a channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-channel) or [join a channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-join-peer-org2) by using your console.
+- You must either [build a network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network) or [join a network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network) by using your {{site.data.keyword.blockchainfull_notm}} Platform console.
+- Because smart contracts are installed onto peers, ensure that you [add peers](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-peer-org1) to your console.
+- Smart contracts are instantiated on a channel. Therefore, you must [create a channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-channel) or [join a channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-join-peer-org2) by using your console.
 - The {{site.data.keyword.blockchainfull_notm}} Platform supports smart contracts written in JavaScript, TypeScript, Java, and Go. When you are allocating resources to your peer node, it is important to note that JavaScript and TypeScript smart contracts require more resources than contracts written in Go.
 
 
@@ -62,7 +62,7 @@ Before you can install a smart contract, ensure that you have the following thin
 The {{site.data.keyword.blockchainfull_notm}} console manages the *deployment* of smart contracts rather than development. If you are interested in developing smart contracts, you can get started using tutorials provided by the Hyperledger Fabric community and tooling provided by {{site.data.keyword.IBM_notm}}.
 
 - To learn how smart contracts can be used to conduct transactions among multiple parties, see the [Developing applications topic](https://hyperledger-fabric.readthedocs.io/en/release-1.4/developapps/developing_applications.html){: external} in the Hyperledger Fabric documentation.
-- When you are ready to start building smart contracts, you can use the [{{site.data.keyword.blockchainfull_notm}} Visual Studio code extension](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode) to start building your own smart contract project. You can also use that extension to [connect directly to your network from Visual Studio Code](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-connecting-ibp) and explore the inline tutorials.
+- When you are ready to start building smart contracts, you can use the [{{site.data.keyword.blockchainfull_notm}} Visual Studio code extension](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode) to start building your own smart contract project. You can also use that extension to [connect directly to your network from Visual Studio Code](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-connecting-ibp) and explore the inline tutorials.
 - For a quick tutorial on developing smart contracts, see [Develop a smart contract with the IBM Blockchain Platform VS Code extension](https://developer.ibm.com/tutorials/ibm-blockchain-platform-vscode-smart-contract/){: external}.
 - For a more in-depth end-to-end tutorial about using an application to interact with smart contracts, see [Hyperledger Fabric Commercial Paper tutorial](https://hyperledger-fabric.readthedocs.io/en/release-1.4/tutorial/commercial_paper.html){: external}.
 - To learn about how to incorporate access control mechanisms into your smart contract, see [Chaincode for Developers](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4ade.html#chaincode-access-control){: external}.
@@ -70,7 +70,7 @@ The {{site.data.keyword.blockchainfull_notm}} console manages the *deployment* o
 Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you will have to vendor the shim and then repackage any smart contracts written in Golang (Go) that you installed on peers deployed using the 1.4.x Fabric image. Without this vendoring and repackaging, the smart contract will not run on a peer using a Fabric 2.x image. You will not need to do this on smart contracts that are written in Java or Node.js, nor for smart contracts written and packaged using the 2.0 package. See [Vendoring smart contracts](#ibp-console-smart-contracts-write-package-vendor) for details.
 {: important}
 
-When you are ready to install and instantiate your smart contract to the {{site.data.keyword.blockchainfull_notm}} platform, the smart contract must be packaged into `.cds` format. For more information, see [Packaging smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract). Alternatively, you can use peer CLI commands to build the package. For v1.4.x commands, see [1.4.x peer CLI commands](https://hyperledger-fabric.readthedocs.io/en/release-1.4/commands/peerchaincode.html#peer-chaincode-package){: external}.
+When you are ready to install and instantiate your smart contract to the {{site.data.keyword.blockchainfull_notm}} platform, the smart contract must be packaged into `.cds` format. For more information, see [Packaging smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract). Alternatively, you can use peer CLI commands to build the package. For v1.4.x commands, see [1.4.x peer CLI commands](https://hyperledger-fabric.readthedocs.io/en/release-1.4/commands/peerchaincode.html#peer-chaincode-package){: external}.
 
 ### Vendoring smart contracts
 {: #ibp-console-smart-contracts-write-package-vendor}
@@ -80,7 +80,7 @@ If your smart contract uses the
 
 **Why is vendoring the shim required?**  
 
-In Fabric v1.4.x, the Go chaincode shim and protocol buffers (protos) were included with the Fabric distribution and were included in the Go chaincode runtime in the {{site.data.keyword.blockchainfull_notm}} Platform. Starting with v2.0, Fabric now provides the chaincode [shim](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-shim) and protos as separate repositories that need to be imported or "vendored" in Go smart contracts before they can be installed on a peer that runs a Fabric v2.x image. To vendor the shim for your Go smart contract, navigate to your smart contract source folder and initialize the Go module by issuing the following command which creates a `go.mod`file:
+In Fabric v1.4.x, the Go chaincode shim and protocol buffers (protos) were included with the Fabric distribution and were included in the Go chaincode runtime in the {{site.data.keyword.blockchainfull_notm}} Platform. Starting with v2.0, Fabric now provides the chaincode [shim](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-shim) and protos as separate repositories that need to be imported or "vendored" in Go smart contracts before they can be installed on a peer that runs a Fabric v2.x image. To vendor the shim for your Go smart contract, navigate to your smart contract source folder and initialize the Go module by issuing the following command which creates a `go.mod`file:
 
 ```
 go mod init
@@ -166,7 +166,7 @@ The source directory must be the smart contract name which is "marbles" in this 
 `import "marbles/util"`
 {: note}
 
-After you have completed these steps, you need to repackage your smart contract using the process that is described in [Packaging smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract).
+After you have completed these steps, you need to repackage your smart contract using the process that is described in [Packaging smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract).
 
 Fabric-contract-api and fabric-shim node modules must be at v1.4.5 or greater to work with Node version 12. If you are using a smart contract that was originally written to work with Fabric 1.4, check the node modules before deploying your smart contract on a peer that runs a Fabric v2.x image.
 {: tip}
@@ -177,7 +177,7 @@ Fabric-contract-api and fabric-shim node modules must be at v1.4.5 or greater to
 Use your console to perform these steps:
 
 1. Click the **Smart contracts** tab to install one or more smart contracts.
-2. Click **Install smart contract** to upload the smart contract package file in [.cds format](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4noah.html#packaging){: external}. _The smart contract package file must be less than 25 MB in size._ You can use the {{site.data.keyword.blockchainfull_notm}} Visual Studio Code extension to [create a smart contract package](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract). When you install the package from the **Smart contracts** tab, you can select one or more peer nodes to install the smart contracts on.
+2. Click **Install smart contract** to upload the smart contract package file in [.cds format](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4noah.html#packaging){: external}. _The smart contract package file must be less than 25 MB in size._ You can use the {{site.data.keyword.blockchainfull_notm}} Visual Studio Code extension to [create a smart contract package](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract). When you install the package from the **Smart contracts** tab, you can select one or more peer nodes to install the smart contracts on.
 
 If only one peer exists in the console, the smart contract will be installed on it. You are not prompted to select a peer to install the smart contract on. You can navigate to the nodes tab and click a peer that is managed by your console to view the list of smart contracts installed on an individual peer.
 
@@ -190,7 +190,7 @@ You can return to the **Smart contracts** tab later to install the smart contrac
 ## Step three: Instantiate a smart contract
 {: #ibp-console-smart-contracts-instantiate}
 
-Smart contracts are instantiated on a channel. Any console member with peers joined to a channel can instantiate a smart contract and specify the associated [endorsement policy](/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary#glossary-endorsement-policy).
+Smart contracts are instantiated on a channel. Any console member with peers joined to a channel can instantiate a smart contract and specify the associated [endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary#glossary-endorsement-policy).
 
 Use your console to perform these steps:
 
@@ -295,7 +295,7 @@ You can upgrade a smart contract to change its code, endorsement policy, or priv
 Before you upgrade an instantiated smart contract, the new version of the smart contract must be installed on all peers in the channel that are running the previous level of the smart contract.
 {: note}
 
-Be aware that after you have upgraded your peers to the v2.x image and switched your application channel capability to 2.0, you can no longer upgrade your smart contract using the instructions in this topic. Instead, you need to repackage your smart contract and [deploy the smart contract on the network using Fabric v2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+Be aware that after you have upgraded your peers to the v2.x image and switched your application channel capability to 2.0, you can no longer upgrade your smart contract using the instructions in this topic. Instead, you need to repackage your smart contract and [deploy the smart contract on the network using Fabric v2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).
 {: important}
 
 ### How to upgrade a smart contract
@@ -352,8 +352,8 @@ In order to use private data with {{site.data.keyword.blockchainfull_notm}} Plat
 
     Instead of using the console to install and instantiate your smart contract with a collection config file, you can also use the Fabric SDK. Those instructions are also available under [How to use private data](https://hyperledger.github.io/fabric-sdk-node/release-1.4/tutorial-private-data.html){: external} in the Node SDK documentation.  
 
-    **Note:** A client needs to be an admin of your peer in order to install or instantiate a smart contract by using the SDK. Therefore, you need to download the certificates of the peer admin identity from your console wallet and pass the peer admin's signing certificate and private key to directly to the SDK instead of creating an application identity. For an example of how to pass a key pair to the SDK, see [Connecting to your network by using low-level Fabric SDK APIs](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app#ibp-console-app-low-level).  
+    **Note:** A client needs to be an admin of your peer in order to install or instantiate a smart contract by using the SDK. Therefore, you need to download the certificates of the peer admin identity from your console wallet and pass the peer admin's signing certificate and private key to directly to the SDK instead of creating an application identity. For an example of how to pass a key pair to the SDK, see [Connecting to your network by using low-level Fabric SDK APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-low-level).  
 
-3. **Configure anchor peers.** Because cross organizational [gossip](https://hyperledger-fabric.readthedocs.io/en/release-2.2/gossip.html){: external} must be enabled for private data to work, an anchor peer must exist for each organization in the collection definition. Refer to this information for [how to configure anchor peers](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-channels-anchor-peers) on your network.
+3. **Configure anchor peers.** Because cross organizational [gossip](https://hyperledger-fabric.readthedocs.io/en/release-2.2/gossip.html){: external} must be enabled for private data to work, an anchor peer must exist for each organization in the collection definition. Refer to this information for [how to configure anchor peers](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-channels-anchor-peers) on your network.
 
 Your channel is now configured to use private data.

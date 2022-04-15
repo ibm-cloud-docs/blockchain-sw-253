@@ -1,12 +1,12 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 content-type: faq
 
 ---
@@ -24,7 +24,8 @@ content-type: faq
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-v2-faq">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-v2-faq">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-v2-faq">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-faq">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-faq">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq">2.5.3</a>
 </p>
 
 **Hyperledger Fabric**
@@ -52,6 +53,7 @@ content-type: faq
 - [Do ordering service Raft nodes use Transport Layer Security (TLS) for communication?](#ibp-v2-faq-raft-tls)
 - [How can I back up and restore components and networks?](#ibp-v2-faq-backup-restore)
 - [What benefits are available with the new smart contract lifecycle available on nodes and channels running on Fabric v2.x?](#ibp-v2-faq-new-lifecycle)
+- [How can I check and interpret the status of my components through the Kubernetes command line?](#ibm-v2-faq-cr-status)
 
 **Certificates**
 - [Do you support using certificates from non-IBM Certificate Authorities (CAs)?](#ibp-v2-faq-v2-external-certs)
@@ -75,7 +77,7 @@ content-type: faq
 {: #ibp-v2-faq-v2-IBP-Overview-1-7}
 {: faq}
 
-Hyperledger Fabric is a powerful, versatile, pluggable, open source, distributed ledger technology capable of addressing a wide variety of use cases across many industries. {{site.data.keyword.blockchainfull_notm}} Platform is {{site.data.keyword.IBM_notm}}'s commercial distribution of Hyperledger Fabric. A key benefit of the platform is that  {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments. The platform is the **commercial distribution of Hyperledger Fabric** and includes integrated tools that provide end to end features for developers and network operators to develop, test, operate, monitor, and govern Fabric components by using an intuitive console UI. Quickly deploy an instance and use the streamlined console UI to [build a network](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network), easily [deploy smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts), [govern your components](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components), and [govern your channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern). Interested in APIs? See the [{{site.data.keyword.blockchainfull_notm}} Platform API reference](https://cloud.ibm.com/apidocs/blockchain){: external}. With the {{site.data.keyword.blockchainfull_notm}} Platform, it is easy to extend a basic network, work with multicloud solutions, and receive {{site.data.keyword.IBM_notm}} worldwide support when needed. Finally, the {{site.data.keyword.blockchainfull_notm}} Platform provides additional security benefits that are essential for running an enterprise-grade production network.
+Hyperledger Fabric is a powerful, versatile, pluggable, open source, distributed ledger technology capable of addressing a wide variety of use cases across many industries. {{site.data.keyword.blockchainfull_notm}} Platform is {{site.data.keyword.IBM_notm}}'s commercial distribution of Hyperledger Fabric. A key benefit of the platform is that  {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments. The platform is the **commercial distribution of Hyperledger Fabric** and includes integrated tools that provide end to end features for developers and network operators to develop, test, operate, monitor, and govern Fabric components by using an intuitive console UI. Quickly deploy an instance and use the streamlined console UI to [build a network](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network), easily [deploy smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts), [govern your components](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components), and [govern your channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern). Interested in APIs? See the [{{site.data.keyword.blockchainfull_notm}} Platform API reference](https://cloud.ibm.com/apidocs/blockchain){: external}. With the {{site.data.keyword.blockchainfull_notm}} Platform, it is easy to extend a basic network, work with multicloud solutions, and receive {{site.data.keyword.IBM_notm}} worldwide support when needed. Finally, the {{site.data.keyword.blockchainfull_notm}} Platform provides additional security benefits that are essential for running an enterprise-grade production network.
 
 
 
@@ -114,7 +116,7 @@ Containers deployed from any of the above sources can be connected on a single c
 ## Where can a customer deploy the {{site.data.keyword.blockchainfull_notm}} Platform and how will {{site.data.keyword.IBM_notm}} support those deployment environments?
 {: #ibp-v2-faq-sw-support}
 
-For an updated list of all the {{site.data.keyword.blockchainfull_notm}} Platform deployment options check out the [Supported Platforms](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites).
+For an updated list of all the {{site.data.keyword.blockchainfull_notm}} Platform deployment options check out the [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites).
 
 It is important to note that the {{site.data.keyword.blockchainfull_notm}} support only spans across Hyperledger Fabric based component issues for customers who have purchased the Blockchain Platform. Some examples include assistance in Fabric upgrades, smart contract deployment, adding peers to channels, etc.
 
@@ -127,9 +129,9 @@ On the other hand, {{site.data.keyword.blockchainfull_notm}} will not provide de
 
 Yes. The {{site.data.keyword.blockchainfull_notm}} Platform can be purchased and deployed in four ways on OpenShift:
 - [{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/blockchain-platform){: external} is deployed and runs on [IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/about?platformType=openshift){: external}.
-- {{site.data.keyword.blockchainfull_notm}} Platform is also available as a software offering that can be deployed on Red Hat OpenShift and can run in all environments where OpenShift Container Platform (OCP) is supported. Read more about running OpenShift Container Platform [here](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about).
+- {{site.data.keyword.blockchainfull_notm}} Platform is also available as a software offering that can be deployed on Red Hat OpenShift and can run in all environments where OpenShift Container Platform (OCP) is supported. Read more about running OpenShift Container Platform [here](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about).
 - {{site.data.keyword.blockchainfull_notm}} Platform is available to be deployed to your OpenShift cluster directly from the [Red Hat Marketplace](https://marketplace.redhat.com/en-us/products/ibm-blockchain){: external}.
-- Finally, experienced Hyperledger Fabric customers also have the option to download and use the peer, CA, orderer, and smart contract container [images](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-images).
+- Finally, experienced Hyperledger Fabric customers also have the option to download and use the peer, CA, orderer, and smart contract container [images](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images).
 
 
 
@@ -137,13 +139,13 @@ Yes. The {{site.data.keyword.blockchainfull_notm}} Platform can be purchased and
 {: #ibp-v2-ports}
 {: faq}
 
-See the port information in the [Security topic](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-security#ibp-security-ibp-ports).
+See the port information in the [Security topic](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-security#ibp-security-ibp-ports).
 
 ## How can I estimate the {{site.data.keyword.blockchainfull_notm}} Platform sizing requirements for my development, test, and production environments?
 {: #ibp-v2-faq-sizing}
 {: faq}
 
-After you understand how many CAs, peers, and ordering nodes are required, you can examine the default resource allocations table for  [OpenShift](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp-getting-started#deploy-ocp-resources-required) or [Kubernetes](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8#deploy-k8-resources-required) to get an approximate estimate of the CPUs (VPCs) required for your network.  If you plan to deploy the platform outside of {{site.data.keyword.cloud_notm}}, you will need to buy licenses per VPC (CPU) based on expected usage. As a reminder, these are only sold per VPC so you should always round up the number of VPCs if you plan to use fractional parts. For example, if you estimate that you will need 11.2 VPCs then you should license 12 VPCs.
+After you understand how many CAs, peers, and ordering nodes are required, you can examine the default resource allocations table for  [OpenShift](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-getting-started#deploy-ocp-resources-required) or [Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-resources-required) to get an approximate estimate of the CPUs (VPCs) required for your network.  If you plan to deploy the platform outside of {{site.data.keyword.cloud_notm}}, you will need to buy licenses per VPC (CPU) based on expected usage. As a reminder, these are only sold per VPC so you should always round up the number of VPCs if you plan to use fractional parts. For example, if you estimate that you will need 11.2 VPCs then you should license 12 VPCs.
 
 
 
@@ -175,17 +177,17 @@ View the Support page by clicking the question mark icon <img src="images/suppor
 
 Depending on the contents of a Fabric release and {{site.data.keyword.blockchainfull_notm}} Platform, it might only be necessary to upgrade nodes to get access to the latest features. However, often it is necessary to update channel configurations with the latest capabilities in order to get access to the latest Fabric features. In these cases, it is important to upgrade components and channels in a particular order:
 
-1. Upgrade nodes to the latest Fabric versions. Note that nodes are always backward compatible with earlier versions and earlier capabilities. For more information about upgrading nodes, see [Upgrading to a new version of Fabric](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components#ibp-console-govern-components-upgrade).
-2. Update channels with any new channel capabilities. If you update capabilities to a capability level (such as 2.0) before upgrading nodes to the Fabric version corresponding to a capability, the node may crash. For more information, see [Capabilities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-capabilities).
+1. Upgrade nodes to the latest Fabric versions. Note that nodes are always backward compatible with earlier versions and earlier capabilities. For more information about upgrading nodes, see [Upgrading to a new version of Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade).
+2. Update channels with any new channel capabilities. If you update capabilities to a capability level (such as 2.0) before upgrading nodes to the Fabric version corresponding to a capability, the node may crash. For more information, see [Capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-capabilities).
 
-If you are moving from v1.4.x to v2.x, you may have to update your smart contracts to conform to new smart contract lifecycle. For more information, see [Upgrading to a new version of Fabric](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2).
+If you are moving from v1.4.x to v2.x, you may have to update your smart contracts to conform to new smart contract lifecycle. For more information, see [Upgrading to a new version of Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2).
 {: tip}
 
 ## I am currently using Hyperledger Fabric v1.4.x and want to move to {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x or 2.5.x. Can I continue to use Raft?
 {: #ibp-v2-faq-migrate-raft}
 {: faq}
 
-Yes. The {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x or 2.5 uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-faq#ibp-v2-faq-interoperability).
+Yes. The {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x or 2.5 uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-interoperability).
 
 
 
@@ -195,7 +197,7 @@ Yes. The {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x or 2.5 uses R
 {: faq}
 {: support}
 
-You have the choice of either CouchDB or LevelDB when you configure your peer database. Because data is modeled differently in a Couch database than in a Level database, the peers in a channel must all use the same database type. See [LevelDB versus CouchDB](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-level-couch) to decide what is best for your business needs.
+You have the choice of either CouchDB or LevelDB when you configure your peer database. Because data is modeled differently in a Couch database than in a Level database, the peers in a channel must all use the same database type. See [LevelDB versus CouchDB](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-level-couch) to decide what is best for your business needs.
 
 ## What types of off-chain databases are supported with the {{site.data.keyword.blockchainfull_notm}} Platform?
 {: #ibp-v2-faq-offchain-db}
@@ -225,7 +227,7 @@ Yes. The Raft ordering service nodes are configured to use TLS communication. TL
 
 As with anything that is deployed to a Kubernetes-based cluster, backups of components and networks in the {{site.data.keyword.blockchainfull}} Platform are a matter of backing up its [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/){: external}. These volumes are where ledgers and other types of storage are mounted so they can be used by nodes.
 
-As a result, "backing up" a component or a network is the process of saving a copy of the relevant persistent volumes, while "restoring" a component or network involves bringing up components and pointing them to these saved volumes. For more information, check out [Backing up and restoring components and networks](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore){: external}.
+As a result, "backing up" a component or a network is the process of saving a copy of the relevant persistent volumes, while "restoring" a component or network involves bringing up components and pointing them to these saved volumes. For more information, check out [Backing up and restoring components and networks](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore){: external}.
 
 ## What benefits are available with the new smart contract lifecycle available on nodes and channels running on Fabric v2.x?
 {: #ibp-v2-faq-new-lifecycle}
@@ -235,28 +237,58 @@ The new smart contract lifecycle allows channel members to collaborate in the de
 
 This separation of concerns opens exciting new opportunities for collaborating organizations. For example, different organizations can install smart contracts on their peers that contain only the code relevant to their business role and make minor updates to these smart contracts where necessary, without needing to seek new approvals from other organizations.
 
-For a tutorial on how this process is handled by the console, check out [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+For a tutorial on how this process is handled by the console, check out [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).
 
-For information about to take advantage of the new lifecycle when writing a smart contract, check out [Writing powerful smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-write-powerful-smart-contracts).
+For information about to take advantage of the new lifecycle when writing a smart contract, check out [Writing powerful smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-write-powerful-smart-contracts).
+
+## How can I check and interpret the status of my components through the Kubernetes command line?
+{: #ibm-v2-faq-cr-status}
+{: faq}
+
+To check the status of your component, run the following command:
+```
+kubectl get <CUSTOM_RESOURCE_TYPE> <CUSTOM_RESOURCE_NAME> -n <NAMESPACE> -o yaml
+```
+{: codeblock}
+
+- Replace `<CUSTOM_RESOURCE_TYPE>` with the custom resource type of your component (`ibpca`, `ibppeer`, `ibporderer`, or `ibpconsole`).
+- Replace `<CUSTOM_RESOURCE_NAME>` with the name of your component.
+- Replace `<NAMESPACE>` with the name of your {{site.data.keyword.IBM_notm}} Support for Hyperledger Fabric deployment namespace or OpenShift project.
+
+The `spec.status` field will contain details of your component's status:
+- `errorCode`
+- `lastHeartbeatTime`: when the controller last reconciled the component
+- `message`: long explanation of the status type
+- `reason`: short explanation of the status
+- `status`: "true" or "false" bsed on if status is valid
+- `version`: the product (IBP) version of the component
+- `versions`: the operand version of the component
+- `type`: describes the current status of the component
+    - **Deploying**: component pod(s) spinning up but not yet running and ready
+    - **Deployed**: component pod(s) are running
+    - **Precreated**: (specific to the Orderer) Orderer is waiting for the genesis block to be created
+    - **Error**: component hit an error during reconcile, or a certificate has expired
+    - **Warning**: one or more of the component's certificate will be expiring within 30 days (by default)
+    - **Initializing**: component is being reconciled again due to spec updates in the pre-reconcile checks
 
 ## Do you support using certificates from non-IBM Certificate Authorities?
 {: #ibp-v2-faq-v2-external-certs}
 {: faq}
 
-Yes, you can bring your own certificates if they are issued by a CA that is X.509 compliant. The CA should sign by using ECDSA and the defaults should be set to use P256 curve. See this topic about [Using certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca).
+Yes, you can bring your own certificates if they are issued by a CA that is X.509 compliant. The CA should sign by using ECDSA and the defaults should be set to use P256 curve. See this topic about [Using certificates from an external CA with your peer or ordering node](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca).
 
 ## What is the recommended way to manage private keys?
 {: #ibp-v2-faq-hsm}
 {: faq}
 
-Because private keys are not stored by the platform, users are responsible for downloading and securing their private key. Therefore, when a higher level of security is required for private keys, an HSM is recommended. An HSM is a hardware appliance that performs cryptographic operations and provides the capability to ensure that the cryptographic keys never leave the HSM. Hyperledger Fabric supports HSM devices that implement the PKCS #11 standard. PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys. See [Configuring a node to use a Hardware Security Module (HSM)](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm) to learn more.
+Because private keys are not stored by the platform, users are responsible for downloading and securing their private key. Therefore, when a higher level of security is required for private keys, an HSM is recommended. An HSM is a hardware appliance that performs cryptographic operations and provides the capability to ensure that the cryptographic keys never leave the HSM. Hyperledger Fabric supports HSM devices that implement the PKCS #11 standard. PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys. See [Configuring a node to use a Hardware Security Module (HSM)](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm) to learn more.
 
 ## Can I integrate my corporate LDAP server with the Certificate Authority (CA) in the {{site.data.keyword.blockchainfull_notm}} Platform?
 {: #ibp-v2-faq-ldap}
 {: faq}
 
-You cannot currently directly integrate your [LDAP](#x2481619){: term} server with the CA. However, you can use an external mechanism to generate X.509 certificates for the LDAP users. To use those certificates with a peer or ordering service, see these topics on [Using certs from an external CA for your peer or ordering service](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca) and
-[Manually building an organization MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-build-msp).  
+You cannot currently directly integrate your [LDAP](#x2481619){: term} server with the CA. However, you can use an external mechanism to generate X.509 certificates for the LDAP users. To use those certificates with a peer or ordering service, see these topics on [Using certs from an external CA for your peer or ordering service](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca) and
+[Manually building an organization MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-build-msp).  
 
 Also, you cannot configure the blockchain console login authentication to use an LDAP user registry at this time.
 {: note}
@@ -266,7 +298,7 @@ Also, you cannot configure the blockchain console login authentication to use an
 {: faq}
 {: support}
 
-Similar to how passwords need to be regularly updated, identity certificates need to be renewed, a process also referred to as "certificate rotation". The platform displays certificate expiration dates for components throughout the console.  When a certificate expires, transactions on the network will fail because the identity can no longer be trusted.  It is your responsibility to monitor those expiration dates and manage your certificate renewal accordingly. The process varies depending on the type of certificate, when it was generated, and for organization admin certificates, whether Node OU support was enabled on the MSP when the identity was enrolled. The platform attempts to renew the peer and ordering node enrollment certificates 30 days before they expire. See [Managing certificates](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt) to learn more about the types of certificates that you need to monitor and how to renew them.
+Similar to how passwords need to be regularly updated, identity certificates need to be renewed, a process also referred to as "certificate rotation". The platform displays certificate expiration dates for components throughout the console.  When a certificate expires, transactions on the network will fail because the identity can no longer be trusted.  It is your responsibility to monitor those expiration dates and manage your certificate renewal accordingly. The process varies depending on the type of certificate, when it was generated, and for organization admin certificates, whether Node OU support was enabled on the MSP when the identity was enrolled. The platform attempts to renew the peer and ordering node enrollment certificates 30 days before they expire. See [Managing certificates](/docs/blockchain-sw-253?topic=blockchain-sw-253-cert-mgmt) to learn more about the types of certificates that you need to monitor and how to renew them.
 
 ## What languages are supported for smart contracts?
 {: #ibp-v2-faq-v2-IBP-Overview-1-4}
@@ -291,7 +323,7 @@ Ansible is an open source technology and this product is not officially supporte
 {: #ibp-v2-faq-vscode-tutorials}
 {: faq}
 
-The {{site.data.keyword.blockchainfull_notm}} Platform extension provides guided tutorials within VS Code to help you get started. You can find these tutorials on the extension home page when the extension is first installed. However, you can return to the tutorials and the home page by going to the extensions tab. For more information, see [Guided tutorials in VS Code](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-guided-tutorials).
+The {{site.data.keyword.blockchainfull_notm}} Platform extension provides guided tutorials within VS Code to help you get started. You can find these tutorials on the extension home page when the extension is first installed. However, you can return to the tutorials and the home page by going to the extensions tab. For more information, see [Guided tutorials in VS Code](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-guided-tutorials).
 
 ## Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?
 {: #ibp-v2-faq-mon-client-app}

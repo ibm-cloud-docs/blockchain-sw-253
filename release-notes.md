@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-15"
 
 keywords: release note, latest changes, Hyperledger Fabric, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -21,7 +21,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
-[Installing the 2.5.2 fix pack](/docs/blockchain-sw-252?topic=blockchain-sw-252-install-fixpack) provides instructions on how to apply the latest fix pack to your blockchain instance.  
+[Installing the 2.5.2 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack) provides instructions on how to apply the latest fix pack to your blockchain instance.  
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
@@ -99,7 +99,7 @@ Miscellaneous bug fixes and security patches.
 
 Miscellaneous bug fixes and security patches.
 
-Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
+Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
 
 
 
@@ -153,7 +153,7 @@ Miscellaneous bug fixes and security patches.
 ### New logging configuration panel
 {: #01-12-2021-logger-ui}
 
-A new panel is available to override peer and ordering node log levels for specific component loggers. See [Configuring node logging](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage#ibp-console-manage-logger) for more information.
+A new panel is available to override peer and ordering node log levels for specific component loggers. See [Configuring node logging](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#ibp-console-manage-logger) for more information.
 
 ## 08 Dec 2020
 {: #12-08-2020}
@@ -189,17 +189,17 @@ If you are running **OpenShift Container Platform 3.11** in {{site.data.keyword.
 
 In addition to deploying new nodes based on the latest Fabric v2.2.1 image, you can upgrade your existing nodes to Fabric v2.x and the capabilities of your channels, allowing organizations to take advantage of the new smart contract lifecycle process.
 
-For information about upgrading nodes, check out [Upgrading to a new version of Fabric](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components#ibp-console-govern-components-upgrade). For information about updating the capabilities of your channels, check out [Capabilities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-capabilities).
+For information about upgrading nodes, check out [Upgrading to a new version of Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade). For information about updating the capabilities of your channels, check out [Capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-capabilities).
 
 ### Support for Fabric v2.x smart contract lifecycle
 {: #11-02-2020-lc}
 
-The platform has been updated to include support for Fabric v2.x smart contract lifecycle process, which enables the distributed governance of smart contracts. Learn mode about how to [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+The platform has been updated to include support for Fabric v2.x smart contract lifecycle process, which enables the distributed governance of smart contracts. Learn mode about how to [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).
 
 ### Improvements for HSM support
 {: #11-02-2020-hsm}
 
-A new [process](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-hsm-build-docker) is available to configure an HSM for your blockchain nodes, delivering faster performance.
+A new [process](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-hsm-build-docker) is available to configure an HSM for your blockchain nodes, delivering faster performance.
 
 ### Certificate renewal enhancements
 {: #11-02-2020-cert-renew}

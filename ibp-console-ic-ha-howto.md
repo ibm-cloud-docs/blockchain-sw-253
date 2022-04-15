@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: HA, highly availability, multiregion
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-hadr-mr">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-hadr-mr">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-hadr-mr">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-hadr-mr">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-hadr-mr">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-hadr-mr">2.5.3</a>
 </p>
 
 Multiregion HA configuration provides the highest degree of HA coverage that is possible. Deploying peers across multiple geographic regions ensures that if any one region becomes unavailable, the peers in other regions can continue to transact. Note that multiregion HA support for CAs and the ordering service is not currently available.
@@ -50,17 +51,17 @@ This tutorial assumes that an ordering service exists with a channel defined tha
 ### Step one: Create the peer organization's CA and metadata in cluster one
 {: #ibp-console-hadr-peerCA}
 
-1. Deploy a CA in the first cluster by following the instructions in the Build a network tutorial for [Creating your peer organization's CA](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-CA-org1CA). Make note of the values of the CA **enroll ID** and **secret** because you need to provide those values when you import the CA into other clusters.
-2. After the CA tile status indicator is green, `Running`, follow the instructions to [Register identities with your CA](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-use-CA-org1). In those instructions, you create two identities, one for the peer and another for the peer's organization admin identity.
-3. [Create the peer's organization MSP definition](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-peers-org1) for the peer's organization in the first cluster.
-4. [Export the peer's organization definition](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-add-org2-remote) and share it with an ordering service admin.
-5. Similarly, the ordering service admin needs to follow the steps to [import the peer's organization](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-import-remote-msp) and add it to the consortium. They will also need to complete the steps in those instructions to export the ordering service to a JSON file.
-6. [Import the ordering service JSON file](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-import-remote-orderer) to your console.
-7. [Create a peer](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-peer-create) in the first cluster.
-8. [Join your peer to the channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-join-peer-org2). Make this peer an [anchor peer](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-channels-anchor-peers), as this allows service discovery, private data, and peer gossip to be used. For HA, it is recommended that you add each redundant peer as an anchor peer. That way if one of the peers is unavailable, gossip between organizations can continue.
-5. [Install and Propose smart contract](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-install-propose) on your peer.
+1. Deploy a CA in the first cluster by following the instructions in the Build a network tutorial for [Creating your peer organization's CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-CA-org1CA). Make note of the values of the CA **enroll ID** and **secret** because you need to provide those values when you import the CA into other clusters.
+2. After the CA tile status indicator is green, `Running`, follow the instructions to [Register identities with your CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-use-CA-org1). In those instructions, you create two identities, one for the peer and another for the peer's organization admin identity.
+3. [Create the peer's organization MSP definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-peers-org1) for the peer's organization in the first cluster.
+4. [Export the peer's organization definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-add-org2-remote) and share it with an ordering service admin.
+5. Similarly, the ordering service admin needs to follow the steps to [import the peer's organization](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-import-remote-msp) and add it to the consortium. They will also need to complete the steps in those instructions to export the ordering service to a JSON file.
+6. [Import the ordering service JSON file](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-import-remote-orderer) to your console.
+7. [Create a peer](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-peer-create) in the first cluster.
+8. [Join your peer to the channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-join-peer-org2). Make this peer an [anchor peer](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-channels-anchor-peers), as this allows service discovery, private data, and peer gossip to be used. For HA, it is recommended that you add each redundant peer as an anchor peer. That way if one of the peers is unavailable, gossip between organizations can continue.
+5. [Install and Propose smart contract](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-install-propose) on your peer.
 
-After the smart contract definition has been proposed, it must be [approved](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-approve) and [committed](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-commit).
+After the smart contract definition has been proposed, it must be [approved](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-approve) and [committed](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-commit).
 
 ### Step two: Export the metadata and identities from cluster one
 {: #ibp-console-hadr-export-meta1}
@@ -79,7 +80,7 @@ After the smart contract definition has been proposed, it must be [approved](/do
 ### Step three: Import the metadata and identities in to cluster two and three
 {: #ibp-console-hadr-import-meta23}
 
-1. In clusters two and three, [import the CA JSON file](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-import-nodes#ibp-console-import-ca) that you exported from cluster one.  
+1. In clusters two and three, [import the CA JSON file](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-import-nodes#ibp-console-import-ca) that you exported from cluster one.  
 2. If you will need to use the CA to register other identities, you need to open the imported CA and associate the CA administrator enroll ID and secret that you used when you deployed the CA on cluster one.
 3. Import the peer organization MSP definition JSON file that you exported from cluster one.
     - In the **Organizations** tab click **Import MSP definition**.
@@ -87,7 +88,7 @@ After the smart contract definition has been proposed, it must be [approved](/do
     - Click **I have an administrator identity for the MSP definition** checkbox to allow you to use this MSP definition when you create new peers in other zones.
     - Click **Import MSP definition**.
 4. Import the organization admin identity JSON file that you exported from cluster one into the console wallet on clusters two and three.
-5. In clusters two and three, [import the ordering service JSON file](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-import-remote-orderer) to your console.
+5. In clusters two and three, [import the ordering service JSON file](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-import-remote-orderer) to your console.
 
 ### Step four: Create new peers in cluster two and three and join a channel
 {: #ibp-console-hadr-create-new-peers}

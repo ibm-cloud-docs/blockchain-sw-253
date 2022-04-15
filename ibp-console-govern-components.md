@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: network components, Kubernetes, OpenShift, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB, ordering nodes, ordering, add and remove, governance
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-govern-components">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-govern-components">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-govern-components">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components">2.5.3</a>
 </p>
 
 After creating CAs, peers, and ordering nodes, you need to monitor the resources used by the nodes and potentially reallocate resources.
@@ -33,7 +34,7 @@ After creating CAs, peers, and ordering nodes, you need to monitor the resources
 
 After a node has been created, there are three main ways to update it.
 
-1. **Update its configuration**. Just as it is possible to override configuration parameters when deploying a node, it is possible to edit many parameters and redeploy the node. For more information, see our topic on [Advanced deployment options](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment).
+1. **Update its configuration**. Just as it is possible to override configuration parameters when deploying a node, it is possible to edit many parameters and redeploy the node. For more information, see our topic on [Advanced deployment options](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment).
 2. **Increase the resources allocated to it**. If you notice that the performance of a node is beginning to lag or that its storage is beginning to run out, you can choose whether to deploy a larger node and join it to channels or whether to increase the resources allocated to your existing node.
 3. **Upgrade its Fabric version**. Every node is deployed using a release version of Hyperledger Fabric. When new versions of Fabric become available on IBM Blockchain Platform, **Upgrade available** is visible on the tile representing the node. While upgrading to a new version of Fabric is always recommended, unless is rendered necessary by the capabilities of channels you want to join, it is typically optional. For more information, check out [Upgrading to a new version of Fabric](#ibp-console-govern-components-upgrade).
 
@@ -77,14 +78,14 @@ While some new versions of Fabric only require updating the Fabric version on no
 In these cases, the process of "updating to the latest" release is, at a high level, a two step process:
 
 1. Upgrade the Fabric version on all nodes.
-2. Update the channels to the new capability levels. For information about how to update channels, see [Capabilities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-capabilities).
+2. Update the channels to the new capability levels. For information about how to update channels, see [Capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-capabilities).
 
 You must upgrade nodes before you update the channels. If a node attempts to read a configuration block containing a capability level it does not understand (which is true in cases where the capability is a higher level than the node version), the node will crash **on all channels**. The node must then be upgraded to the appropriate Fabric version before it can be used again.
 {: important}
 
 At a high level, the process of upgrading a node involves two main steps:
 
-1. Backing up the persistent volumes associated with the node. These backups ensure that in the case of an upgrade failure in which the peer pod is corrupted that the node can be re-deployed using the ledger. For more information, see [Backup considerations for each node type](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore#backup-restore-node-considerations).
+1. Backing up the persistent volumes associated with the node. These backups ensure that in the case of an upgrade failure in which the peer pod is corrupted that the node can be re-deployed using the ledger. For more information, see [Backup considerations for each node type](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore#backup-restore-node-considerations).
 2. Upgrading the Fabric versions of the nodes one at a time (also known as a "rolling upgrade").
 
 It may also be necessary to update SDKs and smart contracts before you can take advantage of the latest Fabric features. For more information, check out [Step three: Update SDKs and smart contracts](#ibp-console-govern-components-upgrade-step-three).
@@ -96,9 +97,9 @@ Upgrading {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from
 ### Step one: Back up your ledger (optional)
 {: #ibp-console-govern-components-upgrade-step-one-ledger}
 
-It is recommended to take regular backups of the persistent volumes of your nodes as part of the normal process of network administration. For example, in our topic on backing up and restoring components and networks, an [example schedule](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore#backup-restore-schedule-snapshot) is provided which recommends that backups be taken of the ordering nodes and the peers (including the state database of the peer, if using CouchDB) each night.
+It is recommended to take regular backups of the persistent volumes of your nodes as part of the normal process of network administration. For example, in our topic on backing up and restoring components and networks, an [example schedule](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore#backup-restore-schedule-snapshot) is provided which recommends that backups be taken of the ordering nodes and the peers (including the state database of the peer, if using CouchDB) each night.
 
-However, if you are not taking regular backups, it is recommended that you minimally take a backup before attempting to upgrade a node, as it allows for a node to be restored to an earlier running state in cases where the upgrade fails. For information about how to backup your nodes by taking a snapshot of the relevant persistent volumes, check out [Taking snapshots](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore#backup-restore-take-snapshot).
+However, if you are not taking regular backups, it is recommended that you minimally take a backup before attempting to upgrade a node, as it allows for a node to be restored to an earlier running state in cases where the upgrade fails. For information about how to backup your nodes by taking a snapshot of the relevant persistent volumes, check out [Taking snapshots](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore#backup-restore-take-snapshot).
 
 ### Step two: Upgrade your nodes one at a time
 {: #ibp-console-govern-components-upgrade-step-two-rolling-upgrade}
@@ -115,7 +116,7 @@ You can then update the node:
 3. On the **Upgrade Fabric version** side panel, review the version of your node and the version you are upgrading to. If this is right, click **Next**.
 4. On the next panel, confirm the information and enter the name of the node being upgraded.
 
-The node will be unavailable during the upgrade. The status was turn grey and will read **Status unknown** or **Unavailable**. When the upgrade has completed, the status will turn green and be **Ready**. If the upgrade fails and the node lapses into an unrecoverable state, follow the instructions for [Restoring nodes](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore#backup-restore-restore) from a snapshot.
+The node will be unavailable during the upgrade. The status was turn grey and will read **Status unknown** or **Unavailable**. When the upgrade has completed, the status will turn green and be **Ready**. If the upgrade fails and the node lapses into an unrecoverable state, follow the instructions for [Restoring nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore#backup-restore-restore) from a snapshot.
 
 **It is a best practice to only upgrade one node of each type at a time**. In other words, if you need to upgrade both peers and ordering nodes, you can start a single peer upgrade and a single ordering node upgrade at the same time. However, do not attempt to upgrade multiple peers or multiple ordering nodes at the same time, as this threatens the availability of your components.
 
@@ -141,7 +142,7 @@ npm install --save fabric-contract-api@latest-1.4 fabric-shim@latest-1.4
 
 **Go**  
 
-Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you need to vendor the shim and then repackage any smart contracts written in Golang (Go) that use the [Go SDK](https://github.com/hyperledger/fabric-sdk-go). "Vendoring the shim"  effectively means that you are copying the dependencies into your project. Without this vendoring and repackaging, the Go smart contract cannot run on a peer using a Fabric 2.x image. If you are using the [IBM Developer Tools](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode) to develop and package your smart contract, the tooling performs the vendoring for you. This process is not required for smart contracts that are written in Java or Node.js, nor for Go smart contracts that use the [Go contract-api](https://github.com/hyperledger/fabric-contract-api-go){: external}.
+Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you need to vendor the shim and then repackage any smart contracts written in Golang (Go) that use the [Go SDK](https://github.com/hyperledger/fabric-sdk-go). "Vendoring the shim"  effectively means that you are copying the dependencies into your project. Without this vendoring and repackaging, the Go smart contract cannot run on a peer using a Fabric 2.x image. If you are using the [IBM Developer Tools](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode) to develop and package your smart contract, the tooling performs the vendoring for you. This process is not required for smart contracts that are written in Java or Node.js, nor for Go smart contracts that use the [Go contract-api](https://github.com/hyperledger/fabric-contract-api-go){: external}.
 
 **Java**  
 The `build.gradle` file for the smart contract must be updated:
@@ -173,16 +174,16 @@ If the smart contract was written using the **low-level APIs** provided by the F
 
 **Repackage smart contract**  
 
-After you have updated your smart contract, use [v2](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode#packaging-a-smart-contract) your smart contract.     
+After you have updated your smart contract, use [v2](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode#packaging-a-smart-contract) your smart contract.     
 
-For a look at how the new lifecycle is administered in the console, check out [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2). For a look at the possibilities the new lifecycle opens up, check out [Writing powerful smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-write-powerful-smart-contracts).
+For a look at how the new lifecycle is administered in the console, check out [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2). For a look at the possibilities the new lifecycle opens up, check out [Writing powerful smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-write-powerful-smart-contracts).
 
 ### Step four: Update capabilities
 {: #ibp-console-govern-components-upgrade-step-four-rolling-upgrade}
 
 Once your nodes, SDKs, and smart contracts have been upgraded to use the latest Fabric version, you can update your channel configuration to use the latest capabilities. Note that the Fabric version of your nodes must be at least at the corresponding capability level of the channel the node is joined to.
 
-For more information about capabilities and how to update a channel configuration to enable them, check out [Capabilities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-capabilities).
+For more information about capabilities and how to update a channel configuration to enable them, check out [Capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-capabilities).
 
 ## Deleting components
 {: #ibp-console-govern-components-delete}

@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: IBM Blockchain, IBM Blockchain Platform, terms, Fabric, Raft, CouchDB, consortium
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-glossary">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-glossary">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-glossary">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-glossary">2.5.3</a>
 </p>
 
 This topic defines {{site.data.keyword.blockchainfull}} Platform-specific terms that appear in this documentation. For a deeper understanding of terms, and for a glossary of terms that relate to Hyperledger Fabric concepts, refer to the [Hyperledger Fabric glossary](https://hyperledger-fabric.readthedocs.io/en/release-2.2/glossary.html){: external}.
@@ -67,7 +68,7 @@ Referring to a step in the Hyperledger Fabric v2.x smart contract lifecycle, aft
 
 ## Connection profile
 {: #glossary-connection-profile}
-A connection profile is used by the Fabric Client SDKs to connect to the network. A connection profile can be downloaded from the [Organizations tile](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#ibp-console-organizations-connx-profile).
+A connection profile is used by the Fabric Client SDKs to connect to the network. A connection profile can be downloaded from the [Organizations tile](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#ibp-console-organizations-connx-profile).
 
 ## Consensus
 {: #glossary-consensus}
@@ -127,7 +128,7 @@ The process of placing a smart contract on a peer’s file system. You must inst
 
 ## Instantiate
 {: #glossary-instantiate}
-The process of starting and initializing a smart contract container on a channel with peers running Fabric v1.4.x and v1.4 capabilities. After a smart contract is installed on the peers and every peer has joined the channel, the smart contract must be instantiated on the channel. Instantiation performs any necessary initialization of the smart contract, which includes setting the key value pairs that comprise a smart contract's initial world state. After instantiation, peers that have the smart contract installed can interact with the data governed by the smart contract. Starting in Fabric v2.x, the instantiation process has been replaced with a [propose, approve, and commit model](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+The process of starting and initializing a smart contract container on a channel with peers running Fabric v1.4.x and v1.4 capabilities. After a smart contract is installed on the peers and every peer has joined the channel, the smart contract must be instantiated on the channel. Instantiation performs any necessary initialization of the smart contract, which includes setting the key value pairs that comprise a smart contract's initial world state. After instantiation, peers that have the smart contract installed can interact with the data governed by the smart contract. Starting in Fabric v2.x, the instantiation process has been replaced with a [propose, approve, and commit model](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).
 
 ## Kafka
 {: #glossary-kafka}

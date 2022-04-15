@@ -6,7 +6,7 @@ lastupdated: "2022-04-01"
 
 keywords: smart contract, lifecycle, package, definition
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -111,9 +111,9 @@ For more information about smart contract best practices (as well as how smart c
 
 While a smart contract can be packaged using the peer CLI, the VS Code extension for developing smart contracts is a highly useful tool and can be downloaded to your local system.
 
-For more information, see [Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools](/docs/blockchain-sw-252?topic=blockchain-sw-252-develop-vscode).
+For more information, see [Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools](/docs/blockchain-sw-253?topic=blockchain-sw-253-develop-vscode).
 
 ## Installing a package and proposing a definition
 {: #write-powerful-smart-contracts-installing-proposing}
 
-For information about how to use the console to install smart contract packages and propose and commit smart contract definitions on a channel, see [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2).
+For information about how to use the console to install smart contract packages and propose and commit smart contract definitions on a channel, see [Deploy a smart contract using Fabric v2.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2).

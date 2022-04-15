@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: high availability, HA, failures, zone failure, region failure, component failure, worker node failure, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -23,7 +23,8 @@ subcollection: blockchain-sw-252
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-ha">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-ha">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-ha">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-ha">2.5.3</a>
 </p>
 
 Use the built-in Kubernetes features along with {{site.data.keyword.blockchainfull}} Platform component deployment strategies to make your blockchain networks more highly available and protect your network from downtime when a failure occurs in your cluster.
@@ -59,7 +60,7 @@ HA for peers means always having redundant peers, that is at least two peers ava
 
 For even more robust HA coverage, you can stand up multiple clusters in multiple regions and deploy peers in all of them. However, if high performance is desired, care must be taken when distributing peers to ensure the latency and bandwidth between them is sufficient to achieve your performance targets.
 
-**Anchor peers** on a channel facilitate cross-organization communication that is required for private data, [gossip](#x9829550){: term}, and service discovery to work. If only one anchor peer exists on a channel, and that peer becomes unavailable, the organizations are no longer connected and the cross-organization gossip is no longer possible. Therefore, when you create redundant peers for an organization, be sure to add redundant [anchor peers on the channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern#ibp-console-govern-channels-anchor-peers) as well.
+**Anchor peers** on a channel facilitate cross-organization communication that is required for private data, [gossip](#x9829550){: term}, and service discovery to work. If only one anchor peer exists on a channel, and that peer becomes unavailable, the organizations are no longer connected and the cross-organization gossip is no longer possible. Therefore, when you create redundant peers for an organization, be sure to add redundant [anchor peers on the channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern#ibp-console-govern-channels-anchor-peers) as well.
 
 Finally, your peer redundancy strategy needs to take into account your smart contract endorsement policies to ensure that you always have enough peers available to satisfy the [endorsement policy](#x8911635){: term} requirements. For example, if an endorsement policy requires a specific number of endorsements, your peer HA strategy needs to ensure that there are always that number of peers available. Alternatively, if the endorsement policy requires a `MAJORITY` of peers to endorse the transactions, then you need to ensure that a majority of the peers are always available in order for transactions to continue to be processed.
 
@@ -122,7 +123,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform deployer attempts to spre
 
     **Ordering service** As mentioned above, the HA ordering service is based on Raft, and contains five ordering nodes by default. Because the system can sustain the loss of nodes, including leader nodes, as long as there is a majority of ordering nodes (what’s known as a “quorum”) remaining, Raft is said to be “crash fault tolerant” (CFT). In other words, if you have five nodes in a channel, you can lose two nodes (leaving three remaining nodes). When you deploy an ordering service from the console, choose the five node service for HA.
 
-    **CA** You can configure replica sets, which are represented as shaded CA boxes in the diagram above, for your CA. Replica sets guarantee that if the CA node goes down, the CA replica immediately begins processing requests. You must provision an instance of a PostgreSQL database if you plan to use CA replica sets. See these instructions for more information about [how to configure CA replica sets](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-ha-ca).
+    **CA** You can configure replica sets, which are represented as shaded CA boxes in the diagram above, for your CA. Replica sets guarantee that if the CA node goes down, the CA replica immediately begins processing requests. You must provision an instance of a PostgreSQL database if you plan to use CA replica sets. See these instructions for more information about [how to configure CA replica sets](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-ha-ca).
 
     This scenario uses redundant peers, ordering nodes, and CAs on a single worker node, which protects against component failure, but cannot protect from node failure. Therefore, it is only suitable for development and testing purposes.
 
@@ -155,7 +156,7 @@ A single zone is sufficient for a development and test environment if you can to
 
 You can use the {{site.data.keyword.blockchainfull_notm}} Platform console to specify the zone where a CA, peer, or ordering node is created. When you deploy a CA, peer, or ordering service (or a single ordering node), check the Advanced deployment option that is labeled **Deployment zone selection** to see the list of zones that is currently configured for your Kubernetes cluster.
 
-If you're deploying a CA, peer, or ordering service, you have the option to select the zone from the list of zones available to your cluster or to let your Kubernetes cluster decide for you by leaving the default selected. For a five node ordering service, these nodes will be distributed into multiple zones by default, depending on the relative space available in each zone. You also have the ability to distribute a five node ordering service yourself by unselecting the default option to have the zones chosen for you and distributing these nodes into the zones you have available. If you are deploying a redundant node (that is, another peer when you already have one), it is a best practice to deploy this node into a different zone. You can check which zone the other node was deployed to by opening the tile of the node and looking under the **Node location**. Alternatively, you can use the APIs to deploy a peer or orderer to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#ibp-v2-apis-zone).
+If you're deploying a CA, peer, or ordering service, you have the option to select the zone from the list of zones available to your cluster or to let your Kubernetes cluster decide for you by leaving the default selected. For a five node ordering service, these nodes will be distributed into multiple zones by default, depending on the relative space available in each zone. You also have the ability to distribute a five node ordering service yourself by unselecting the default option to have the zones chosen for you and distributing these nodes into the zones you have available. If you are deploying a redundant node (that is, another peer when you already have one), it is a best practice to deploy this node into a different zone. You can check which zone the other node was deployed to by opening the tile of the node and looking under the **Node location**. Alternatively, you can use the APIs to deploy a peer or orderer to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#ibp-v2-apis-zone).
 
 The CA zone selection is only available when the default database type SQLite is used and your cluster is configured with multiple zones.
 {: note}
@@ -188,7 +189,7 @@ The likelihood of a full regional failure is low. However, to account for this f
 
 This scenario uses redundant peers and ordering nodes across multiple worker nodes in multiple regions, which provide the highest degree of HA. This approach is also a recommended scenario for a production network when your resiliency requirements merit the investment. The five ordering nodes are spread across three clusters in a 2-1-2 pattern, meaning two nodes in Region 1, one node in Region 2, and two nodes in Region 3. This configuration allows any single region, or all of the ordering nodes in a region to go down, while still maintaining a quorum of nodes in the Raft cluster.
 
-See the topics on setting up multi-region HA deployments for steps to configure your {{site.data.keyword.blockchainfull_notm}} Platform [peers](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-hadr-mr) and [ordering nodes](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-hadr-mr-os) across multiple regions.
+See the topics on setting up multi-region HA deployments for steps to configure your {{site.data.keyword.blockchainfull_notm}} Platform [peers](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-hadr-mr) and [ordering nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-hadr-mr-os) across multiple regions.
 
 ## Disaster recovery (DR)
 {: #ibp-console-ha-dr}
@@ -217,4 +218,4 @@ If you are using CA replica sets and your PostgreSQL database resides in {{site.
 ### Backup and recovery
 {: #ibp-console-ha-stop-nodes}
 
-For information about backing up your components and how to recover corrupted components or networks, see [Backing up and restoring components and networks](/docs/blockchain-sw-252?topic=blockchain-sw-252-backup-restore).
+For information about backing up your components and how to recover corrupted components or networks, see [Backing up and restoring components and networks](/docs/blockchain-sw-253?topic=blockchain-sw-253-backup-restore).

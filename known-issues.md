@@ -2,11 +2,11 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: catalina, chrome, external CA, TLS, orderer, error, multicloud
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -26,7 +26,8 @@ This page describes known issues that you might encounter when you use {{site.da
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-sw-known-issues">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-sw-known-issues">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-sw-known-issues">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-sw-known-issues">2.5.2</a>
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-sw-known-issues">2.5.2</a>,
+<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-sw-known-issues">2.5.3</a>
 </p>
 
 

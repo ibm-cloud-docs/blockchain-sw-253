@@ -6,7 +6,7 @@ lastupdated: "2022-04-01"
 
 keywords: IBM Blockchain Platform, video series, videos, getting started videos, demo videos
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 

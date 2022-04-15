@@ -2,11 +2,11 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-15"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
-subcollection: blockchain-sw-252
+subcollection: blockchain-sw-253
 
 ---
 
@@ -83,7 +83,7 @@ The **Resource allocation** panel in the console provides default values for the
 After you have deployed the node, you need to **monitor the resource consumption of the node**. Configure a monitoring tool such as [{{site.data.keyword.mon_full_notm}}](/docs/blockchain?topic=blockchain-ibp-monitoring) to observe the nodes and ensure that adequate resources are available to the node containers when processing transactions.
 {: important}
 
-All of the containers that are associated with a node have **CPU** and **memory**, while certain containers that are associated with the peer, ordering node, and CA also have **storage**. For more information about storage, see [storage](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp-getting-started#deploy-ocp-storage). 
+All of the containers that are associated with a node have **CPU** and **memory**, while certain containers that are associated with the peer, ordering node, and CA also have **storage**. For more information about storage, see [storage](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-getting-started#deploy-ocp-storage). 
 
 You are responsible for monitoring your CPU, memory, and storage consumption in your cluster. If you do happen to request more resources for a blockchain node than are available, the node will not start. However, existing nodes will not be affected. For information about how to increase the CPU, memory, and storage, consult the documentation of your cloud provider.
 {: note}
@@ -103,7 +103,7 @@ When you deploy a CA, the following advanced deployment options are available:
 ### Database and replica sets
 {: #ibp-console-adv-deployment-CA-replica-sets}
 
-Because redundancy is the key to ensuring that when a node goes down another node is able to continue to process requests, you have the option to configure replica sets for CA nodes. For a complete understanding of what replica sets are and how they can be configured for a CA, see this topic on [Building a high availability Certificate Authority (CA)](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-ha-ca).
+Because redundancy is the key to ensuring that when a node goes down another node is able to continue to process requests, you have the option to configure replica sets for CA nodes. For a complete understanding of what replica sets are and how they can be configured for a CA, see this topic on [Building a high availability Certificate Authority (CA)](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-ha-ca).
 
 ### Deployment zone selection
 {: #ibp-console-adv-deployment-ca-k8s-zone}
@@ -566,7 +566,7 @@ When you deploy a peer, the following advanced deployment options are available:
 * [Hardware Security Module](#ibp-console-adv-deployment-cfg-hsm) - Configure the peer to use an HSM to generate and store private keys.
 * [Peer configuration override](#ibp-console-adv-deployment-peer-create-json) - Choose this option when you want to override peer configuration.
 
-You also have the ability to choose the version of Fabric that will be used to deploy your peer. It is recommended to always choose the latest version, as this version will have the latest fixes and improvements. However, note that you might have to re-vendor your smart contract if it was written in Golang. For more information, see [Write and package your smart contract](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-pkg).
+You also have the ability to choose the version of Fabric that will be used to deploy your peer. It is recommended to always choose the latest version, as this version will have the latest fixes and improvements. However, note that you might have to re-vendor your smart contract if it was written in Golang. For more information, see [Write and package your smart contract](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-pkg).
 {: important}
 
 ### State database
@@ -586,7 +586,7 @@ Because the data is modeled differently in a Couch database than in a Level data
 
 If your Kubernetes cluster is configured across multiple zones, when you deploy a peer you have the option of selecting which zone the peer is deployed to. Check the Advanced deployment option that is labeled **Deployment zone selection** to see the list of zones that is currently configured for your Kubernetes cluster.
 
-If you are deploying a redundant node (that is, another peer when you already have one), it is a best practice to deploy this node into a different zone. You can determine the zone that the other node was deployed to by opening the tile of the node and looking under the Node location. Alternatively, you can use the APIs to deploy a peer or orderer to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#ibp-v2-apis-zone).
+If you are deploying a redundant node (that is, another peer when you already have one), it is a best practice to deploy this node into a different zone. You can determine the zone that the other node was deployed to by opening the tile of the node and looking under the Node location. Alternatively, you can use the APIs to deploy a peer or orderer to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#ibp-v2-apis-zone).
 
 If **multizone-capable storage** is configured for your Kubernetes cluster, when a zone failure occurs, the nodes can come up in another zone with their associated storage intact, ensuring high availability of the node. In order to leverage this capability with the {{site.data.keyword.blockchainfull_notm}} Platform, you need to configure your cluster to use **SDS (Portworx)** storage. And when you deploy a peer, select the advanced deployment option labeled **Deployment zone selection** and then select **Across all zones**. 
 
@@ -941,14 +941,14 @@ In Raft, a **majority of the total number of nodes** must be available for the o
 
 This is why, by default, the console offers two options: one node or five nodes. Recall that the majority of five is three. This means that in a five node configuration, the loss of two nodes can be tolerated. Users who know that they will be deploying a production solution should therefore choose the five node option.
 
-However many nodes a user chooses to deploy, they have the ability to add more nodes to their ordering service. For more information, see [Adding and removing ordering service nodes](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-add-remove-orderer).
+However many nodes a user chooses to deploy, they have the ability to add more nodes to their ordering service. For more information, see [Adding and removing ordering service nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-add-remove-orderer).
 
 ### Deployment zone selection
 {: #ibp-console-adv-deployment-on-k8s-zone}
 
 If your Kubernetes cluster is configured across multiple zones, when you deploy an ordering node you have the option of selecting which zone the node is deployed to. Check the Advanced deployment option that is labeled **Deployment zone selection** to see the list of zones that is currently configured for your Kubernetes cluster.
 
-For a five node ordering service, these nodes will be distributed into multiple zones by default, depending on the relative space available in each zone. You also have the ability to distribute a five node ordering service yourself by clearing the default option to have the zones that are chosen for you and distributing these nodes into the zones you have available. You can check which zone a node was deployed to by opening the tile of the node and looking under the Node location. Alternatively, you can use the APIs to deploy an ordering node to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis#ibp-v2-apis-zone).
+For a five node ordering service, these nodes will be distributed into multiple zones by default, depending on the relative space available in each zone. You also have the ability to distribute a five node ordering service yourself by clearing the default option to have the zones that are chosen for you and distributing these nodes into the zones you have available. You can check which zone a node was deployed to by opening the tile of the node and looking under the Node location. Alternatively, you can use the APIs to deploy an ordering node to a specific zone. For more information on how to do this with the APIs, see [Creating a node within a specific zone](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#ibp-v2-apis-zone).
 
 If **multizone-capable storage** is configured for your Kubernetes cluster when a zone failure occurs, the nodes can come up in another zone, with their associated storage intact, ensuring high availability of the node. In order to leverage this capability with the {{site.data.keyword.blockchainfull_notm}} Platform, you need to configure your cluster to use **SDS (Portworx)** storage. And when you deploy an ordering service or an ordering node, select the advanced deployment option labeled **Deployment zone selection** and then select **Across all zones**. 
 
@@ -1105,7 +1105,7 @@ The ability to update an ordering node configuration is not available for orderi
 ## Using certificates from an external CA with your peer or ordering service
 {: #ibp-console-adv-deployment-third-party-ca}
 
-Instead of using an {{site.data.keyword.blockchainfull_notm}} Platform Certificate Authority as your peer or ordering service's CA, you can use certificates from an external CA, one that is not hosted by {{site.data.keyword.IBM_notm}}. To use an external CA, the CA needs to issue certificates in [X.509](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html#digital-certificates){: external} format. You need to generate your private keys using the PKCS #8 standard. For a quick tutorial, see [Using certificates from an external Certificate Authority](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-tutorial-extca).
+Instead of using an {{site.data.keyword.blockchainfull_notm}} Platform Certificate Authority as your peer or ordering service's CA, you can use certificates from an external CA, one that is not hosted by {{site.data.keyword.IBM_notm}}. To use an external CA, the CA needs to issue certificates in [X.509](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html#digital-certificates){: external} format. You need to generate your private keys using the PKCS #8 standard. For a quick tutorial, see [Using certificates from an external Certificate Authority](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca).
 
 ### Before you begin
 {: #ibp-console-adv-deployment-third-party-ca-prereq}
@@ -1121,7 +1121,7 @@ Instead of using an {{site.data.keyword.blockchainfull_notm}} Platform Certifica
     * **Intermediate CA TLS certificate**: (Optional) This is the TLS certificate if your TLS certificate is issued by an intermediate TLS CA. Upload the intermediate TLS CA certificate. You must provide either a TLS CA root certificate or an intermediate TLS CA certificate, you may also provide both.
     * **Peer or ordering service admin identity certificate** This is the signing certificate from your external CA that the admin identity of this peer or ordering service will use. This certificate is also known as your peer or ordering service admin identity key. This certificate must contain the OU attribute "admin".
     * **Peer or ordering service admin identity private key** This is the private key corresponding to the signed certificate from your external CA that the admin identity of this peer or ordering service will use.
-    * **Peer or ordering service organization MSP definition** You must manually generate this file by using instructions that are provided in [Manually building an MSP JSON file](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-build-msp).
+    * **Peer or ordering service organization MSP definition** You must manually generate this file by using instructions that are provided in [Manually building an MSP JSON file](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-build-msp).
 
 2. Import the generated peer or ordering service organization MSP definition file into the console, by clicking the **Organizations** tab followed by **Import MSP definition**.
 
@@ -1140,7 +1140,7 @@ Replace:
 - `identity.1.pem` with the name of the PKCS #1 private key `.PEM` file.
 - `identity.8.pem` with the name that you want to give your PKCS #8 private key `.PEM` file.
 
-Now the private key can be used by the console. If you plan to include it in an [organization MSP](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations#console-organizations-build-msp) file, it needs to be encoded in base64 format.
+Now the private key can be used by the console. If you plan to include it in an [organization MSP](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations#console-organizations-build-msp) file, it needs to be encoded in base64 format.
 
 ### Option 1: Create a new peer or single-node ordering service using certificates from an external CA
 {: #ibp-console-adv-deployment-third-party-ca-create-peer-orderer}
@@ -1310,9 +1310,9 @@ After you create the `JSON` file with all of the certificates for the ordering n
 {: #ibp-console-adv-deployment-third-party-ca-next}
 
 You have gathered all of your peer or ordering service certificates from your third-party CA, created their corresponding organization MSP definition and created a peer or ordering service. If you are following along in the tutorials, you can return to the next step.
-- If you created the peer node, the next step is to [Create the node that orders transactions](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-orderer).
-- If you created the node to join an existing network, the next step is to [Add your organization to list of organizations that can transact](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-join-network#ibp-console-join-network-add-org2).
-- If you created an ordering service, the next step is to [Create a channel](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-network#ibp-console-build-network-create-channel).
+- If you created the peer node, the next step is to [Create the node that orders transactions](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-orderer).
+- If you created the node to join an existing network, the next step is to [Add your organization to list of organizations that can transact](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-add-org2).
+- If you created an ordering service, the next step is to [Create a channel](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network-create-channel).
 
 ## Configuring a node to use a Hardware Security Module (HSM)
 {: #ibp-console-adv-deployment-cfg-hsm}
@@ -1336,7 +1336,7 @@ When a CA, peer, or ordering node is configured to use an HSM, their private key
 
 Configuring a node to use HSM is a three-part process:
 1. **Deploy an HSM**. Utilize the HSM appliance that is available in [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/infrastructure/hardware-security-module){: external} or configure your own HSM. Record the value of the HSM `partition` and `PIN` to be used in the subsequent steps.
-    - If you plan to use {{site.data.keyword.cloud_notm}} HSM see this [tutorial](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-hsm-gemalto) for an example of how to configure {{site.data.keyword.cloud_notm}} HSM 6.0 with the {{site.data.keyword.blockchainfull_notm}} Platform. After that is completed you can skip to Part 3 **Configure the node to use HSM**. 
+    - If you plan to use {{site.data.keyword.cloud_notm}} HSM see this [tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-hsm-gemalto) for an example of how to configure {{site.data.keyword.cloud_notm}} HSM 6.0 with the {{site.data.keyword.blockchainfull_notm}} Platform. After that is completed you can skip to Part 3 **Configure the node to use HSM**. 
 2. **Configure an HSM client image** [See Build a Docker image](#ibp-console-adv-deployment-hsm-build-docker).
 3. **Configure the node to use HSM**.  From the APIs or the console, when you deploy a peer, CA, or ordering node, you can select the advanced option to use an HSM. See [Configure the node to use the HSM](#ibp-console-adv-deployment-cfg-hsm-node).
 
@@ -1469,7 +1469,7 @@ Replace:
 - `DOCKER_USER` - Valid username with access to HSM client image in the container registry.
 - `DOCKER_PASSWORD` - Valid password or access token for the HSM client image in the container registry.
 - `DOCKER_EMAIL` - Email address for container registry user.
-- `NAMESPACE` - Name of the [Kubernetes namespace](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp#deploy-ocp-project) that you created for your {{site.data.keyword.blockchainfull_notm}} Platform deployment.
+- `NAMESPACE` - Name of the [Kubernetes namespace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-project) that you created for your {{site.data.keyword.blockchainfull_notm}} Platform deployment.
 
 These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
 
@@ -1490,7 +1490,7 @@ $ kubectl create secret generic hsmcrypto -n <NAMESPACE> --from-file=Chrystoki.c
 ```
 {: codeblock}
 
-Replace `<NAMESPACE>` with the name of your operator [Kubernetes namespace](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp#deploy-ocp-project). If you are not using {{site.data.keyword.cloud_notm}} HSM, you need to replace the values of the `--from-file` parameters with the set of certificates and configuration files that are required for your HSM client image.
+Replace `<NAMESPACE>` with the name of your operator [Kubernetes namespace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-namespace) or [OpenShift project](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-project). If you are not using {{site.data.keyword.cloud_notm}} HSM, you need to replace the values of the `--from-file` parameters with the set of certificates and configuration files that are required for your HSM client image.
 
 When successful, the output looks similar to:
 ```
