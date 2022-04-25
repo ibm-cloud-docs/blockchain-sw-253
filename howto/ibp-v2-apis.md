@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
@@ -44,7 +44,7 @@ After you review the instructions in this topic on how to use the APIs, you can 
 ## Prerequisites
 {: #ibp-v2-apis-prereq}
 
-The APIs target your {{site.data.keyword.blockchainfull_notm}} Platform console to authenticate calls and communicate with your nodes. Therefore you must deploy the {{site.data.keyword.blockchainfull_notm}} Platform console before you can start using the {{site.data.keyword.blockchainfull_notm}} Platform console APIs. If you have not yet deployed the console on your cluster, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
+The APIs target your {{site.data.keyword.blockchainfull_notm}} Platform console to authenticate calls and communicate with your nodes. Therefore you must deploy the {{site.data.keyword.blockchainfull_notm}} Platform console before you can start using the {{site.data.keyword.blockchainfull_notm}} Platform console APIs. If you have not yet deployed the console on your cluster, see [Getting started with IBM Blockchain Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
 
 To use the APIs, you will need to gather the following information:
 
@@ -280,7 +280,7 @@ curl -X GET \
 ```
 {: codeblock}
 
-The same API call would resemble the request below for a console deployed with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
+The same API call would resemble the request below for a console deployed with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.
 
 ```
 curl -X GET \

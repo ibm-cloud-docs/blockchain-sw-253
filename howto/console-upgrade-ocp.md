@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters
 
@@ -28,17 +28,18 @@ subcollection: blockchain-sw-253
 </p>
 
 
-You can upgrade the {{site.data.keyword.blockchainfull}} Platform without disrupting a running network. Because the platform is deployed by using a Kubernetes operator, you can pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images from the {{site.data.keyword.IBM_notm}} Entitlement registry without having to reinstall the platform. You can use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
+You can upgrade the {{site.data.keyword.blockchainfull}} Platform without disrupting a running network. Because the platform is deployed by using a Kubernetes operator, you can pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images from the {{site.data.keyword.IBM_notm}} Entitlement registry without having to reinstall the platform. You can use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.
 {: shortdesc}
 
 ## {{site.data.keyword.blockchainfull_notm}} Platform overview
 {: #upgrade-ocp-platform-overview}
 
-Use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from versions 2.5.1, 2.5, 2.1.3, 2.1.2, 2.1.1, and 2.1.0. The table provides an overview of the current and past releases.
+Use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from versions 2.5.2, 2.5.1, 2.5, 2.1.3, 2.1.2, 2.1.1, and 2.1.0. The table provides an overview of the current and past releases.
 
 | Version | Release date | Image tags | New features |
 |----|----|----|----|
-| [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-03-29-2021) | 29 Mar 2021| **Console and tools** <ul><li>2.5.2-20220405-amd64</li><li>2.5.2-20210810-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li><li>1.4.11-20210505</li><li>1.4.11-20210325</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li><li>Fabric version 1.4.11 and 2.2.2</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li></ul> |
+| [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-05-03-2022) | 03 May 2022| **Console and tools** <ul><li>2.5.3-20220503-amd64</li><li>2.5.3-20220503-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li><li>Support for new Fabric Gateway.</li></ul> |
+| [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-whats-new#whats-new-03-29-2021) | 29 Mar 2021| **Console and tools** <ul><li>2.5.3-20220503-amd64</li><li>2.5.3-20220503-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li><li>1.4.11-20210505</li><li>1.4.11-20210325</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li><li>Fabric version 1.4.11 and 2.2.2</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.1](/docs/blockchain-sw-251?topic=blockchain-sw-251-release-notes-saas-20#01-12-2021) | 12 Jan 2021| **Console and tools** <ul><li>2.5.1-20210112-amd64</li> <li>2.5.1-20201208-amd64</li> <li>2.5.1-20201119-amd64</li> <li>2.5.1-20201030-amd64</li></ul> **Fabric nodes** <ul><li>1.4.9-20210112-amd64</li><li>1.4.9-20201208-amd64</li> <li>1.4.9-20201119-amd64</li> <li>1.4.9-20201030-amd64</li><li>2.2.1-20210112-amd64</li><li>2.2.1-20201208-amd64</li><li>2.2.1-20201119-amd64</li><li>2.2.1-20201030-amd64</li></ul> **CouchDB** <ul> <li>2.3.1-20210112-amd64</li> <li>2.3.1-20201208-amd64</li>  <li>2.3.1-20201119-amd64</li><li>2.3.1-20201030-amd64</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.9 and 2.2.1</ul> <strong>Improvements to the Console UI</strong> <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform 2.5](/docs/blockchain-sw-25?topic=blockchain-sw-25-release-notes-saas-20#08-25-2020){: external} | 9 Sept 2020| **Console and tools** <ul><li>2.5.0-20200825-amd64</li><li>2.5.0-20200714-amd64</li><li>2.5.0-20200618-amd64</li></ul> **Fabric nodes** <ul><li>1.4.7-20200825-amd64</li><li>1.4.7-20200714-amd64</li><li>1.4.7-20200618-amd64</li><li>2.1.1-20200825-amd64</li><li>2.1.1-20200714-amd64</li><li>2.1.1-20200618-amd64</li></ul> **CouchDB** <ul><li>2.3.1-20200825-amd64</li><li>2.3.1-20200714-amd64</li><li>2.3.1-20200618-amd64</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.7 and 2.1.1</ul> <strong>Improvements to the Console UI</strong> <ul><li>Ability to select Fabric version when you deploy a new peer or ordering node.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform v2.1.3](/docs/blockchain-sw-213?topic=blockchain-sw-213-whats-new#whats-new-03-24-2020){: external} | 24 March 2020| **Console and tools** <ul><li>2.1.3-20200520-amd64</li><li>2.1.3-20200416-amd64</li><li>2.1.3-20200324-amd64</li></ul> **Fabric nodes** <ul><li>1.4.6-20200520-amd64</li><li>1.4.6-20200416-amd64</li><li>1.4.6-20200324-amd64</li></ul> **CouchDB** <ul><li>2.3.1-20200520-amd64</li><li>2.3.1-20200416-amd64</li><li>2.3.1-20200324-amd64</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.6</ul> <strong>Additional platforms</strong> <ul><li>Platform can be deployed on the OpenShift Container Platform 4.2 on LinuxONE (s390x)</ul> <strong>Improvements to the Console UI</strong> <ul><li>Hardware Security Module (HSM) support for node identities</li><li>Ability to override CA, peer, and ordering node configuration</li><li>Ability to add and remove Raft ordering nodes</li><li>Java smart contract instantiation</li><li>Updated create channel and create organization panels</ul> |
@@ -51,12 +52,12 @@ Use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm
 {: #upgrade-ocp-before}
 
 The upgrade process that you follow depends on the version of the platform that you are upgrading from v2.1.x or v2.5.x.
-- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from v2.5.x](#upgrade-ocp-steps-252)
-- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from v2.1.x](#upgrade-ocp-steps-21x)  
+- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from v2.5.x](#upgrade-ocp-steps-253)
+- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from v2.1.x](#upgrade-ocp-steps-21x)  
 
 Or, if you are upgrading from behind a firewall
-- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from v2.5.x](#upgrade-ocp-steps-252)
-- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from v2.1.x](#upgrade-ocp-firewall)
+- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from v2.5.x](#upgrade-ocp-steps-253)
+- [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from v2.1.x](#upgrade-ocp-firewall)
 
 After you upgrade the {{site.data.keyword.blockchainfull_notm}} Platform operator, the operator will automatically upgrade the console that is deployed on your OpenShift project. You can then use the upgraded console to upgrade your blockchain nodes.
 
@@ -71,37 +72,37 @@ It is a best practice to upgrade your SDK to the latest version as part of a gen
 ## Platform limitations
 {: #upgrade-ocp-platform}
 
-If your {{site.data.keyword.blockchainfull_notm}} Platform is running on OpenShift Container Platform 3.11, you cannot upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 unless you first upgrade your OpenShift cluster from 3.11 to 4.7. For more information, see [Upgrading your migrationn](https://docs.openshift.com/container-platform/4.7/migration-toolkit-for-containers/installing-mtc.html).
+If your {{site.data.keyword.blockchainfull_notm}} Platform is running on OpenShift Container Platform 3.11, you cannot upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 unless you first upgrade your OpenShift cluster from 3.11 to 4.10. For more information, see [Upgrading your migration](https://docs.openshift.com/container-platform/4.10/migration_toolkit_for_containers/about-mtc.html).
 
 
-## Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.5.x
-{: #upgrade-ocp-steps-252}
+## Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.5.x
+{: #upgrade-ocp-steps-253}
 
-When you upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.5.x  you need to update the webhook, the custom resource definitions (CRDs), the ClusterRole, and the operator using the following steps. **These same steps can be followed even if your deployment is behind a firewall.**
+When you upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.5.x you need to update the webhook, the custom resource definitions (CRDs), the ClusterRole, and the operator using the following steps. **These same steps can be followed even if your deployment is behind a firewall.**
 
-1. [Update webhook image.](#upgrade-ocp-steps-252-webhook)
-2. [Update the CRDs.](#upgrade-ocp-steps-252-crds) (Not required when upgrading from 2.5.1)
-3. [Update the ClusterRole.](#upgrade-ocp-steps-252-clusterrole) (Not required when upgrading from 2.5.1)
-4. [Update the operator.](#upgrade-ocp-steps-252-operator)
+1. [Update webhook image.](#upgrade-ocp-steps-253-webhook)
+2. [Update the CRDs.](#upgrade-ocp-steps-253-crds) (Not required when upgrading from 2.5.1)
+3. [Update the ClusterRole.](#upgrade-ocp-steps-253-clusterrole) (Not required when upgrading from 2.5.1)
+4. [Update the operator.](#upgrade-ocp-steps-253-operator)
 5. [Use your console to upgrade your running blockchain nodes.](#upgrade-ocp-nodes)
 6. [Update MSPs in consortium to add organization-level endorsement policy.](#upgrade-ocp-update-consortium)
 
 You need to repeat steps 3-5 for each network that that runs on a separate project. If you experience any problems, see the instructions for [rolling back an upgrade](#upgrade-ocp-rollback). If you deployed your network behind a firewall, without access to the external internet, see the separate set of instructions for [Upgrading the {{site.data.keyword.blockchainfull_notm}} Platform behind a firewall](#upgrade-ocp-firewall).
 
 ### Step one: Update the webhook image
-{: #upgrade-ocp-steps-252-webhook}
+{: #upgrade-ocp-steps-253-webhook}
 
 Log in to your cluster and run the following command to update the webhook image in the `ibpinfra` namespace or project:
 
 ```
-kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook="cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook="cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
 ```
 {: codeblock}
 
 If you are running the platform on LinuxONE, replace `-amd64` with `-s390x`.
 
-### Step two: Update the CRDs 
-{: #upgrade-ocp-steps-252-crds}
+### Step two: Update the CRDs
+{: #upgrade-ocp-steps-253-crds}
 **This step is not required when upgrading from 2.5.1.**
 
 1. Extract the webhook TLS certificate from the `ibpinfra` namespace by running the following command:
@@ -110,7 +111,7 @@ If you are running the platform on LinuxONE, replace `-amd64` with `-s390x`.
     ```
     {: codeblock}
 
-2. When you deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.2, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
+2. When you deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.3, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
 
 Run this command to update the CA CRD:   
 ```yaml
@@ -465,8 +466,8 @@ customresourcedefinition.apiextensions.k8s.io/ibporderers.ibp.com configured
 ```
 {: codeblock}
 
-### Step three: Update the ClusterRole 
-{: #upgrade-ocp-steps-252-clusterrole} 
+### Step three: Update the ClusterRole
+{: #upgrade-ocp-steps-253-clusterrole}
 **This step is not required when upgrading from 2.5.1.**
 
 You need to update the ClusterRole that is applied to your project. Copy the following text to a file on your local system and save the file as `ibp-clusterrole.yaml`. Edit the file and replace `<PROJECT_NAME>` with the name of your project.
@@ -661,7 +662,7 @@ oc adm policy add-scc-to-group <PROJECT_NAME> system:serviceaccounts:<PROJECT_NA
 {: codeblock}
 
 ### Step four: Upgrade the {{site.data.keyword.blockchainfull_notm}} operator
-{: #upgrade-ocp-steps-252-operator}
+{: #upgrade-ocp-steps-253-operator}
 
 Before updating the operator image, you need to stop the ibpconsole by running the following command. Replace <PROJECT_NAME> with the name of your project:
 ```
@@ -677,7 +678,7 @@ While the console is stopped you are unable to deploy or manage your blockchain 
 Run the following command to upgrade the operator. Replace <PROJECT_NAME> with the name of your project:
 
 ```
-kubectl set image deploy/ibp-operator -n <PROJECT_NAME> ibp-operator="cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64"
+kubectl set image deploy/ibp-operator -n <PROJECT_NAME> ibp-operator="cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64"
 ```
 {: codeblock}
 
@@ -702,7 +703,7 @@ kubectl patch ibpconsole ibpconsole -n <PROJECT_NAME> -p='[{"op": "replace", "pa
 
 ### Step six: Upgrade your nodes
 
-You can now follow the [steps](#upgrade-ocp-nodes) to upgrade your blockchain nodes. Be aware that after the nodes are upgraded, there is no way to roll back the upgrade from 2.5.2 to 2.5.x. After you upgrade to 2.5.2, you can take advantage of the new Fabric v2.x Lifecycle deployment process for your  smart contracts. But to avoid your peers crashing, you need to ensure that you upgrade your peers before you upgrade your channels. Learn more about considerations when [Upgrading to a new version of Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade).
+You can now follow the [steps](#upgrade-ocp-nodes) to upgrade your blockchain nodes. Be aware that after the nodes are upgraded, there is no way to roll back the upgrade from 2.5.3 to 2.5.x. After you upgrade to 2.5.3, you can take advantage of the new Fabric v2.x Lifecycle deployment process for your  smart contracts. But to avoid your peers crashing, you need to ensure that you upgrade your peers before you upgrade your channels. Learn more about considerations when [Upgrading to a new version of Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade).
 
 After you upgrade your nodes, you can [update the MSPs in your consortium to add organization-level endorsement policies](#upgrade-ocp-update-consortium).
 
@@ -713,7 +714,7 @@ To use the 2.x smart contract lifecycle, an organization must have an endorsemen
 
 The best practice to add this endorsement policy to the MSP is to delete the MSP from the system channel and then re-add the MSP. The console detects the fact that the MSP does not contain the endorsement policy and automatically adds it. Note that this action can only be completed by an ordering service administrator. You do not need to delete and re-add the MSPs in the configuration of any application channels that have already been created. For these MSPs, the endorsement policy is added as part of the process of deploying the smart contract.
 
-## Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x
+## Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x
 {: #upgrade-ocp-steps-21x}
 
 To upgrade your network, you need to [retrieve your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-entitlement-key) from the My {{site.data.keyword.IBM_notm}} Dashboard, and you should have already [created a Kubernetes secret](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-docker-registry-secret) to store the key on your OpenShift project. If the Entitlement key secret was removed from your cluster, or if your key is expired, then you need to download another key and create a new secret.  
@@ -730,13 +731,13 @@ You can upgrade an {{site.data.keyword.blockchainfull_notm}} Platform network by
 
 You need to complete steps 4-6 for each network that that runs on a separate project. If you experience any problems, see the instructions for [rolling back an upgrade](#upgrade-ocp-rollback). If you deployed your network behind a firewall, without access to the external internet, see the separate set of instructions for [Upgrading the {{site.data.keyword.blockchainfull_notm}} Platform behind a firewall](#upgrade-ocp-firewall).
 
-Occasionally, a five node ordering service that was deployed using v2.1.2 will be deleted by the Kubernetes garbage collector because it considers the nodes a resource that needs to be cleaned up. This process is both random and unrecoverable --- if the ordering service is deleted, all of the channels hosted on it are permanently lost. To prevent this, the `ownerReferences` field in the configuration of each ordering node must be removed **before upgrading to 2.5.2**. For the steps about how to pull the configuration file, remove `ordererReferences`, and apply the change, see [Known issues](/docs/blockchain-sw?topic=blockchain-sw-sw-known-issues#sw-known-issues-ordering-service-delete) in the v2.1.2 documentation.
+Occasionally, a five node ordering service that was deployed using v2.1.2 will be deleted by the Kubernetes garbage collector because it considers the nodes a resource that needs to be cleaned up. This process is both random and unrecoverable --- if the ordering service is deleted, all of the channels hosted on it are permanently lost. To prevent this, the `ownerReferences` field in the configuration of each ordering node must be removed **before upgrading to 2.5.3**. For the steps about how to pull the configuration file, remove `ordererReferences`, and apply the change, see [Known issues](/docs/blockchain-sw?topic=blockchain-sw-sw-known-issues#sw-known-issues-ordering-service-delete) in the v2.1.2 documentation.
 {: important}
 
 ### Step one: Create the `ibpinfra` project for the webhook
 {: #deploy-ocp-ibpinfra}
 
-Because the platform has updated the internal apiversion from `v1alpha1` in previous versions to `v1beta1` in 2.5.2, a Kubernetes conversion webhook is required to update the CA, peer, operator, and console to the new API version. This webhook will continue to be used in the future, so new deployments of the platform are required to deploy it as well.  The webhook is deployed to its own project, referred to as  `ibpinfra` throughout these instructions.
+Because the platform has updated the internal apiversion from `v1alpha1` in previous versions to `v1beta1` in 2.5.2 and later, a Kubernetes conversion webhook is required to update the CA, peer, operator, and console to the new API version. This webhook will continue to be used in the future, so new deployments of the platform are required to deploy it as well.  The webhook is deployed to its own project, referred to as  `ibpinfra` throughout these instructions.
 
 After you log in to your cluster, you can create the new `ibpinfra` project for the Kubernetes conversion webhook using the kubectl CLI. The new project needs to be created by a cluster administrator.  
 
@@ -923,7 +924,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -938,7 +939,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1044,7 +1045,7 @@ service/ibp-webhook created
     ```
     {: codeblock}
 
-2. When you deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.2, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
+2. When you deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.3, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
 
 Run this command to update the CA CRD:   
 ```yaml
@@ -1613,7 +1614,7 @@ kubectl get deployment ibp-operator -o yaml > operator.yaml
 
 Open `operator.yaml` in a text editor and save a new copy of the file as `operator-upgrade.yaml`. Open `operator-upgrade.yaml` in a text editor. You need to update the `image:` field with the updated version of the operator image. You can find the name and tag of the latest operator image below:
 ```yaml
-cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64
+cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -1683,7 +1684,7 @@ To use the 2.x smart contract lifecycle, an organization must have an endorsemen
 
 The best practice to add this endorsement policy to the MSP is to delete the MSP from the system channel and then re-add the MSP. The console detects the fact that the MSP does not contain the endorsement policy and automatically adds it. Note that this action can only be completed by an ordering service administrator. You do not need to delete and re-add the MSPs in the configuration of any application channels that have already been created. For these MSPs, the endorsement policy is added as part of the process of deploying the smart contract.
 
-## Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x from behind a firewall
+## Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x from behind a firewall
 {: #upgrade-ocp-firewall}
 
 If you deployed the {{site.data.keyword.blockchainfull_notm}} Platform behind a firewall, without access to the external internet, you can upgrade your network by using the following steps:
@@ -1725,33 +1726,33 @@ The following commands only work with a Docker container registry. Depending on 
 {: note}
 
 ```
-skopeo copy docker://cp.icr.io/cp/ibp-operator:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-operator:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-init:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-init:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-console:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-console:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-grpcweb:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220405 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220405 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-dind:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-dind:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-utilities:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-utilities:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-peer:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-peer:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-orderer:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-orderer:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-chaincode-launcher:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-chaincode-launcher:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-utilities:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-utilities:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ccenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-ccenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-goenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-goenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-nodeenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-javaenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-javaenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-crdwebhook:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ccenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-ccenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-goenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-goenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-nodeenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-javaenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-javaenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-enroller:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-enroller:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-operator:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-operator:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-init:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-init:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-console:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-console:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-grpcweb:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220503 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-dind:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-dind:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-utilities:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-utilities:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-peer:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-orderer:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-chaincode-launcher:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-chaincode-launcher:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-utilities:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-utilities:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ccenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-ccenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-goenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-goenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-nodeenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-javaenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-javaenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-crdwebhook:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ccenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-ccenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-goenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-goenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-nodeenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-javaenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-javaenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-enroller:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-enroller:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 ```
 {: codeblock}
 
@@ -1760,7 +1761,7 @@ After you complete these steps, you can use the following instructions to deploy
 ### Step two: Create the `ibpinfra` project for the webhook
 {: #deploy-ocp-ibpinfra-fw}
 
-Because the platform has updated the internal apiversion from `v1alpha1` in previous versions to `v1beta1` in 2.5.2, a Kubernetes conversion webhook is required to update the CA, peer, operator, and console to the new API version. This webhook will continue to be used in the future, so new deployments of the platform are required to deploy it as well.  The webhook is deployed to its own project, referred to as  `ibpinfra` throughout these instructions.
+Because the platform has updated the internal apiversion from `v1alpha1` in previous versions to `v1beta1` in 2.5.2 and later, a Kubernetes conversion webhook is required to update the CA, peer, operator, and console to the new API version. This webhook will continue to be used in the future, so new deployments of the platform are required to deploy it as well.  The webhook is deployed to its own project, referred to as  `ibpinfra` throughout these instructions.
 
 After you log in to your cluster, you can create the new `ibpinfra` project for the Kubernetes conversion webhook using the kubectl CLI. The new project needs to be created by a cluster administrator.  
 
@@ -1949,7 +1950,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -1964,7 +1965,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -2070,7 +2071,7 @@ service/ibp-webhook created
     ```
     {: codeblock}
 
-2. When you deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.2, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
+2. When you deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.3, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
 
 Run this command to update the CA CRD:   
 ```yaml
@@ -2637,7 +2638,7 @@ kubectl get deployment ibp-operator -o yaml > operator.yaml
 
 Open `operator.yaml` in a text editor and save a new copy of the file as `operator-upgrade.yaml`. Open `operator-upgrade.yaml` a text editor. You need to update the `image:` field with the updated version of the operator image:
 ```
-<LOCAL_REGISTRY>/ibp-operator:2.5.2-20220405-amd64
+<LOCAL_REGISTRY>/ibp-operator:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -2746,5 +2747,3 @@ To upgrade a node, open the node tile and click the **Upgrade available** button
 When you upgrade your operator, the operator saves the secrets, deployment spec, and network information of your console before attempting to upgrade the console. If your upgrade fails for any reason, the {{site.data.keyword.IBM_notm}} Support can roll back your upgrade and restore your previous deployment by using the information on your cluster. If you need to roll back your upgrade, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page.
 
 You can roll back an upgrade after you use the console to operate your network. However, after you use the console to upgrade your blockchain nodes, you can no longer roll back your console to a previous version of the platform.
-
-

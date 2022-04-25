@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -14,7 +14,7 @@ subcollection: blockchain-sw-253
 
 
 
-# Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 manually
+# Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 manually
 {: #deploy-ocp}
 
 <p>
@@ -27,7 +27,7 @@ subcollection: blockchain-sw-253
 <a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp">2.5.3</a>
 </p>
 
-You can use the following instructions to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.2 onto a Kubernetes cluster that is running on OpenShift Container Platform. The {{site.data.keyword.blockchainfull_notm}} Platform uses a [Kubernetes Operator](https://www.openshift.com/learn/topics/operators){: external} to install the {{site.data.keyword.blockchainfull_notm}} Platform console on your cluster and manage the deployment and your blockchain nodes. After the {{site.data.keyword.blockchainfull_notm}} Platform console is running on your cluster, you can use the console to create blockchain nodes and operate a multicloud blockchain network.
+You can use the following instructions to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.3 onto a Kubernetes cluster that is running on OpenShift Container Platform. The {{site.data.keyword.blockchainfull_notm}} Platform uses a [Kubernetes Operator](https://www.openshift.com/learn/topics/operators){: external} to install the {{site.data.keyword.blockchainfull_notm}} Platform console on your cluster and manage the deployment and your blockchain nodes. After the {{site.data.keyword.blockchainfull_notm}} Platform console is running on your cluster, you can use the console to create blockchain nodes and operate a multicloud blockchain network.
 {: shortdesc}
 
 ## Get your entitlement key
@@ -286,7 +286,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -301,7 +301,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -409,7 +409,7 @@ When the command completes successfully, you should see something similar to:
     ```
     {: codeblock}
 
-2. When you deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.2, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
+2. When you deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.3, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
 
 Run this command to update the CA CRD:   
 ```yaml
@@ -1164,7 +1164,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
         productChargedContainers: ""
         productMetric: "VIRTUAL_PROCESSOR_CORE"
     spec:
@@ -1190,7 +1190,7 @@ spec:
         - name: ibm-entitlement-key
       containers:
         - name: ibp-operator
-          image: cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64
+          image: cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64
           command:
             - ibp-operator
           imagePullPolicy: Always
@@ -1400,7 +1400,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.2
+  version: 2.5.3
 
 ```
 {: codeblock}

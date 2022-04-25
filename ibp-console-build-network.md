@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, multicloud
 
@@ -36,7 +36,7 @@ subcollection: blockchain-sw-253
 
 
 
-If you have not already deployed your {{site.data.keyword.blockchainfull_notm}} Platform console to a Kubernetes cluster, see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
+If you have not already deployed your {{site.data.keyword.blockchainfull_notm}} Platform console to a Kubernetes cluster, see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
 
 You need to pay close attention to the resources at your disposal when you choose to deploy nodes and create channels. It is your responsibility to manage your Kubernetes cluster and deploy additional resources if necessary. For more information about component sizings and how the console interacts with your Kubernetes cluster, see [Allocating resources](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-adv-deployment#ibp-console-adv-deployment-allocate-resources).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: IBM Blockchain Platform, images, multicloud
 
@@ -33,7 +33,7 @@ For experienced Hyperledger Fabric customers, the {{site.data.keyword.blockchain
 
 A key benefit of using these images over the open source community version is that {{site.data.keyword.IBM_notm}} scans the open source code for security vulnerabilities daily as well as keeps the images up to date with operating system and vulnerability patches. Additionally, {{site.data.keyword.IBM_notm}} provides 24x7x365 support with SLAs appropriate for production environments.  The images are based on [Red Hat Universal Base Image (UBI)](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image){: external} and the blockchain components are enabled for HSM support.   
 
-{{site.data.keyword.blockchainfull_notm}} Platform images can be purchased through an entitlement to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2. The images are bundled with support from {{site.data.keyword.IBM_notm}}. While it is possible to configure mixed networks that include components (CAs, peers, and ordering nodes) from the {{site.data.keyword.blockchainfull_notm}} Platform and Hyperledger Fabric community version, {{site.data.keyword.IBM_notm}} support is limited to {{site.data.keyword.blockchainfull_notm}} components.  {{site.data.keyword.IBM_notm}} does not support blockchain components that are deployed using the open source Hyperledger Fabric Docker images.
+{{site.data.keyword.blockchainfull_notm}} Platform images can be purchased through an entitlement to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3. The images are bundled with support from {{site.data.keyword.IBM_notm}}. While it is possible to configure mixed networks that include components (CAs, peers, and ordering nodes) from the {{site.data.keyword.blockchainfull_notm}} Platform and Hyperledger Fabric community version, {{site.data.keyword.IBM_notm}} support is limited to {{site.data.keyword.blockchainfull_notm}} components.  {{site.data.keyword.IBM_notm}} does not support blockchain components that are deployed using the open source Hyperledger Fabric Docker images.
 
 ## Supported Platforms
 {: #blockchain-images-supported-platforms}
@@ -46,7 +46,7 @@ Although you can deploy the {{site.data.keyword.blockchainfull_notm}} images on 
 ## Supported Fabric versions
 {: #blockchain-images-supported-fabric}
 
-The {{site.data.keyword.blockchainfull_notm}} Docker images are based on Hyperledger Fabric v1.4.12 and v2.2.5. You can use this documentation to install and deploy the latest version of Fabric used by the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
+The {{site.data.keyword.blockchainfull_notm}} Docker images are based on Hyperledger Fabric v1.4.12 and v2.2.5. You can use this documentation to install and deploy the latest version of Fabric used by the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.
 
 See the [My Support](https://www.ibm.com/support/pages/node/1072956){: external} page for details on what is supported.
 
@@ -56,14 +56,14 @@ See the [My Support](https://www.ibm.com/support/pages/node/1072956){: external}
 The images do not include the {{site.data.keyword.blockchainfull_notm}} Platform console or operator. This offering is meant for experienced Fabric users with existing deployments. If you are still exploring Hyperledger Fabric, you can get started with [{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks#ibp-v2-deploy-iks).
 {: important}
 
-- {{site.data.keyword.blockchainfull_notm}} provides support for Hyperledger Fabric only if you purchase {{site.data.keyword.blockchainfull_notm}} 2.5.2 and deploy the commercial distribution of Hyperledger Fabric images that comes with it. You cannot purchase support for the Hyperledger Fabric Docker images that are provided by the Hyperledger community.
+- {{site.data.keyword.blockchainfull_notm}} provides support for Hyperledger Fabric only if you purchase {{site.data.keyword.blockchainfull_notm}} 2.5.3 and deploy the commercial distribution of Hyperledger Fabric images that comes with it. You cannot purchase support for the Hyperledger Fabric Docker images that are provided by the Hyperledger community.
 - {{site.data.keyword.blockchainfull_notm}} does not support images that have been altered.
 - You cannot use the {{site.data.keyword.blockchainfull_notm}} Platform console to deploy or operate these images. But, if you download the image for the gRPC web proxy and connect the proxy to node that you deploy, you can import the node into an existing {{site.data.keyword.blockchainfull_notm}} Platform console. After you import a node into the console, you can operate that node alongside nodes that were deployed by using the {{site.data.keyword.blockchainfull_notm}} Platform.
 
 ## License and pricing
 {: #blockchain-images-license}
 
-{{site.data.keyword.blockchainfull_notm}} Platform images can be purchased through an entitlement to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2. After you purchase the platform, you can access the [My IBM dashboard](https://myibm.ibm.com/dashboard/){: external} to obtain your entitlement key. You can then use the entitlement key to download the images from the {{site.data.keyword.IBM_notm}} Entitlement Registry.
+{{site.data.keyword.blockchainfull_notm}} Platform images can be purchased through an entitlement to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3. After you purchase the platform, you can access the [My IBM dashboard](https://myibm.ibm.com/dashboard/){: external} to obtain your entitlement key. You can then use the entitlement key to download the images from the {{site.data.keyword.IBM_notm}} Entitlement Registry.
 
 For more information on the pricing of the images, to the [Pricing](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-sw-pricing) topic.
 
@@ -95,33 +95,33 @@ The following commands only work with a Docker container registry. Depending on 
 {: note}
 
 ```
-skopeo copy docker://cp.icr.io/cp/ibp-operator:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-operator:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-init:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-init:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-console:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-console:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-grpcweb:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220405 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220405 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-dind:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-dind:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-utilities:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-utilities:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-peer:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-peer:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-orderer:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-orderer:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-chaincode-launcher:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-chaincode-launcher:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-utilities:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-utilities:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ccenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-ccenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-goenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-goenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-nodeenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-javaenv:2.2.5-20220405 docker://<LOCAL_REGISTRY>/ibp-javaenv:2.2.5-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-crdwebhook:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-ccenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-ccenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-goenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-goenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-nodeenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-javaenv:1.4.12-20220405 docker://<LOCAL_REGISTRY>/ibp-javaenv:1.4.12-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-enroller:2.5.2-20220405 docker://<LOCAL_REGISTRY>/ibp-enroller:2.5.2-20220405 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-operator:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-operator:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-init:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-init:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-console:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-console:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-grpcweb:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220503 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-dind:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-dind:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-utilities:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-utilities:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-peer:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-orderer:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-chaincode-launcher:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-chaincode-launcher:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-utilities:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-utilities:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ccenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-ccenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-goenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-goenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-nodeenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-javaenv:2.2.5-20220503 docker://<LOCAL_REGISTRY>/ibp-javaenv:2.2.5-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-crdwebhook:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-ccenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-ccenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-goenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-goenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-nodeenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-javaenv:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-javaenv:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-enroller:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-enroller:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 ```
 {: codeblock}
 
@@ -179,7 +179,7 @@ In addition to using the Fabric tools, you can also use the tools that are provi
 ### Configuring the gRPC web proxy (optional)
 {: #getting-started-proxy}
 
-If you want to manage your nodes using the {{site.data.keyword.blockchainfull_notm}} Platform console, you can deploy an instance of the gRPC web proxy and then connect it to a node that you deployed with the {{site.data.keyword.blockchainfull_notm}} images. You can then import the node into a console that was deployed by using the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 or {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. You need to deploy a separate web proxy for each node.
+If you want to manage your nodes using the {{site.data.keyword.blockchainfull_notm}} Platform console, you can deploy an instance of the gRPC web proxy and then connect it to a node that you deployed with the {{site.data.keyword.blockchainfull_notm}} images. You can then import the node into a console that was deployed by using the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 or {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. You need to deploy a separate web proxy for each node.
 
 To deploy the proxy, you need to set the following environment variables inside the container.
 ```
@@ -515,7 +515,7 @@ After we deploy a network, we can use the gRPC web proxy to import a peer or ord
     services:
       web_proxy.peer0.org1.example.com:
         container_name: web_proxy.peer0.org1.example.com
-        image: cp.icr.io/cp/ibp-grpcweb:2.5.2-20220405-amd64
+        image: cp.icr.io/cp/ibp-grpcweb:2.5.3-20220503-amd64
         environment:
           - LICENSE=accept
           - BACKEND_ADDRESS=peer0.org1.example.com:7051
@@ -592,7 +592,7 @@ After we deploy a network, we can use the gRPC web proxy to import a peer or ord
     web_proxy.peer0.org1.example.com    | time="2020-01-29T22:18:37Z" level=info msg="listening for http on: [::]:8080"
     ```
 
-You can now view the node from a console by importing the ``peer0.org1.json`` file into an {{site.data.keyword.blockchainfull_notm}} Platform console deployed on {{site.data.keyword.cloud_notm}} or your own cluster using {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2. In order for the console to access your nodes, the URL of the web proxy, the peer, and the operations URL needs be externally accessible.
+You can now view the node from a console by importing the ``peer0.org1.json`` file into an {{site.data.keyword.blockchainfull_notm}} Platform console deployed on {{site.data.keyword.cloud_notm}} or your own cluster using {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3. In order for the console to access your nodes, the URL of the web proxy, the peer, and the operations URL needs be externally accessible.
 
 You need to complete these steps for each node that you want to import into an instance of the {{site.data.keyword.blockchainfull_notm}} Platform console.
 
@@ -600,7 +600,7 @@ You need to complete these steps for each node that you want to import into an i
 ## Interoperability
 {: #blockchain-images-interop}
 
-Nodes that are deployed by using the {{site.data.keyword.blockchainfull_notm}} images can join the channels of other {{site.data.keyword.blockchainfull_notm}} offerings, such as {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 and {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. Unless you connected an instance of the gRPC web proxy to the node, you cannot use the console to operate the images. You need to use Fabric tools to join existing channels that were created with a console or create new channels.
+Nodes that are deployed by using the {{site.data.keyword.blockchainfull_notm}} images can join the channels of other {{site.data.keyword.blockchainfull_notm}} offerings, such as {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. Unless you connected an instance of the gRPC web proxy to the node, you cannot use the console to operate the images. You need to use Fabric tools to join existing channels that were created with a console or create new channels.
 
 ## Upgrading to new versions
 {: #blockchain-images-upgrade}
@@ -610,9 +610,9 @@ You can upgrade your deployment to the latest version of the {{site.data.keyword
 ## Getting support
 {: #blockchain-images-support}
 
-If you encounter issues that are related to Hyperledger Fabric or the underlying images, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page. When you open a case you need to select your product, {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
+If you encounter issues that are related to Hyperledger Fabric or the underlying images, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page. When you open a case you need to select your product, {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.
 
-{{site.data.keyword.IBM_notm}} provides support for issues that are related to the Hyperledger Fabric code or the steps to download and deploy the images that you can find in this documentation. {{site.data.keyword.IBM_notm}} does not provide support for issues that relate to the operation of the images or your underlying infrastructure. Deployment issues due to the specific circumstances of the customer environment will be the customer's responsibility to investigate. If you need assistance with the deployment and management of a Fabric network, use the [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about) offering.
+{{site.data.keyword.IBM_notm}} provides support for issues that are related to the Hyperledger Fabric code or the steps to download and deploy the images that you can find in this documentation. {{site.data.keyword.IBM_notm}} does not provide support for issues that relate to the operation of the images or your underlying infrastructure. Deployment issues due to the specific circumstances of the customer environment will be the customer's responsibility to investigate. If you need assistance with the deployment and management of a Fabric network, use the [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about) offering.
 
 You can take advantage of free blockchain developer resources and support forums to troubleshoot problems and get help from {{site.data.keyword.IBM_notm}} and the Fabric community. For more information, see [Resources and support forums](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-resources).
 

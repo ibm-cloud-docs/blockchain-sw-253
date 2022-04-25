@@ -1,6 +1,6 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
 lastupdated: "2022-04-01"
 
@@ -27,6 +27,16 @@ subcollection: blockchain-sw-253
 <a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new">2.5.3</a>
 </p>
 
+
+
+
+## May 03, 2022
+{: #whats-new-05-03-2022}
+
+{{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 is now available with support for:
+
+- The new [Hyperledger Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) and API, which migrate transaction logic from the application to the new gateway.
+- Rolling node restarts, which increase resource availability across a 2.5.3 network.
 
 
 

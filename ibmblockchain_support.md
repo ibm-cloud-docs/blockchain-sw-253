@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: IBM Blockchain Platform, support case, Hyperledger Fabric Community, Cloud tickets, Rocket Chat, dWAnswers, multicloud
 
@@ -28,7 +28,7 @@ subcollection: blockchain-sw-253
 </p>
 
 
-{{site.data.keyword.blockchainfull}} Platform 2.5.2 provides several avenues for troubleshooting problems and getting support, which depend on your   {{site.data.keyword.blockchainfull_notm}} Platform product, support plan and
+{{site.data.keyword.blockchainfull}} Platform 2.5.3 provides several avenues for troubleshooting problems and getting support, which depend on your   {{site.data.keyword.blockchainfull_notm}} Platform product, support plan and
 case severity.
 {: shortdesc}
 
@@ -36,7 +36,7 @@ case severity.
 ## Security incidents
 {: #blockchain-security-incidents}
 
-{{site.data.keyword.blockchainfull}} Platform 2.5.2 provides the following methods for investigating and reporting security incidents:
+{{site.data.keyword.blockchainfull}} Platform 2.5.3 provides the following methods for investigating and reporting security incidents:
 
 - Search known IBM security issues on the [IBM Product Security Incident Response](https://www.ibm.com/blogs/psirt/). You can filter the issues by severity.
 - Report your security issue to the [IBM Product Security Incident Response Team (PSIRT)](https://www.ibm.com/trust/security-psirt). Reporting methods for third-parties and anonymous sources are also provided.
@@ -71,7 +71,7 @@ You can also post questions or check if your question has been answered in [Stac
 ## Submitting support cases
 {: #blockchain-support-cases}
 
-For issues that are related to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page.   
+For issues that are related to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you can submit a support case from the [mysupport](https://www.ibm.com/support/pages/node/1072956){: external} page.   
 
 For issues that are related to the {{site.data.keyword.blockchainfull_notm}} Platform acquired through the Red Hat Marketplace, it is recommended that you submit a support ticket through the Red Hat Marketplace [support portal](https://marketplace.redhat.com/en-us/support){: external}.
 

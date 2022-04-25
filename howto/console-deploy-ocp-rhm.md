@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 # Deploy from Red Hat Marketplace
 {: #deploy-ocp-rhm}
 
-The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.2 operator onto a Kubernetes cluster on OpenShift Container Platform 4.4+. This operator deploys instances of the certificate authority (CA), peer, ordering nodes and the {{site.data.keyword.blockchainfull_notm}} Platform console that uses to manage the blockchain components on your network. This deployment option is available for OpenShift clusters that are running in {{site.data.keyword.cloud_notm}} or your cloud.
+The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.3 operator onto a Kubernetes cluster on OpenShift Container Platform 4.4+. This operator deploys instances of the certificate authority (CA), peer, ordering nodes and the {{site.data.keyword.blockchainfull_notm}} Platform console that uses to manage the blockchain components on your network. This deployment option is available for OpenShift clusters that are running in {{site.data.keyword.cloud_notm}} or your cloud.
 {: shortdesc}
 
 ## What is the Red Hat Marketplace?
@@ -38,7 +38,7 @@ To learn more about the Marketplace see the [Red Hat documentation](https://mark
 
 - This deployment option is not available on OpenShift Container Platform on LinuxONE.
 - This deployment option is only available for {{site.data.keyword.blockchainfull_notm}} Platform 2.5 and higher. 
-- IBM Blockchain Platform 2.5.2 is supported on Red Hat OpenShift 4.4+.
+- IBM Blockchain Platform 2.5.3 is supported on Red Hat OpenShift 4.4+.
 - You are responsible for the management of health monitoring, logging, and resource usage of your blockchain components.
 - IBM Blockchain Platform is not supported on OpenShift Online.
 - Mutual TLS is not supported between your applications and your blockchain nodes.
@@ -214,14 +214,14 @@ spec:
       class: ''
       size: 5Gi
   serviceAccountName: ibm-blockchain
-  version: 2.5.2
+  version: 2.5.3
 ```
 {: codeblock}
 
 - Accept the IBM Blockchain Platform license by replacing `<ACCEPT>` with the text `true`.
 - Replace `<EMAIL>` with the email address that you want to use for the console administrator.
 - Replace `<PASSWORD>` with the password of your choice. This password becomes the default password for the console administrator but they are required to change it the first time they log in.
-- Replace `<DOMAIN>` with the name of your cluster domain. You can find this value from your OpenShift web console URL. Examine the URL for the current page. It is similar to: `https://console-openshift-console.pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.2/ibp.com~v1beta1~IBPConsole/~new`. The value of the domain then would be `pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud`, after you remove `console-openshift-console` and `/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.2/ibp.com~v1beta1~IBPConsole/~new`.  
+- Replace `<DOMAIN>` with the name of your cluster domain. You can find this value from your OpenShift web console URL. Examine the URL for the current page. It is similar to: `https://console-openshift-console.pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.3/ibp.com~v1beta1~IBPConsole/~new`. The value of the domain then would be `pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud`, after you remove `console-openshift-console` and `/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.3/ibp.com~v1beta1~IBPConsole/~new`.  
 
 
 You also need to make additional edits to the file depending on your choices in the deployment process. For example, if you created a new storage class for your network, provide the storage class that you created to the `class:` field.
@@ -267,7 +267,7 @@ spec:
       class: default
       size: 5Gi
   serviceAccountName: ibm-blockchain
-  version: 2.5.2
+  version: 2.5.3
   clusterdata:
     zones:
   resources:
@@ -450,7 +450,7 @@ In your browser, you can see the console login screen:
 Ensure that you are not using the ESR version of Firefox. If you are, switch to another browser such as Chrome and log in.
 {: important}
 
-The administrator who provisions the console can grant access to other users and restrict the actions they can perform. For more information, see [Managing users from the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users){: external} in the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 documentation.
+The administrator who provisions the console can grant access to other users and restrict the actions they can perform. For more information, see [Managing users from the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users){: external} in the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 documentation.
 
 ## Removing your deployment
 {: #console-deploy-ocp-rhm-remove-deployment}

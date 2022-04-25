@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -20,17 +20,17 @@ subcollection: blockchain-sw-253
 
 
 
-## Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2
-{: #sitemap_getting_started_with__platform_2.5.2}
+## Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
+{: #sitemap_getting_started_with__platform_2.5.3}
 
 
-[Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp)
+[Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp)
 
 * [Are you a Red Hat Marketplace customer?](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-rhm)
 
 * [Already have an {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x network and want to upgrade?](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-upgrade)
 
-* [Is {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 suitable for you?](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-suitable)
+* [Is {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 suitable for you?](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-suitable)
     * [Developer Tools](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-dev-tools)
     * [{{site.data.keyword.blockchainfull_notm}} images](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-images)
 
@@ -45,13 +45,13 @@ subcollection: blockchain-sw-253
 * [Step four: Connect networks across clouds](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-import-nodes)
 
 
-## About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2
-{: #sitemap_about__platform_2.5.2}
+## About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
+{: #sitemap_about__platform_2.5.3}
 
 
-[About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about)
+[About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about)
 
-* [What {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 offers](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-offers)
+* [What {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 offers](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-offers)
 
 * [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites)
     * [Fabric Component Support](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#fabric-component-support)
@@ -60,7 +60,7 @@ subcollection: blockchain-sw-253
 
 * [Considerations and limitations](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-considerations)
 
-* [Installing {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-install)
+* [Installing {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-install)
     * [Installing behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#installing-behind-a-firewall)
 
 * [Security Considerations](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-security)
@@ -80,6 +80,8 @@ subcollection: blockchain-sw-253
 
 
 [What's new](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new)
+
+* [May 03, 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-05-03-2022)
 
 * [March 29, 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-03-29-2021)
 
@@ -396,7 +398,7 @@ subcollection: blockchain-sw-253
 * [Next steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-join-network#ibp-console-join-network-next-steps)
 
 [{{site.data.keyword.blockchainfull_notm}} Platform getting started videos](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-videos)
-* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-videos#ibp-videos-ibp-v2)
+* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-videos#ibp-videos-ibp-v2)
 
 
 ## Deploy a smart contract
@@ -633,7 +635,7 @@ subcollection: blockchain-sw-253
 * [Remove your deployment](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-rhm-fw#console-deploy-ocp-rhm-fw-remove-deployment)
 * [Create a project for your {{site.data.keyword.blockchainfull_notm}} Platform deployment](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-rhm-fw#deploy-ocp-rhm-fw-project)
 
-[Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 manually](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp)
+[Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 manually](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp)
 * [Get your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-entitlement-key)
 * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-prerequisites)
 * [Log in to your OpenShift cluster](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-login)
@@ -658,7 +660,7 @@ subcollection: blockchain-sw-253
 * [Log in to the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#deploy-ocp-log-in)
 * [Next steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp#console-deploy-ocp-next-steps)
 
-[Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 on-prem manually](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall)
+[Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 on-prem manually](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall)
 * [Need to Know](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall#need-to-know)
 * [Get your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall#deploy-ocp-entitlement-key-firewall)
 * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall#deploy-ocp-prerequisites-firewall)
@@ -704,15 +706,15 @@ subcollection: blockchain-sw-253
 
 * [Platform limitations](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-platform)
 
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.5.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-252)
-    * [Step one: Update the webhook image](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-252-webhook)
-    * [Step two: Update the CRDs](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-252-crds)
-    * [Step three: Update the ClusterRole](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-252-clusterrole)
-    * [Step four: Upgrade the {{site.data.keyword.blockchainfull_notm}} operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-252-operator)
+* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.5.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-253)
+    * [Step one: Update the webhook image](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-253-webhook)
+    * [Step two: Update the CRDs](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-253-crds)
+    * [Step three: Update the ClusterRole](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-253-clusterrole)
+    * [Step four: Upgrade the {{site.data.keyword.blockchainfull_notm}} operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-253-operator)
     * [Step six: Upgrade your nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#step-six-upgrade-your-nodes)
     * [Step seven: Update MSPs in consortium to add organization-level endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-update-consortium)
 
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-21x)
+* [Upgrade to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-steps-21x)
     * [Step one: Create the `ibpinfra` project for the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#deploy-ocp-ibpinfra)
     * [Step two: Create a secret for your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#deploy-ocp-secret-ibpinfra)
     * [Step three: Deploy the webhook and custom resource definitions to your OpenShift cluster](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#webhook)
@@ -721,7 +723,7 @@ subcollection: blockchain-sw-253
     * [Step six: Upgrade your nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#step-six-upgrade-your-nodes)
     * [Step seven: Update MSPs in consortium to add organization-level endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-update-nodes-consortium)
 
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x from behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-firewall)
+* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x from behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-firewall)
     * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-begin-firewall)
     * [Step one: Pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#upgrade-ocp-images-firewall)
     * [Step two: Create the `ibpinfra` project for the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-ocp#deploy-ocp-ibpinfra-fw)
@@ -756,7 +758,7 @@ subcollection: blockchain-sw-253
 {: #sitemap_install_on_kubernetes}
 
 
-[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8)
+[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8)
 * [Resources required](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-resources-required)
 * [Browsers](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-browsers)
 * [Storage](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-storage)
@@ -791,7 +793,7 @@ subcollection: blockchain-sw-253
     * [Configure Kubernetes Ingress](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#console-deploy-k8-iks-ingress)
     * [Enable SSL passthrough](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#console-deploy-k8-iks-passthru)
 
-[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall)
+[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall)
 * [Need to Know](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall#need-to-know)
 * [Resources required](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall#deploy-k8-resources-required-firewall)
 * [Browsers](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall#deploy-k8-browsers-firewall)
@@ -829,14 +831,14 @@ subcollection: blockchain-sw-253
 [Upgrading your console and components](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8)
 * [{{site.data.keyword.blockchainfull_notm}} Platform overview](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-platform-overview)
 * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-before)
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.5.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252)
+* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.5.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252)
     * [Step one: Update the webhook image](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252-webhook)
     * [Step two: Update the CRDs](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252-crds)
     * [Step three: Update the ClusterRole](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252-clusterrole)
     * [Step four: Upgrade the {{site.data.keyword.blockchainfull_notm}} operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-252-operator)
     * [Step five: Upgrade your nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#step-five-upgrade-your-nodes)
     * [Step six: Update MSPs in consortium to add organization-level endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8s-update-consortium)
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-21x)
+* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-steps-21x)
     * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-before-steps-21x)
     * [Step one: Create the `ibpinfra` namespace for the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8s-ibpinfra)
     * [Step two: Create a secret for your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8s-secret-ibpinfra)
@@ -845,7 +847,7 @@ subcollection: blockchain-sw-253
     * [Step five: Upgrade the {{site.data.keyword.blockchainfull_notm}} operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-operator)
     * [Step six: Upgrade your nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#step-six-upgrade-your-nodes)
     * [Step seven: Update MSPs in consortium to add organization-level endorsement policy](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-before-steps-21x-update-consortium)
-* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 from 2.1.x from behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-firewall)
+* [Upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 from 2.1.x from behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-firewall)
     * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-begin-firewall)
     * [Step one: Pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8-images-firewall)
     * [Step two: Create the `ibpinfra` namespace for the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8#upgrade-k8s-ibpinfra-fw)
@@ -864,7 +866,7 @@ subcollection: blockchain-sw-253
 * [Step Three: Delete the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain-sw-253?topic=blockchain-sw-253-Removing-k8#Removing-k8-step-three)
 * [Step Four: Remove policies and secrets](/docs/blockchain-sw-253?topic=blockchain-sw-253-Removing-k8#Removing-k8-step-four)
 
-[Installing the 2.5.2 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack)
+[Installing the 2.5.3 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack)
 * [What this fix pack contains](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-contents)
 * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-begin)
 * [Step one: Update the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-webhook)
@@ -872,7 +874,7 @@ subcollection: blockchain-sw-253
 * [Step three: Update the {{site.data.keyword.blockchainfull_notm}} console](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-console)
 * [Step four: Apply fixes to your blockchain nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-nodes)
 * [Rolling back the fix pack installation](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-rollback)
-* [Installing the 2.5.2 fix pack behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-firewall)
+* [Installing the 2.5.3 fix pack behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-firewall)
     * [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-begin-firewall)
     * [Step one: Pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-images-firewall)
     * [Step two: Update the webhook](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-webhook-firewall)
@@ -880,7 +882,7 @@ subcollection: blockchain-sw-253
     * [Step four: Update the {{site.data.keyword.blockchainfull_notm}} console](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-console-firewall)
     * [Step five: Update your blockchain nodes](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack#install-fixpack-nodes-firewall)
 
-[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 for {{site.data.keyword.cloud_notm}} Private](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp)
+[Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 for {{site.data.keyword.cloud_notm}} Private](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp)
 * [Resources required](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-resources-required)
 * [Browsers](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-browsers)
 * [Storage](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-storage)
@@ -1369,6 +1371,8 @@ subcollection: blockchain-sw-253
 
 
 [Release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252)
+
+* [03 May 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-03-2022)
 
 * [05 Apr 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-04-2022)
 

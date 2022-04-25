@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -79,7 +79,7 @@ This topic describes common issues that can occur when you use the {{site.data.k
 {: #ibp-v2-troubleshooting-deployment-policies}
 {: troubleshoot}
 
-When I try to deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 and apply the Security Context Constraint, clusterRole, or ClusterRoleBinding to my namespace, I encounter one of the following errors.
+When I try to deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and apply the Security Context Constraint, clusterRole, or ClusterRoleBinding to my namespace, I encounter one of the following errors.
 
 When I apply the file, I receive a user forbidden error:
 {: tsSymptoms}
@@ -108,7 +108,7 @@ This error happens when a problem exists with the indents in your YAML file. Ref
 {: #ibp-v2-troubleshooting-deployment-cr}
 {: troubleshoot}
 
-When I try to deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 and apply the custom resource definition of the operator or the console, I encounter one of the following errors:
+When I try to deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and apply the custom resource definition of the operator or the console, I encounter one of the following errors:
 
 When I apply the custom resource file, I receive an image pull or image pull back-off error:
 {: tsSymptoms}

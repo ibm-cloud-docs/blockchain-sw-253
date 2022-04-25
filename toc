@@ -2,7 +2,7 @@
 {:topicgroup:.topicgroup}
 
 {: .toc subcollection="blockchain-sw-253" category="blockchain" audience="service" product-page="https://www.ibm.com/cloud/blockchain-platform" href="/docs/blockchain-sw-253/index.html" path="blockchain-sw-253"}
-IBM Blockchain Platform 2.5.2
+IBM Blockchain Platform 2.5.3
 
 	{: .navgroup id="learn"}
 	index_blockchain_sw.md

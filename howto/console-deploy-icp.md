@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -13,12 +13,12 @@ subcollection: blockchain-sw-253
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 for {{site.data.keyword.cloud_notm}} Private
+# Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 for {{site.data.keyword.cloud_notm}} Private
 {: #deploy-icp}
 
-You can use the following instructions to deploy {{site.data.keyword.blockchainfull}} Platform 2.5.2 on IBM Cloud Private with a minimum fix pack level of 3.2.2.2008.
+You can use the following instructions to deploy {{site.data.keyword.blockchainfull}} Platform 2.5.3 on IBM Cloud Private with a minimum fix pack level of 3.2.2.2008.
 
-{{site.data.keyword.blockchainfull}} Platform 2.5.2 has been tested on IBM Cloud Private 3.2.2.2105, which contains Kubernetes v1.19. However, the minimum fix level for IBM Cloud Private (3.2.2.2008) contains an earlier version of  Kubernetes. Though IBM Blockchain Platform is functional with earlier versions of Kubernetes, they are no longer supported and may be missing fixes for identified vulnerabilities.
+{{site.data.keyword.blockchainfull}} Platform 2.5.3 has been tested on IBM Cloud Private 3.2.2.2105, which contains Kubernetes v1.19. However, the minimum fix level for IBM Cloud Private (3.2.2.2008) contains an earlier version of  Kubernetes. Though IBM Blockchain Platform is functional with earlier versions of Kubernetes, they are no longer supported and may be missing fixes for identified vulnerabilities.
 {: important}
 
 {{site.data.keyword.blockchainfull_notm}} Platform uses a [Kubernetes Operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){: external} to install the {{site.data.keyword.blockchainfull_notm}} Platform console on your cluster and manage the deployment and your blockchain nodes. When the {{site.data.keyword.blockchainfull_notm}} Platform console is running on your cluster, you can use the console to create blockchain nodes and operate a multicloud blockchain network.
@@ -195,7 +195,7 @@ for file in images/*; do docker load < $file; done
 
 Execute the following command to tag the webhook image:
 ```
-docker tag icr.io/cp/ibp-crdwebhook:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.2-20210713-amd64
+docker tag icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -223,13 +223,13 @@ docker tag icr.io/cp/ibp-goenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<N
 docker tag icr.io/cp/ibp-dind:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20210713-amd64
 docker tag icr.io/cp/ibp-utilities:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20210713-amd64
 docker tag icr.io/cp/ibp-ccenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-enroller:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.2-20210713-amd64
-docker tag icr.io/cp/ibp-init:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.2-20210713-amd64
-docker tag icr.io/cp/ibp-fluentd:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.2-20210713-amd64
-docker tag icr.io/cp/ibp-grpcweb:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.2-20210713-amd64
-docker tag icr.io/cp/ibp-console:2.5.2-20210810-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.2-20210810-amd64
-docker tag icr.io/cp/ibp-deployer:2.5.2-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.2-20210713-amd64
-docker tag icr.io/cp/ibp-operator:2.5.2-20210810-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.2-20210810-amd64
+docker tag icr.io/cp/ibp-enroller:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-init:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-fluentd:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-grpcweb:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-console:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-deployer:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220503-amd64
+docker tag icr.io/cp/ibp-operator:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -240,7 +240,7 @@ Replace `<NAMESPACE>` with the name of your {{site.data.keyword.blockchainfull_n
 
 Execute the following command to push the webhook image to the private image repository:
 ```
-docker push <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.2-20210713-amd64
+docker push <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -270,13 +270,13 @@ docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20210713-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20210713-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20210713-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.2-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.2-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.2-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.2-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.2-20210810-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.2-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.2-20210810-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220503-amd64
 ```
 {: codeblock}
 
@@ -417,7 +417,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -431,7 +431,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "<cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.2-20210713-amd64"
+          image: "<cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -540,7 +540,7 @@ service/ibp-webhook created
     ```
     {: codeblock}
 
-2. When you deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.2, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
+2. When you deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, you need to apply the following four CRDs for the CA, peer, orderer, and console. If you are upgrading to 2.5.3, before you can update the operator, you need to update the CRDs to include a new `v1beta1` section as well as the webhook TLS certificate that you just stored in the `TLS_CERT` environment variable. In either case, run the following four commands to apply or update each CRD.
 
 Run this command to update the CA CRD:   
 ```yaml
@@ -1098,7 +1098,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
         productChargedContainers: ""
         productMetric: "VIRTUAL_PROCESSOR_CORE"
     spec:
@@ -1123,7 +1123,7 @@ spec:
         - name: docker-key-secret
       containers:
         - name: ibp-operator
-          image: <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.2-20210810-amd64
+          image: <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220503-amd64
           command:
           - ibp-operator
           imagePullPolicy: Always
@@ -1221,12 +1221,12 @@ spec:
     configtxlatorTag: 2.2.3-20210713
     consoleImage: ibp-console
     consoleInitImage: ibp-init
-    consoleInitTag: 2.5.2-20210713
-    consoleTag: 2.5.2-20210810
+    consoleInitTag: 2.5.3-20220503
+    consoleTag: 2.5.3-20220503
     couchdbImage: ibp-couchdb
     couchdbTag: 2.3.1-20210713
     deployerImage: ibp-deployer
-    deployerTag: 2.5.2-20210713
+    deployerTag: 2.5.3-20220503
   imagePullSecrets:
     - docker-key-secret
   networkinfo:
@@ -1244,34 +1244,34 @@ spec:
         image:
           caImage: ibp-ca
           caInitImage: ibp-init
-          caInitTag: 2.5.2-20210713
+          caInitTag: 2.5.3-20220503
           caTag: 1.5.0-20210713
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.2-20210713
+          enrollerTag: 2.5.3-20220503
         version: 1.5.0-0
     orderer:
       1.4.12-0:
         default: true
         image:
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.2-20210713
+          enrollerTag: 2.5.3-20220503
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.2-20210713
+          grpcwebTag: 2.5.3-20220503
           ordererImage: ibp-orderer
           ordererInitImage: ibp-init
-          ordererInitTag: 2.5.2-20210713
+          ordererInitTag: 2.5.3-20220503
           ordererTag: 1.4.12-20210713
         version: 1.4.12-0
       2.2.3-0:
         default: false
         image:
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.2-20210713
+          enrollerTag: 2.5.3-20220503
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.2-20210713
+          grpcwebTag: 2.5.3-20220503
           ordererImage: ibp-orderer
           ordererInitImage: ibp-init
-          ordererInitTag: 2.5.2-20210713
+          ordererInitTag: 2.5.3-20220503
           ordererTag: 2.2.3-20210713
         version: 2.2.3-0
     peer:
@@ -1283,11 +1283,11 @@ spec:
           dindImage: ibp-dind
           dindTag: 1.4.12-20210713
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.2-20210713
+          enrollerTag: 2.5.3-20220503
           fluentdImage:ibp-fluentd
-          fluentdTag: 2.5.2-20210713
+          fluentdTag: 2.5.3-20220503
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.2-20210713
+          grpcwebTag: 2.5.3-20220503
           goEnvImage: ibp-goenv
           goEnvTag: 1.4.12-20210713
           javaEnvImage: ibp-javaenv
@@ -1296,7 +1296,7 @@ spec:
           nodeEnvTag: 1.4.12-20210713
           peerImage: ibp-peer
           peerInitImage: ibp-init
-          peerInitTag: 2.5.2-20210713
+          peerInitTag: 2.5.3-20220503
           peerTag: 1.4.12-20210713
         version: 1.4.12-0
       2.2.3-0:
@@ -1309,20 +1309,20 @@ spec:
           couchdbImage: ibp-couchdb
           couchdbTag: 3.1.1-20210713
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.2-20210713
+          enrollerTag: 2.5.3-20220503
           fluentdImage: ibp-fluentd
-          fluentdTag: 2.5.2-20210713
+          fluentdTag: 2.5.3-20220503
           goEnvImage: ibp-goenv
           goEnvTag: 2.2.3-20210713
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.2-20210713
+          grpcwebTag: 2.5.3-20220503
           javaEnvImage: ibp-javaenv
           javaEnvTag: 2.2.3-20210713
           nodeEnvImage: ibp-nodeenv
           nodeEnvTag: 2.2.3-20210713
           peerImage: ibp-peer
           peerInitImage: ibp-init
-          peerInitTag: 2.5.2-20210713
+          peerInitTag: 2.5.3-20220503
           peerTag: 2.2.3-20210713
         version: 2.2.3-0
 ```
@@ -1433,7 +1433,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.2
+  version: 2.5.3
 
 ```
 {: codeblock}

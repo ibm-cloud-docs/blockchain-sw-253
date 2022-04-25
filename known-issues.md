@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: catalina, chrome, external CA, TLS, orderer, error, multicloud
 
@@ -17,7 +17,7 @@ subcollection: blockchain-sw-253
 # Known issues
 {: #sw-known-issues}
 
-This page describes known issues that you might encounter when you use {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2.
+This page describes known issues that you might encounter when you use {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.
 {: shortdesc}
 
 <p>

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy,
 
@@ -53,7 +53,7 @@ It also includes an entire set of playbooks that can be used to deploy your peer
 
 
 There are two main scenarios that the playbooks address:
-- **Deploying the {{site.data.keyword.blockchainfull_notm}} Platform on a Kubernetes cluster**.  If you are using your own Kubernetes distribution, you can purchase an [{{site.data.keyword.blockchainfull_notm}} 2.5.2 license](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp) and then use the `install-ibp.yml` playbook to deploy the platform onto your Kubernetes cluster. The alternative is to install the service manually by following instructions for [OpenShift Container Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or [Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp).
+- **Deploying the {{site.data.keyword.blockchainfull_notm}} Platform on a Kubernetes cluster**.  If you are using your own Kubernetes distribution, you can purchase an [{{site.data.keyword.blockchainfull_notm}} 2.5.3 license](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp) and then use the `install-ibp.yml` playbook to deploy the platform onto your Kubernetes cluster. The alternative is to install the service manually by following instructions for [OpenShift Container Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or [Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp).
 
     This option is not applicable if you are planning to install the {{site.data.keyword.blockchainfull_notm}} Platform service from the {{site.data.keyword.cloud_notm}} catalog because the Cloud catalog installs it for you.
     {: note}

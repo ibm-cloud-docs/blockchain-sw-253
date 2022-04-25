@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-25"
 
 keywords: IBM Blockchain Platform, system requirements, Kubernetes, behind a firewall, azure, multicloud
 
@@ -14,7 +14,7 @@ subcollection: blockchain-sw-253
 
 
 
-# About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2
+# About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
 {: #console-ocp-about}
 
 <p>
@@ -27,7 +27,7 @@ subcollection: blockchain-sw-253
 <a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about">2.5.3</a>
 </p>
 
-The {{site.data.keyword.blockchainfull}} Platform 2.5.2 enables a consortium of organizations to easily build and join a blockchain network [on-prem](#x4561212){: term}, or on any private, public, or hybrid multicloud that uses Kubernetes. Customers can deploy their nodes on the cloud platform of their choice and connect to any {{site.data.keyword.blockchainfull_notm}} Platform network, whether it is deployed on your own Kubernetes cluster or with the {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 leverages Hyperledger Fabric v1.4.12 and v2.2.5 and supports deployment on multiple Kubernetes distributions.
+The {{site.data.keyword.blockchainfull}} Platform 2.5.3 enables a consortium of organizations to easily build and join a blockchain network [on-prem](#x4561212){: term}, or on any private, public, or hybrid multicloud that uses Kubernetes. Customers can deploy their nodes on the cloud platform of their choice and connect to any {{site.data.keyword.blockchainfull_notm}} Platform network, whether it is deployed on your own Kubernetes cluster or with the {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 leverages Hyperledger Fabric v1.4.12 and v2.2.5 and supports deployment on multiple Kubernetes distributions.
 {: shortdesc}
 
 {{site.data.keyword.blockchainfull_notm}} Platform is based on Hyperledger Fabric v1.4.12 and v2.2.5 and is {{site.data.keyword.IBM_notm}}'s commercial distribution of Hyperledger Fabric. A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments.
@@ -76,7 +76,7 @@ Because you only pay for the compute you use, it’s painless to transition from
 
 The world is moving too fast to keep doing things the old way. Go to cloud dot IBM dot com today and check out the IBM blockchain platform.
 
-## What {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 offers
+## What {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 offers
 {: #console-ocp-about-offers}
 
 The {{site.data.keyword.blockchainfull_notm}} Platform provides a flexible management platform that runs on Kubernetes. The offering includes an award-winning management console that allows you to easily deploy blockchain components, build a multicloud blockchain network, and perform network management and maintenance.
@@ -89,7 +89,7 @@ Includes the operator, management console, peer, CA, ordering node, and smart co
 
 **{{site.data.keyword.blockchainfull_notm}} images**  
 
-For experienced Hyperledger Fabric customers, a purchase of {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 includes an entitlement to the peer, CA, ordering node, and smart contract container images that are signed and supported by {{site.data.keyword.IBM_notm}}. These images are based on the open source Hyperledger Fabric code base and contain a number of enhancements for stability and serviceability. The images are bundled with support from {{site.data.keyword.IBM_notm}}. The {{site.data.keyword.blockchainfull_notm}} Platform management console and operator are not among the images that are included in this entitlement. For more information, see [{{site.data.keyword.blockchainfull_notm}} images for Hyperledger Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images#blockchain-images).
+For experienced Hyperledger Fabric customers, a purchase of {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 includes an entitlement to the peer, CA, ordering node, and smart contract container images that are signed and supported by {{site.data.keyword.IBM_notm}}. These images are based on the open source Hyperledger Fabric code base and contain a number of enhancements for stability and serviceability. The images are bundled with support from {{site.data.keyword.IBM_notm}}. The {{site.data.keyword.blockchainfull_notm}} Platform management console and operator are not among the images that are included in this entitlement. For more information, see [{{site.data.keyword.blockchainfull_notm}} images for Hyperledger Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images#blockchain-images).
 
 The {{site.data.keyword.blockchainfull_notm}} Platform includes the following key features:
 
@@ -134,7 +134,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 All documentation on supported environments applies to the latest version of the code only. If necessary, refer to the [upgrade information](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components). For release-specific details, see [release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-saas-20).
 
 
-The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 can be deployed with the Kubernetes distributions on the following platforms:
+The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 can be deployed with the Kubernetes distributions on the following platforms:
 
 | Kubernetes distribution | Version | Hardware |  Tested configuration|
 |----|----|----|-----|
@@ -144,7 +144,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 can be deployed wit
 | Kubernetes ***   | v1.20 - v1.23 | x86_64 | v1.20 - v1.23 |
 {: caption="Table 1. Supported platforms" caption-side="bottom"}
 
-*** If you want to use {{site.data.keyword.IBM_notm}} Kubernetes Service, we recommend that you check out the [{{site.data.keyword.blockchainfull_notm}} Platform for IBM Cloud](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks){: external} offering unless you specifically require this offering. See [Is IBM Blockchain Platform 2.5.2 suitable for you](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-suitable).    
+*** If you want to use {{site.data.keyword.IBM_notm}} Kubernetes Service, we recommend that you check out the [{{site.data.keyword.blockchainfull_notm}} Platform for IBM Cloud](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks){: external} offering unless you specifically require this offering. See [Is IBM Blockchain Platform 2.5.3 suitable for you](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-suitable).    
 
 {{site.data.keyword.blockchainfull_notm}} Platform does not support IBM Cloud Virtual Server for VPC and Virtual Private Cloud (VPC).
 {: note}
@@ -183,7 +183,7 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 ## License and pricing
 {: #console-ocp-about-license}
 
-Your {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 entitlement includes both the full platform and the {{site.data.keyword.blockchainfull_notm}} images.
+Your {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 entitlement includes both the full platform and the {{site.data.keyword.blockchainfull_notm}} images.
 
 The entitlement does not include a Kubernetes distribution. You must procure that separately.
 {: note}
@@ -202,17 +202,17 @@ For more information, see [Pricing](/docs/blockchain-sw-253?topic=blockchain-sw-
 - You must have the cluster admin role in order to deploy the product.
 - The console creates nodes based on the Hyperledger Fabric v1.4.12 and v2.2.5 node images.
 - You can deploy only one {{site.data.keyword.blockchainfull_notm}} Platform console per Kubernetes namespace or OpenShift project. If you plan to create multiple blockchain networks, for example to create different environments for development, staging, and production, you should create a unique project or namespace for each environment.
-- You cannot upgrade a deployed network from {{site.data.keyword.blockchainfull_notm}} Platform for Multicloud to {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2.
+- You cannot upgrade a deployed network from {{site.data.keyword.blockchainfull_notm}} Platform for Multicloud to {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3.
 - {{site.data.keyword.blockchainfull_notm}} Platform is not supported on OpenShift Online.
 - OpenShift customers can preview the {{site.data.keyword.blockchainfull_notm}} Platform at no charge for 30 days when you select the free trial version available from the Red Hat Marketplace.
 
-## Installing {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2
+## Installing {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
 {: #console-ocp-about-install}
 
-The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 uses a [Kubernetes Operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){: external} to install the {{site.data.keyword.blockchainfull_notm}} Platform console on your cluster and manage the deployment of your nodes. When you purchase the {{site.data.keyword.blockchainfull_notm}} Platform license from Passport Advantage Online, you receive a token that provides access to {{site.data.keyword.IBM_notm}} Entitlement registry. You can use your token with the commands and files that are provided in the installation guide to automatically download the Docker images and start the operator and console on your cluster. When you are ready to get started, see [Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 on the OpenShift Container Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp). If you are deploying the platform on other Kubernetes distributions, see [Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 on Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8).
+The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 uses a [Kubernetes Operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/){: external} to install the {{site.data.keyword.blockchainfull_notm}} Platform console on your cluster and manage the deployment of your nodes. When you purchase the {{site.data.keyword.blockchainfull_notm}} Platform license from Passport Advantage Online, you receive a token that provides access to {{site.data.keyword.IBM_notm}} Entitlement registry. You can use your token with the commands and files that are provided in the installation guide to automatically download the Docker images and start the operator and console on your cluster. When you are ready to get started, see [Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 on the OpenShift Container Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp). If you are deploying the platform on other Kubernetes distributions, see [Deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 on Kubernetes](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8).
 
 ### Installing behind a firewall
-It is also possible to install and deploy the {{site.data.keyword.blockchainfull_notm}} Platform behind a firewall, without having access to the public internet. For more information, see [Deploying IBM Blockchain Platform 2.5.2 on the OpenShift Container Platform behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall). Otherwise, for other Kubernetes distributions see [Deploying IBM Blockchain Platform 2.5.2 on Kubernetes behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall).
+It is also possible to install and deploy the {{site.data.keyword.blockchainfull_notm}} Platform behind a firewall, without having access to the public internet. For more information, see [Deploying IBM Blockchain Platform 2.5.3 on the OpenShift Container Platform behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-firewall). Otherwise, for other Kubernetes distributions see [Deploying IBM Blockchain Platform 2.5.3 on Kubernetes behind a firewall](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall).
 
 **Looking for a way to script the deployment of the service?** Check out the [Ansible playbooks](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible), a powerful tool for scripting the deployment of components in your blockchain network.
 
@@ -229,4 +229,4 @@ For more information about how to get support on {{site.data.keyword.blockchainf
 ## Next steps
 {: #console-ocp-about-next-steps}
 
-When you are ready to learn how to deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
+When you are ready to learn how to deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
