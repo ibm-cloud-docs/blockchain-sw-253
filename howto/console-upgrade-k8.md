@@ -36,7 +36,7 @@ Use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm
 
 | Version | Release date | Image tags | New features |
 |----|----|----|----|
-| [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-05-03-2022) | 03 May 2022| **Console and tools** <ul><li>2.5.3-20220503-amd64</li><li>2.5.3-20220503-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li><li>Support for new Fabric Gateway.</li></ul> |
+| [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new#whats-new-05-03-2022) | 03 May 2022| **Console and tools** <ul><li>2.5.3-20220503-amd64</li><li>2.5.3-20220503-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li> <li>3.1.2-20220503</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li><li>Support for new Fabric Gateway.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-whats-new#whats-new-03-29-2021) | 29 Mar 2021| **Console and tools** <ul><li>2.5.3-20220503-amd64</li><li>2.5.3-20220503-amd64</li><li>2.5.2-20210616-amd64</li><li>2.5.2-20210505-amd64</li><li>2.5.2-20210325-amd64</li></ul> **Fabric nodes** <ul><li>1.4.12-20210616</li><li>1.4.11-20210505</li><li>1.4.11-20210325</li></ul> **CouchDB** <ul> <li>2.3.1-20210505</li><li>2.3.1-20210325</li> <li>3.1.1-20210505</li> <li>3.1.1-20210325</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.12 and 2.2.4</li><li>Fabric version 1.4.11 and 2.2.2</li></ul> **Improvements to the Console UI** <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform 2.5.1](/docs/blockchain-sw-251?topic=blockchain-sw-251-release-notes-saas-20#01-12-2021) | 12 Jan 2021| **Console and tools** <ul><li>2.5.1-20210112-amd64</li> <li>2.5.1-20201208-amd64</li> <li>2.5.1-20201119-amd64</li> <li>2.5.1-20201030-amd64</li></ul> **Fabric nodes** <ul><li>1.4.9-20210112-amd64</li><li>1.4.9-20201208-amd64</li> <li>1.4.9-20201119-amd64</li> <li>1.4.9-20201030-amd64</li><li>2.2.1-20210112-amd64</li><li>2.2.1-20201208-amd64</li><li>2.2.1-20201119-amd64</li><li>2.2.1-20201030-amd64</li></ul> **CouchDB** <ul> <li>2.3.1-20210112-amd64</li> <li>2.3.1-20201208-amd64</li>  <li>2.3.1-20201119-amd64</li><li>2.3.1-20201030-amd64</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.9 and 2.2.1</ul> <strong>Improvements to the Console UI</strong> <ul><li>Support for Fabric v2.x Lifecycle.</li><li>Upgrade CA, peer, and ordering nodes from Fabric v1.4 to Fabric v2.x.</li><li>Certificate renewal enhancements added to the console.</li></ul> |
 | [{{site.data.keyword.blockchainfull_notm}} Platform 2.5](/docs/blockchain-sw-25?topic=blockchain-sw-25-release-notes-saas-20#08-25-2020){: external} | 9 Sept 2020| **Console and tools** <ul><li>2.5.0-20200825-amd64</li><li>2.5.0-20200714-amd64</li><li>2.5.0-20200618-amd64</li></ul> **Fabric nodes** <ul><li>1.4.7-20200825-amd64</li><li>1.4.7-20200714-amd64</li><li>1.4.7-20200618-amd64</li><li>2.1.1-20200825-amd64</li><li>2.1.1-20200714-amd64</li><li>2.1.1-20200618-amd64</li></ul> **CouchDB** <ul><li>2.3.1-20200825-amd64</li><li>2.3.1-20200714-amd64</li><li>2.3.1-20200618-amd64</li></ul> | **Fabric Version Upgrade** <ul><li>Fabric version 1.4.7 and 2.1.1</ul> <strong>Improvements to the Console UI</strong> <ul><li>Ability to select Fabric version when you deploy a new peer or ordering node.</li></ul> |
@@ -922,7 +922,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -937,7 +937,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1743,7 +1743,7 @@ skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.3-20220503 docker://<LOCAL_REG
 skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.2-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220503 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
@@ -1953,7 +1953,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -1968,7 +1968,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false

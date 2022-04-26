@@ -85,7 +85,7 @@ skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.3-20220503 docker://<LOCAL_REG
 skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.3-20220503 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.3-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.1-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.1.2-20220503 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.1.1-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20220503 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-ca:1.5.2-20220503 docker://<LOCAL_REGISTRY>/ibp-ca:1.5.2-20220503 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
@@ -345,7 +345,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -360,7 +360,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1253,7 +1253,7 @@ spec:
         - name: ibm-entitlement-key
       containers:
         - name: ibp-operator
-          image: cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64
+          image: cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64
           command:
             - ibp-operator
           imagePullPolicy: Always

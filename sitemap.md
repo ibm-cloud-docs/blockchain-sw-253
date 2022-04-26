@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -911,10 +911,6 @@ subcollection: blockchain-sw-253
     * [Create the role binding](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-k8-rolebinding)
 * [Deploy the {{site.data.keyword.blockchainfull_notm}} Platform operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-operator)
 * [Deploy the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-console)
-    * [Advanced deployment options](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#console-icp-deploy-k8-advanced)
-    * [Use your own TLS Certificates (Optional)](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-tls)
-    * [Verifying the console installation](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-verify)
-* [Log in to the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-log-in)
 * [Next steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-k8-next-steps)
 * [Docker in Docker considerations](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-icp#deploy-icp-docker-in-docker-considerations)
 

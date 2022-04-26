@@ -58,8 +58,9 @@ Note that when smart contracts are installed on peers that run a Fabric v2.x ima
 {: #deploy-k8-browsers}
 The {{site.data.keyword.blockchainfull_notm}} Platform console has been successfully tested on the following browsers:
 
-- Chrome Version 91.0.4472.114 (Official Build) (64-bit)
-- Safari Version 14.1.1 (16611.2.7.1.4)
+- Chrome Version 100.0.4896.127 (Official Build) (x86_64)
+- Safari Version 15.4 (16613.1.17.1.13, 16613)
+- Firefox 99.0.1 (64-bit)
 
 ## Storage
 {: #deploy-k8-storage}
@@ -318,7 +319,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -333,7 +334,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1204,7 +1205,7 @@ spec:
         - name: ibm-entitlement-key
       containers:
         - name: ibp-operator
-          image: cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64
+          image: cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64
           command:
             - ibp-operator
           imagePullPolicy: Always

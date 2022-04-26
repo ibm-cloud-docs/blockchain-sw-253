@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -53,8 +53,9 @@ If you are deploying the OpenShift platform on {{site.data.keyword.cloud_notm}},
 {: #deploy-ocp-browsers}
 The {{site.data.keyword.blockchainfull_notm}} Platform console has been successfully tested on the following browsers:
 
-- Chrome Version 91.0.4472.114 (Official Build) (64-bit)
-- Safari Version 14.1.1 (16611.2.7.1.4)
+- Chrome Version 100.0.4896.127 (Official Build) (x86_64)
+- Safari Version 15.4 (16613.1.17.1.13, 16613)
+- Firefox 99.0.1 (64-bit)
 
 ## Storage
 {: #deploy-ocp-storage}

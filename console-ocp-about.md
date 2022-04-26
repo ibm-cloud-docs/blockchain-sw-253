@@ -158,7 +158,7 @@ Support for Hyperledger Fabric **v1.4 is now deprecated**, and support for Fabri
 Note that Fabric v1.4 has not been supported by the Hyperledger community since April of 2021. In addition, Fabric v1.4 uses Golang v1.14, which is no longer receiving security updates from the Golang community.
 {: important}
 
-The following support levels are provided for Hyperledger Fabric v1.4.12 (Deprecated), v2.2.4, v2.2.5, and Fabric CA v1.5.0 and v1.5.2.
+The following support levels are provided for Hyperledger Fabric v1.4.12 (Deprecated), v2.2.4, v2.2.5, and Fabric CA v1.5.0 and v1.5.3.
 
 Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Operations Console **are required for support** and provide Hyperledger Fabric clients with a verified production setup, simplified management and support, and verified security patches.
 {: important}

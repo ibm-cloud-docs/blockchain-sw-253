@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -53,8 +53,9 @@ Note that when smart contracts are installed on peers that run a Fabric v2.x ima
 {: #deploy-icp-browsers}
 The {{site.data.keyword.blockchainfull_notm}} Platform console has been successfully tested on the following browsers:
 
-- Chrome Version 91.0.4472.114 (Official Build) (64-bit)
-- Safari Version 14.1.1 (16611.2.7.1.4)
+- Chrome Version 100.0.4896.127 (Official Build) (x86_64)
+- Safari Version 15.4 (16613.1.17.1.13, 16613)
+- Firefox 99.0.1 (64-bit)
 
 ## Storage
 {: #deploy-icp-storage}
@@ -204,25 +205,25 @@ docker tag icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64 <cluster_CA_domain>:850
 
 Execute the following command to tag the webhook image:
 ```
-docker tag icr.io/cp/ibp-orderer:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-peer:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-orderer:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-peer:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-ca:1.5.0-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ca:1.5.0-20210713-amd64
-docker tag icr.io/cp/ibp-couchdb:3.1.1-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:3.1.1-20210713-amd64
-docker tag icr.io/cp/ibp-chaincode-launcher:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-chaincode-launcher:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-javaenv:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-nodeenv:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-goenv:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-utilities:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-ccenv:2.2.3-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:2.2.3-20210713-amd64
-docker tag icr.io/cp/ibp-couchdb:2.3.1-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:2.3.1-20210713-amd64
-docker tag icr.io/cp/ibp-javaenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-nodeenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-goenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-dind:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-utilities:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20210713-amd64
-docker tag icr.io/cp/ibp-ccenv:1.4.12-20210713-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20210713-amd64
+docker tag icr.io/cp/ibp-orderer:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-peer:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-orderer:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-peer:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-ca:1.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ca:1.5.3-20220503-amd64
+docker tag icr.io/cp/ibp--amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp--amd64
+docker tag icr.io/cp/ibp-chaincode-launcher:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-chaincode-launcher:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-javaenv:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-nodeenv:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-goenv:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-utilities:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-ccenv:2.4.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:2.4.3-20220503-amd64
+docker tag icr.io/cp/ibp-couchdb:2.3.1-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:2.3.1-20220503-amd64
+docker tag icr.io/cp/ibp-javaenv:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-nodeenv:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-goenv:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-dind:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-utilities:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20220503-amd64
+docker tag icr.io/cp/ibp-ccenv:1.4.12-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20220503-amd64
 docker tag icr.io/cp/ibp-enroller:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220503-amd64
 docker tag icr.io/cp/ibp-init:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220503-amd64
 docker tag icr.io/cp/ibp-fluentd:2.5.3-20220503-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220503-amd64
@@ -251,25 +252,25 @@ docker push <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220503-amd6
 
 Execute the following command to push the blockchain images to the private image repository:
 ```
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ca:1.5.0-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:3.1.1-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-chaincode-launcher:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:2.2.3-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:2.3.1-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20210713-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20210713-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-orderer:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-peer:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ca:1.5.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp--amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-chaincode-launcher:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:2.4.3-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-couchdb:2.3.1-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-javaenv:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-nodeenv:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20220503-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20220503-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220503-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220503-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220503-amd64
@@ -1218,13 +1219,13 @@ spec:
   registryURL: <cluster_CA_domain>:8500/<NAMESPACE>
   images:
     configtxlatorImage: ibp-utilities
-    configtxlatorTag: 2.2.3-20210713
+    configtxlatorTag: 2.4.3-20220503
     consoleImage: ibp-console
     consoleInitImage: ibp-init
     consoleInitTag: 2.5.3-20220503
     consoleTag: 2.5.3-20220503
     couchdbImage: ibp-couchdb
-    couchdbTag: 2.3.1-20210713
+    couchdbTag: 3.1.2-20220503
     deployerImage: ibp-deployer
     deployerTag: 2.5.3-20220503
   imagePullSecrets:
@@ -1239,30 +1240,18 @@ spec:
       size: 10Gi
   versions:
     ca:
-      1.5.0-0:
+      1.5.3-1:
         default: true
         image:
           caImage: ibp-ca
           caInitImage: ibp-init
           caInitTag: 2.5.3-20220503
-          caTag: 1.5.0-20210713
+          caTag: 1.5.3-20220503
           enrollerImage: ibp-enroller
           enrollerTag: 2.5.3-20220503
-        version: 1.5.0-0
+        version: 1.5.3-1
     orderer:
-      1.4.12-0:
-        default: true
-        image:
-          enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220503
-          grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.3-20220503
-          ordererImage: ibp-orderer
-          ordererInitImage: ibp-init
-          ordererInitTag: 2.5.3-20220503
-          ordererTag: 1.4.12-20210713
-        version: 1.4.12-0
-      2.2.3-0:
+      1.4.12-12:
         default: false
         image:
           enrollerImage: ibp-enroller
@@ -1272,16 +1261,28 @@ spec:
           ordererImage: ibp-orderer
           ordererInitImage: ibp-init
           ordererInitTag: 2.5.3-20220503
-          ordererTag: 2.2.3-20210713
-        version: 2.2.3-0
-    peer:
-      1.4.12-0:
+          ordererTag: 1.4.12-20220503
+        version: 1.4.12-12
+      2.4.3-1:
         default: true
         image:
+          enrollerImage: ibp-enroller
+          enrollerTag: 2.5.3-20220503
+          grpcwebImage: ibp-grpcweb
+          grpcwebTag: 2.5.3-20220503
+          ordererImage: ibp-orderer
+          ordererInitImage: ibp-init
+          ordererInitTag: 2.5.3-20220503
+          ordererTag: 2.4.3-20220503
+        version: 2.4.3-1
+    peer:
+      1.4.12-12:
+        default: false
+        image:
           couchdbImage: ibp-couchdb
-          couchdbTag: 2.3.1-20210713
+          couchdbTag: 2.3.1-20220503
           dindImage: ibp-dind
-          dindTag: 1.4.12-20210713
+          dindTag: 1.4.12-20220503
           enrollerImage: ibp-enroller
           enrollerTag: 2.5.3-20220503
           fluentdImage:ibp-fluentd
@@ -1289,43 +1290,42 @@ spec:
           grpcwebImage: ibp-grpcweb
           grpcwebTag: 2.5.3-20220503
           goEnvImage: ibp-goenv
-          goEnvTag: 1.4.12-20210713
+          goEnvTag: 1.4.12-20220503
           javaEnvImage: ibp-javaenv
-          javaEnvTag: 1.4.12-20210713
+          javaEnvTag: 1.4.12-20220503
           nodeEnvImage: ibp-nodeenv
-          nodeEnvTag: 1.4.12-20210713
+          nodeEnvTag: 1.4.12-20220503
           peerImage: ibp-peer
           peerInitImage: ibp-init
           peerInitTag: 2.5.3-20220503
-          peerTag: 1.4.12-20210713
-        version: 1.4.12-0
-      2.2.3-0:
-        default: false
+          peerTag: 1.4.12-20220503
+        version: 1.4.12-12
+      2.4.3-1:
+        default: true
         image:
           builderImage:ibp-ccenv
-          builderTag: 2.2.3-20210713
+          builderTag: 2.4.3-20220503
           chaincodeLauncherImage: ibp-chaincode-launcher
-          chaincodeLauncherTag: 2.2.3-20210713
+          chaincodeLauncherTag: 2.4.3-20220503
           couchdbImage: ibp-couchdb
-          couchdbTag: 3.1.1-20210713
+          couchdbTag: 3.1.2-20220503
           enrollerImage: ibp-enroller
           enrollerTag: 2.5.3-20220503
           fluentdImage: ibp-fluentd
           fluentdTag: 2.5.3-20220503
           goEnvImage: ibp-goenv
-          goEnvTag: 2.2.3-20210713
+          goEnvTag: 2.4.3-20220503
           grpcwebImage: ibp-grpcweb
           grpcwebTag: 2.5.3-20220503
           javaEnvImage: ibp-javaenv
-          javaEnvTag: 2.2.3-20210713
+          javaEnvTag: 2.4.3-20220503
           nodeEnvImage: ibp-nodeenv
-          nodeEnvTag: 2.2.3-20210713
+          nodeEnvTag: 2.4.3-20220503
           peerImage: ibp-peer
           peerInitImage: ibp-init
           peerInitTag: 2.5.3-20220503
-          peerTag: 2.2.3-20210713
-        version: 2.2.3-0
-```
+          peerTag: 2.4.3-20220503
+        version: 2.4.3-1
 {: codeblock}
 
 - Replace `<cluster_CA_domain>:8500` with the domain you use to log in to your {{site.data.keyword.cloud_notm}} Private cluster.
