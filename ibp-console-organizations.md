@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-26"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization, multicloud
 
@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # Managing organizations
 {: #ibp-console-organizations}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-ibp-console-organizations">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-organizations">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-organizations">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-organizations">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-organizations">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-organizations">2.5.3</a>
-</p>
+2.5.3.
 
 You can use the {{site.data.keyword.blockchainfull}} Platform console to create a formal organization definition that is known as a Membership Services Provider (MSP). Your organization's MSP definition allows other members of the blockchain consortium to verify the identity of your nodes and applications. Your MSP definition also contains your organization's admin certificates.
 

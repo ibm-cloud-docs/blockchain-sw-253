@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # Upgrading your console and components
 {: #upgrade-k8}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-upgrade-k8">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-upgrade-k8">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-upgrade-k8">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-upgrade-k8">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-upgrade-k8">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-upgrade-k8">2.5.3</a>
-</p>
+2.5.3.
 
 
 You can upgrade the {{site.data.keyword.blockchainfull}} Platform without disrupting a running network. Because the platform is deployed by using a Kubernetes operator, you can pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images from the {{site.data.keyword.IBM_notm}} Entitlement registry without having to reinstall the platform. You can use these instructions to upgrade to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3.

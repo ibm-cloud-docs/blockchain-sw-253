@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-26"
 
 keywords: high availability, CA, PostgreSQL, replica sets
 
@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # Building a high availability Certificate Authority (CA)
 {: #ibp-console-build-ha-ca}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-ibp-console-build-ha-ca">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-build-ha-ca">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-build-ha-ca">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-build-ha-ca">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-build-ha-ca">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-ha-ca">2.5.3</a>
-</p>
+2.5.3.
 
 
 Because redundancy is required to achieve high availability (HA) networks, you can use the {{site.data.keyword.blockchainfull}} Platform console to configure a CA for high availability.

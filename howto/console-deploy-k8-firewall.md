@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 behind a firewall
 {: #deploy-k8-firewall}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-deploy-k8-firewall">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-deploy-k8-firewall">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-deploy-k8-firewall">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-deploy-k8-firewall">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8-firewall">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall">2.5.3</a>
-</p>
+2.5.3.
 
 
 You can use these instructions to deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 behind a firewall without internet connectivity. If you are deploying the platform on a cluster with access to the external internet, use the main instructions for [Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8).

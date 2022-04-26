@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # What's new
 {: #whats-new}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-whats-new">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-whats-new">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-whats-new">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-whats-new">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-whats-new">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new">2.5.3</a>
-</p>
+2.5.3.
 
 
 

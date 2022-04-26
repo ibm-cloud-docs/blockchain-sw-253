@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: IBM Blockchain Platform, images, multicloud
 
@@ -17,15 +17,13 @@ subcollection: blockchain-sw-253
 # Using the {{site.data.keyword.blockchainfull_notm}} images
 {: #blockchain-images}
 
-<p>
-<strong>Running a different version of IBM Blockchain Platform?</strong> Switch to version
+Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw?topic=blockchain-sw-blockchain-images">2.1.2</a>,
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-blockchain-images">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-blockchain-images">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-blockchain-images">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-images">2.5.2</a>,
-<a href="/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images">2.5.3</a>
-</p>
+2.5.3.
 
 
 For experienced Hyperledger Fabric customers, the {{site.data.keyword.blockchainfull}} Platform provides images for peer, CA, ordering service, and smart contract containers that are signed and supported by {{site.data.keyword.IBM_notm}}. These images are the commercial distribution of Hyperledger Fabric v1.4.7 and v2.x.
