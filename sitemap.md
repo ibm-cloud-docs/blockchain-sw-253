@@ -448,11 +448,11 @@ subcollection: blockchain-sw-253
 * [Private data](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-smart-contracts-v14#ibp-console-smart-contracts-private-data)
 
 
-## Creating applications
-{: #sitemap_creating_applications}
+## Developing applications
+{: #sitemap_developing_applications}
 
 
-[Creating applications](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app)
+[Developing applications](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app)
 
 * [Overview](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-learning-resources)
     * [High-Level Programming Model APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-high-level)
