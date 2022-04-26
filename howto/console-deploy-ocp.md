@@ -1400,7 +1400,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.3
+  version: 2.5.2
 
 ```
 {: codeblock}
