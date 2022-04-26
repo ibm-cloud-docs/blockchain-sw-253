@@ -33,10 +33,10 @@ Running a different version of IBM Blockchain Platform? Switch to version
 {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 is now available and includes the following enhancements and changes:
 
 - [Hyperledger Fabric v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3) support
-- [Fabric Gateway](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-create-app) support
+- [Fabric Gateway](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app) support
 - Kubernetes Operator will now perform a rolling restart of Hyperledger Fabric pods when updating configuration to help avoid downtime.
 - Hyperledger Fabric [v1.4 support was deprecated](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components#ibp-console-govern-components-upgrade) from {{site.data.keyword.blockchainfull_notm}} Platform Software and SaaS on March 31, 2022. Support will be removed on March 31, 2023.
-- Updated [Supported Platforms](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites), including support for [OpenShift Container Platform (OCP) 4.10](https://access.redhat.com/support/policy/updates/openshift#dates), [Kubernetes 1.23](https://kubernetes.io/releases/) and dropped support for OCP 4.7 and Kubernetes 1.20.
+- Updated [Supported Platforms](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites), including support for [OpenShift Container Platform (OCP) 4.10](https://access.redhat.com/support/policy/updates/openshift#dates), [Kubernetes 1.23](https://kubernetes.io/releases/).
 
 
 

@@ -138,7 +138,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 can be deployed wit
 |----|----|----|-----|
 | OpenShift Container Platform | 4.6, 4.7, 4.8, 4.9, 4.10 |  x86_64 |  4.6, 4.7, 4.8, 4.9, 4.10 |
 | OpenShift Container Platform on {{site.data.keyword.cloud_notm}} |  4.6, 4.7, 4.8, 4.9, 4.10 | x86_64 |  4.6, 4.7, 4.8, 4.9, 4.10 |
-| OpenShift Container Platform on LinuxONE |  4.6, 4.7, 4.8, 4.9, 4.10 | s390x | 4.6, 4.7, 4.8, 4.9, 4.10 |
+| OpenShift Container Platform on LinuxONE |  4.6, 4.7, 4.8, 4.9 | s390x | 4.6, 4.7, 4.8, 4.9 |
 | Kubernetes ***   | v1.20 - v1.23 | x86_64 | v1.20 - v1.23 |
 {: caption="Table 1. Supported platforms" caption-side="bottom"}
 
