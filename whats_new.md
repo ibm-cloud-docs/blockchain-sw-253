@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-26"
 
 keywords: IBM Blockchain Platform, release, new features, multicloud
 
@@ -29,7 +29,6 @@ subcollection: blockchain-sw-253
 
 
 
-
 ## May 03, 2022
 {: #whats-new-05-03-2022}
 
@@ -37,6 +36,9 @@ subcollection: blockchain-sw-253
 
 - The new [Hyperledger Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) and API, which migrate transaction logic from the application to the new gateway.
 - Rolling node restarts, which increase resource availability across a 2.5.3 network.
+
+
+
 
 
 
