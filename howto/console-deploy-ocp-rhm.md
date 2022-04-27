@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-27"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -214,6 +214,7 @@ spec:
       class: ''
       size: 5Gi
   serviceAccountName: ibm-blockchain
+  usetags: true
   version: 2.5.3
 ```
 {: codeblock}
@@ -267,6 +268,7 @@ spec:
       class: default
       size: 5Gi
   serviceAccountName: ibm-blockchain
+  usetags: true
   version: 2.5.3
   clusterdata:
     zones:
@@ -371,7 +373,8 @@ spec:
       class: default
       size: 5Gi
   serviceAccountName: ibm-blockchain
-  version: 2.5.2
+  usetags: true
+  version: 2.5.3
   tlsSecretName: "console-tls-secret"
   clusterdata:
     zones:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-27"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -24,7 +24,7 @@ Customers can use an Ansible playbook to automate their installation of the {{si
 This playbook can be used to deploy the {{site.data.keyword.blockchainfull_notm}} Platform on any [supported Kubernetes distribution](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites). It is not available for Kubernetes clusters that are running in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-In just a few minutes, you can have an instance of the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 up and running on your cluster.
+In just a few minutes, you can have an instance of the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 up and running on your cluster.
 
 ## Prerequisites
 {: #ansible-install-ibp-prereqs}
@@ -69,6 +69,3 @@ The first time you log in, you are required to change your password, and then lo
 If you are simply interested in automating the process of installing the {{site.data.keyword.blockchainfull_notm}} Platform, you are done. You can use the console UI or APIs to create your blockchain components. If you are not familiar with the process to build a network by using the console, check out the [tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network) that walks you through the steps of building a sample network.
 
 Already familiar with how to build a network and want to continue to learn more about the available Ansible playbooks? Then check out the tutorial on [Building an {{site.data.keyword.blockchainfull_notm}} Platform network using Ansible playbooks](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible-build).
-
-
-

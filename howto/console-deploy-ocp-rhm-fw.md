@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-27"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, Red Hat Marketplace, subscription, operators, on-prem, firewall, airgap environment, container registry, portable storage, Bastion server
 
@@ -1047,6 +1047,7 @@ spec:
       class: ''
       size: 5Gi
   serviceAccountName: ibm-blockchain
+  usetags: true
   version: 2.5.3
 ```
 {: codeblock}
@@ -1100,6 +1101,7 @@ spec:
       class: default
       size: 5Gi
   serviceAccountName: ibm-blockchain
+  usetags: true
   version: 2.5.3
   clusterdata:
     zones:
@@ -1204,7 +1206,8 @@ spec:
       class: default
       size: 5Gi
   serviceAccountName: ibm-blockchain
-  version: 2.5.2
+  usetags: true
+  version: 2.5.3
   tlsSecretName: "console-tls-secret"
   clusterdata:
     zones:

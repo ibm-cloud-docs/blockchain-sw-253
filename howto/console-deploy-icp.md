@@ -1209,6 +1209,7 @@ metadata:
 spec:
   arch:
   - amd64
+  usetags: true
   license:
     accept: true
   serviceAccountName: default
@@ -1494,6 +1495,7 @@ metadata:
 spec:
   arch:
     - amd64
+  usetags: true
   license:
     accept: false
   serviceAccountName: default

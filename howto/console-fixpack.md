@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -17,7 +17,7 @@ subcollection: blockchain-sw-253
 # Installing the 2.5.3 fix pack
 {: #install-fixpack}
 
-Use these instructions if you have already installed or upgraded to the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 before June 17, 2021 and want to apply the latest 2.5.3 fix pack. This fix pack is cumulative, which means that it includes all of the fixes from previous 2.5.2 fixpacks. It contains important bug fixes and should be applied to your network as soon as possible.  If you install the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 after June 17, 2021, the platform will contain all the bug fixes and improvements included in this fix pack, and you do not need to apply it.
+Use these instructions if you have already installed or upgraded to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and want to apply the latest 2.5.3 fix pack. This fix pack is cumulative, which means that it includes all of the fixes from previous fixpacks. It contains important bug fixes and should be applied to your network as soon as possible. If you have not yet installed {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3, the platform will contain all the bug fixes and improvements included in this fix pack, and you do not need to apply it.
 {: shortdesc}
 
 You can install the fix pack by updating the {{site.data.keyword.blockchainfull_notm}} Platform deployment on your Kubernetes cluster to pull the latest images from the {{site.data.keyword.IBM_notm}} entitlement registry. You can apply the fix pack by using the following steps:
@@ -341,5 +341,3 @@ kubectl apply -f console-upgrade.yaml
 {: #install-fixpack-nodes-firewall}
 
 After you upgrade your console, you can use the console UI to upgrade the nodes of your blockchain network. For more information, see [Upgrade your blockchain nodes](#install-fixpack-nodes).
-
-
