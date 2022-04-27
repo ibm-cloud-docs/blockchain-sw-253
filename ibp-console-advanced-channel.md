@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: network components, Kubernetes, batch timeout, channel update, channels, governance, channel configuration, access control
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-govern">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-govern">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-govern">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern">2.5.2</a>.
 
 
 When you create a channel, there are a number of advanced options that allow you fine tune the configuration of your channel to fit your use case. In this topic we'll discuss how to edit those options as part of creating a channel or when editing a channel after it has been created.

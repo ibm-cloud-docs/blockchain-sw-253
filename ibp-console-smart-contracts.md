@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: smart contract, private data, private data collection, anchor peer, multicloud
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-smart-contracts">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-smart-contracts">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-smart-contracts">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts">2.5.2</a>.
 
 A smart contract is the code, packaged as chaincode, that applications interact with to read and update data on the blockchain ledger. A smart contract turns business logic into an executable program that is agreed to and verified by all members of a blockchain network. This tutorial is the third part in the [sample network tutorial series](#ibp-console-smart-contracts-structure) and describes how to deploy smart contracts to start transactions in the blockchain network.
 {: shortdesc}

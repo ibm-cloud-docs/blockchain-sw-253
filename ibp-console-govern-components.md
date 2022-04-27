@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: network components, Kubernetes, OpenShift, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB, ordering nodes, ordering, add and remove, governance
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-govern-components">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-govern-components">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-govern-components">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components">2.5.2</a>.
 
 After creating CAs, peers, and ordering nodes, you need to monitor the resources used by the nodes and potentially reallocate resources.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: high availability, HA, failures, zone failure, region failure, component failure, worker node failure, multicloud
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-ha">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-ha">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-ha">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha">2.5.2</a>.
 
 Use the built-in Kubernetes features along with {{site.data.keyword.blockchainfull}} Platform component deployment strategies to make your blockchain networks more highly available and protect your network from downtime when a failure occurs in your cluster.
 {: shortdesc}

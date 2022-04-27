@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: import nodes, another console, import a CA, import a peer, import admin identities, import an ordering service node
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-import-nodes">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-import-nodes">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-import-nodes">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-import-nodes">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-import-nodes">2.5.2</a>.
 
 
 The console includes the option to import nodes that were created in another {{site.data.keyword.blockchainfull}} Platform console.

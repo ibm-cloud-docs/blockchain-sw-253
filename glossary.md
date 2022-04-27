@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: IBM Blockchain, IBM Blockchain Platform, terms, Fabric, Raft, CouchDB, consortium
 
@@ -22,8 +22,7 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-glossary">2.1.3</a>,
 <a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-glossary">2.5</a>,
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-glossary">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary">2.5.2</a>,
-2.5.3.
+<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-glossary">2.5.2</a>.
 
 This topic defines {{site.data.keyword.blockchainfull}} Platform-specific terms that appear in this documentation. For a deeper understanding of terms, and for a glossary of terms that relate to Hyperledger Fabric concepts, refer to the [Hyperledger Fabric glossary](https://hyperledger-fabric.readthedocs.io/en/release-2.2/glossary.html){: external}.
 {: shortdesc}
