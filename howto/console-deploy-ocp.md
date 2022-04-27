@@ -138,7 +138,36 @@ The first three steps are for deployment of the webhook. The last step is for th
 First, copy the following text to a file on your local system and save the file as `rbac.yaml`. This step allows the webhook to read and create a TLS secret in its own project.
 
 ```yaml
-[yaml-crd-conversion-webhook-rbac.md]
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: webhook
+  namespace: ibpinfra
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: webhook
+rules:
+- apiGroups:
+  - "*"
+  resources:
+  - secrets
+  verbs:
+  - "*"
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ibpinfra
+subjects:
+- kind: ServiceAccount
+  name: webhook
+  namespace: ibpinfra
+roleRef:
+  kind: Role
+  name: webhook
+  apiGroup: rbac.authorization.k8s.io
 ```
 {: codeblock}
 
@@ -198,7 +227,6 @@ users:
 - system:serviceaccounts:<PROJECT_NAME>
 volumes:
 - "*"
-
 ```
 {: codeblock}
 
@@ -311,7 +339,6 @@ spec:
             requests:
               cpu: 0.1
               memory: "100Mi"
-
 ```
 {: codeblock}
 
@@ -630,7 +657,6 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
-
 EOF
 ```
 {: codeblock}
@@ -827,7 +853,6 @@ users:
 - system:serviceaccounts:<PROJECT_NAME>
 volumes:
 - "*"
-
 ```
 {: codeblock}
 
@@ -1074,7 +1099,6 @@ roleRef:
   kind: ClusterRole
   name: <PROJECT_NAME>
   apiGroup: rbac.authorization.k8s.io
-
 ```
 {: codeblock}
 
@@ -1205,7 +1229,6 @@ spec:
             limits:
               cpu: 100m
               memory: 200Mi
-
 ```
 {: codeblock}
 
@@ -1260,8 +1283,7 @@ spec:
     console:
       class: ""
       size: 5Gi
-  version: 2.5.2
-
+  version: 2.5.3
 ```
 {: codeblock}
 
@@ -1367,8 +1389,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.2
-
+  version: 2.5.3
 ```
 {: codeblock}
 
@@ -1448,7 +1469,6 @@ spec:
       class: default
       size: 10Gi
   tlsSecretName: "<CONSOLE_TLS_SECRET_NAME>"
-
 ```
 {: codeblock}
 

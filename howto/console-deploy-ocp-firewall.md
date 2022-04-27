@@ -229,7 +229,6 @@ roleRef:
   kind: Role
   name: webhook
   apiGroup: rbac.authorization.k8s.io
-
 ```
 {: codeblock}
 
@@ -289,7 +288,6 @@ users:
 - system:serviceaccounts:<PROJECT_NAME>
 volumes:
 - "*"
-
 ```
 {: codeblock}
 
@@ -402,7 +400,6 @@ spec:
             requests:
               cpu: 0.1
               memory: "100Mi"
-
 ```
 {: codeblock}
 
@@ -442,7 +439,6 @@ spec:
       protocol: TCP
   selector:
     app.kubernetes.io/instance: "ibp-webhook"
-
 ```
 {: codeblock}
 
@@ -721,7 +717,6 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
-
 EOF
 ```
 {: codeblock}
@@ -919,7 +914,6 @@ users:
 - system:serviceaccounts:<PROJECT_NAME>
 volumes:
 - "*"
-
 ```
 {: codeblock}
 
@@ -1165,7 +1159,6 @@ roleRef:
   kind: ClusterRole
   name: <PROJECT_NAME>
   apiGroup: rbac.authorization.k8s.io
-
 ```
 {: codeblock}
 
@@ -1300,7 +1293,6 @@ spec:
             limits:
               cpu: 100m
               memory: 200Mi
-
 ```
 {: codeblock}
 
@@ -1356,8 +1348,7 @@ spec:
     console:
       class: ""
       size: 5Gi
-  version: 2.5.2
-
+  version: 2.5.3
 ```
 {: codeblock}
 
@@ -1462,8 +1453,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.2
-
+  version: 2.5.3
 ```
 {: codeblock}
 
@@ -1538,7 +1528,6 @@ spec:
       class: default
       size: 10Gi
   tlsSecretName: "<CONSOLE_TLS_SECRET_NAME>"
-
 ```
 {: codeblock}
 
