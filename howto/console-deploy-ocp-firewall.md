@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, firewall, on-premises, air-gapped, on-prem, multicloud, on-prem
 
@@ -345,7 +345,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.3"
+        productVersion: "2.5.2"
     spec:
       serviceAccountName: webhook
       imagePullSecrets:
@@ -360,7 +360,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220503-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.2-20220405-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
