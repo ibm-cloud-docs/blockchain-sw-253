@@ -1519,7 +1519,6 @@ metadata:
 spec:
   arch:
     - amd64
-  usetags: true
   license:
     accept: false
   serviceAccountName: default
@@ -1536,6 +1535,7 @@ spec:
       class: default
       size: 10Gi
   tlsSecretName: "<CONSOLE_TLS_SECRET_NAME>"
+
 ```
 {: codeblock}
 
