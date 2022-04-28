@@ -1116,6 +1116,7 @@ roleRef:
   kind: ClusterRole
   name: <NAMESPACE>
   apiGroup: rbac.authorization.k8s.io
+
 ```
 {: codeblock}
 
