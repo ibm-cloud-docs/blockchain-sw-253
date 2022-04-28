@@ -374,6 +374,7 @@ spec:
             requests:
               cpu: 0.1
               memory: "100Mi"
+
 ```
 {: codeblock}
 
