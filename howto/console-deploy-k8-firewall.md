@@ -1334,7 +1334,6 @@ metadata:
 spec:
   arch:
     - amd64
-  usetags: true
   license:
     accept: false
   serviceAccountName: default
@@ -1350,7 +1349,8 @@ spec:
     console:
       class: ""
       size: 5Gi
-  version: 2.5.3
+  version: 2.5.2
+
 ```
 {: codeblock}
 
