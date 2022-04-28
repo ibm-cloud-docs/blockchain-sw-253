@@ -1394,7 +1394,6 @@ metadata:
 spec:
   arch:
     - amd64
-  usetags: true
   license:
     accept: false
   serviceAccountName: default
@@ -1441,7 +1440,8 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.3
+  version: 2.5.2
+
 ```
 {: codeblock}
 
