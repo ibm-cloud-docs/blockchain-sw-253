@@ -1427,6 +1427,7 @@ spec:
     console:
       class: ""
       size: 5Gi
+  usetags: true
   clusterdata:
     zones:
   resources:
@@ -1458,8 +1459,7 @@ spec:
       requests:
         cpu: 100m
         memory: 200Mi
-  version: 2.5.2
-
+  version: 2.5.3
 ```
 {: codeblock}
 
