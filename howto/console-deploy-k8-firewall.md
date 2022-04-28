@@ -458,7 +458,6 @@ spec:
       protocol: TCP
   selector:
     app.kubernetes.io/instance: "ibp-webhook"
-
 ```
 {: codeblock}
 
