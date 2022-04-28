@@ -695,7 +695,6 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
-
 EOF
 ```
 {: codeblock}
