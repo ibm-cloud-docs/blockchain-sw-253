@@ -1348,8 +1348,8 @@ spec:
     console:
       class: ""
       size: 5Gi
-  version: 2.5.2
-
+  usetags: true
+  version: 2.5.3
 ```
 {: codeblock}
 
