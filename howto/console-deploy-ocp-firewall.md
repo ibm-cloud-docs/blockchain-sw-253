@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-04-28"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, firewall, on-premises, air-gapped, on-prem, multicloud, on-prem
 
@@ -717,6 +717,7 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
+
 EOF
 ```
 {: codeblock}

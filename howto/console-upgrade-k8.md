@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-04-28"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters
 
@@ -354,6 +354,7 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
+
 EOF
 ```
 {: codeblock}
@@ -1291,6 +1292,7 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
+
 EOF
 ```
 {: codeblock}
@@ -2317,6 +2319,7 @@ status:
   conditions: []
   storedVersions:
   - v1beta1
+
 EOF
 ```
 {: codeblock}
