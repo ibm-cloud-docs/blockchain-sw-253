@@ -203,7 +203,6 @@ roleRef:
   kind: Role
   name: webhook
   apiGroup: rbac.authorization.k8s.io
-
 ```
 {: codeblock}
 
