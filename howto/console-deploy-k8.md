@@ -1174,7 +1174,7 @@ spec:
       annotations:
         productName: "IBM Blockchain Platform"
         productID: "54283fa24f1a4e8589964e6e92626ec4"
-        productVersion: "2.5.2"
+        productVersion: "2.5.3"
         productChargedContainers: ""
         productMetric: "VIRTUAL_PROCESSOR_CORE"
     spec:
@@ -1200,7 +1200,7 @@ spec:
         - name: ibm-entitlement-key
       containers:
         - name: ibp-operator
-          image: cp.icr.io/cp/ibp-operator:2.5.2-20220405-amd64
+          image: cp.icr.io/cp/ibp-operator:2.5.3-20220503-amd64
           command:
             - ibp-operator
           imagePullPolicy: Always
@@ -1208,8 +1208,8 @@ spec:
             privileged: false
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
-            runAsNonRoot: false
-            runAsUser: 1001
+            runAsNonRoot: true
+            runAsUser: 7051
             capabilities:
               drop:
                 - ALL
@@ -1248,7 +1248,6 @@ spec:
             limits:
               cpu: 100m
               memory: 200Mi
-
 ```
 {: codeblock}
 
