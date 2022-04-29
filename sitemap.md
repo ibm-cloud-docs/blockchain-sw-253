@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-29"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -454,7 +454,12 @@ subcollection: blockchain-sw-253
 
 [Developing applications](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app)
 
-* [Overview](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-learning-resources)
+* [Using the v2.4 Fabric Gateway peer service](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-gateway-peer-service)
+    * [Supported app development methods in Fabric v2.4](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-dev-methods-v24)
+    * [Fabric Peer Gateway documentation](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-fabric-gateway docs)
+    * [Connecting to the Fabric Gateway peer service](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-connecting-fabric-gateway)
+
+* [Legacy model of developing applications](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-learning-resources)
     * [High-Level Programming Model APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-high-level)
     * [Low-Level Fabric SDK APIs**](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-app#ibp-console-app-low-level)
 
