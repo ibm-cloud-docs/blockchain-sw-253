@@ -1372,51 +1372,51 @@ subcollection: blockchain-sw-253
 {: #sitemap_release_notes}
 
 
-[Release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252)
+[Release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253)
 
-* [03 May 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-03-2022)
+* [03 May 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#05-03-2022)
 
-* [05 Apr 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-04-2022)
+* [05 Apr 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#05-04-2022)
 
-* [08 Mar 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#08-03-2022)
+* [08 Mar 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#08-03-2022)
 
-* [08 Feb 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#08-02-2022)
+* [08 Feb 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#08-02-2022)
 
-* [11 Jan 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-01-2022)
+* [11 Jan 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-01-2022)
 
-* [14 Dec 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#14-12-2021)
+* [14 Dec 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#14-12-2021)
 
-* [16 Nov 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#16-11-2021)
+* [16 Nov 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#16-11-2021)
 
-* [26 Oct 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#26-10-2021)
+* [26 Oct 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#26-10-2021)
 
-* [05 Oct 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-10-2021)
+* [05 Oct 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#05-10-2021)
 
-* [10 Aug 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#10-08-2021)
+* [10 Aug 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#10-08-2021)
 
-* [14 Jul 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#14-07-2021)
+* [14 Jul 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#14-07-2021)
 
-* [16 Jun 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#16-06-2021)
+* [16 Jun 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#16-06-2021)
 
-* [05 May 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#05-05-2021)
+* [05 May 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#05-05-2021)
 
-* [29 Mar 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#29-03-2021)
+* [29 Mar 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#29-03-2021)
 
-* [22 Feb 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#02-22-2021)
+* [22 Feb 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#02-22-2021)
 
-* [12 Jan 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#01-12-2021)
-    * [New logging configuration panel](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#01-12-2021-logger-ui)
+* [12 Jan 2021](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#01-12-2021)
+    * [New logging configuration panel](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#01-12-2021-logger-ui)
 
-* [08 Dec 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#12-08-2020)
+* [08 Dec 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#12-08-2020)
 
-* [19 Nov 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-19-2020)
+* [19 Nov 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-19-2020)
 
-* [30 Oct 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#10-20-2020)
-    * [Fabric v2.x node upgrade](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-02-2020-upgrade)
-    * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-02-2020-lc)
-    * [Improvements for HSM support](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-02-2020-hsm)
-    * [Certificate renewal enhancements](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-02-2020-cert-renew)
-    * [Remove registered user from CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252#11-02-2020-delete-user)
+* [30 Oct 2020](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#10-20-2020)
+    * [Fabric v2.x node upgrade](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-02-2020-upgrade)
+    * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-02-2020-lc)
+    * [Improvements for HSM support](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-02-2020-hsm)
+    * [Certificate renewal enhancements](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-02-2020-cert-renew)
+    * [Remove registered user from CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#11-02-2020-delete-user)
 
 
 ## Known issues
