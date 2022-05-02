@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-05-02"
 
 keywords: IBM Blockchain Platform, system requirements, Kubernetes, behind a firewall, azure, multicloud
 
@@ -226,4 +226,4 @@ For more information about how to get support on {{site.data.keyword.blockchainf
 ## Next steps
 {: #console-ocp-about-next-steps}
 
-When you are ready to learn how to deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
+When you are ready to learn how to deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp).
