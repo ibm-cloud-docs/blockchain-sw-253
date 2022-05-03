@@ -1,2 +1,2 @@
-# blockchain-sw-253
-Documentation repository for blockchain-sw-253
+# blockchain-sw-252
+Documentation repository for blockchain-sw-252
