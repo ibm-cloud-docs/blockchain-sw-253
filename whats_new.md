@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-05-11"
 
 keywords: IBM Blockchain Platform, release, new features, multicloud
 
@@ -24,8 +24,6 @@ Running a different version of IBM Blockchain Platform? Switch to version
 <a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-whats-new">2.5.1</a>,
 <a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-whats-new">2.5.2</a>.
 
-
-
 ## May 03, 2022
 {: #whats-new-05-03-2022}
 
@@ -36,8 +34,6 @@ Running a different version of IBM Blockchain Platform? Switch to version
 - Kubernetes Operator will now perform a rolling restart of Hyperledger Fabric pods when updating configuration to help avoid downtime.
 - Hyperledger Fabric [v1.4 support was deprecated](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components#ibp-console-govern-components-upgrade) from {{site.data.keyword.blockchainfull_notm}} Platform Software and SaaS on March 31, 2022. Support will be removed on March 31, 2023.
 - Updated [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites), including support for [OpenShift Container Platform (OCP) 4.10](https://access.redhat.com/support/policy/updates/openshift#dates).
-
-
 
 
 
@@ -163,7 +159,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.c
 ### The {{site.data.keyword.blockchainfull_notm}} Platform console UI has been updated
 {: #whats-new-10-02-2019-Console}
 
-Review the [release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-252) to see the latest features available for your network.
+Review the [release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253) to see the latest features available for your network.
 
 ## August 27, 2019
 {: #whats-new-8-27-2019}
