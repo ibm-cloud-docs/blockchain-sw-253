@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-05-12"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, firewall, on-premises, air-gapped, on-prem, multicloud, on-prem
 
@@ -37,7 +37,7 @@ You can use the following instructions to deploy the {{site.data.keyword.blockch
 - After you deploy your peer and ordering nodes, you need to expose the ports of your nodes for your network to be able to respond to requests from applications or nodes outside your firewall. For more information about the ports that you need to expose, see [Internet Ports](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-security#ibp-security-ibp-ports) in the security guide.
 
 Kubernetes cluster does not download and update the latest version of {{site.data.keyword.blockchainfull_notm}} Platform automatically. To get the latest update, you need to create a new cluster and a new service instance.
-{: note} 
+{: note}
 
 ## Resources required
 {: #deploy-k8-resources-required-firewall}
@@ -89,7 +89,7 @@ When you purchase the {{site.data.keyword.blockchainfull_notm}} Platform from PP
 ## Before you begin
 {: #deploy-k8-prerequisites-firewall}
 
-1. The {{site.data.keyword.blockchainfull_notm}} Platform can be installed only on the [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites){: external}.
+1. The {{site.data.keyword.blockchainfull_notm}} Platform can be installed only on the [Supported Platforms](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-prerequisites).
 
 2. You cannot deploy both an {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x and 2.5.x instance to the same cluster. If you need to run both instances of the product, then they must be running in separate clusters.
 
@@ -1747,5 +1747,3 @@ containers:
 Confirm that `- --ingress-class=nginx` and `- --enable-ssl-passthrough=true`.
 
 This result indicates that you have successfully enabled SSL passthrough and that the associated ingress class is named `nginx`, which is what the software version of the platform requires in order for it to be able to be installed on a {{site.data.keyword.containerlong_notm}} cluster. Verify that all pods are running before you attempt to [install](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-login) the {{site.data.keyword.blockchainfull_notm}} Platform.
-
-
