@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-05-27"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -1325,6 +1325,7 @@ spec:
           peerInitTag: 2.5.3-20220503
           peerTag: 2.4.3-20220503
         version: 2.4.3-1
+```
 {: codeblock}
 
 - Replace `<cluster_CA_domain>:8500` with the domain you use to log in to your {{site.data.keyword.cloud_notm}} Private cluster.
