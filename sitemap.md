@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-09"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -1036,6 +1036,14 @@ subcollection: blockchain-sw-253
     * [Step three: Update SDKs and smart contracts](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-three)
     * [Step four: Update capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-four-rolling-upgrade)
 * [Deleting components](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-delete)
+
+[Operating nodes with operations service](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service)
+* [Considerations and limitations](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_consideration_limitation)
+* [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_before_you_begin)
+* [Checking node health](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_health_check)
+* [Viewing the metrics](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_view_metrics)
+* [Viewing logging levels](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_log_level_view)
+* [Setting logging levels](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_log_level_set)
 
 
 ## Developing smart contracts and applications
