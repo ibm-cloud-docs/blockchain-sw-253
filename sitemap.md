@@ -229,73 +229,6 @@ subcollection: blockchain-sw-253
 * [Reference material](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-about-data-residency#console-icp-about-data-residency-reference)
 
 
-## FAQs
-{: #sitemap_faqs}
-
-
-[FAQs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq)
-
-* [What is the value of using {{site.data.keyword.blockchainfull_notm}} Platform over native Hyperledger Fabric?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-IBP-Overview-1-7)
-
-* [What version of Hyperledger Fabric is being used with {{site.data.keyword.blockchainfull_notm}} Platform?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-Hyperledger-Fabric-3-1)
-
-* [Can {{site.data.keyword.blockchainfull_notm}} Platform components interoperate with Hyperledger Fabric components on the same network? And vice versa? And what is the support policy for networks that include both {{site.data.keyword.blockchainfull_notm}} Platform components and open source components?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-interoperability)
-
-* [Where can a customer deploy the {{site.data.keyword.blockchainfull_notm}} Platform and how will {{site.data.keyword.IBM_notm}} support those deployment environments?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-sw-support)
-
-* [Does {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x and 2.5 run on OpenShift on {{site.data.keyword.cloud_notm}}?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-saas-ocp)
-
-* [What ports are used by the {{site.data.keyword.blockchainfull_notm}} Platform?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-ports)
-
-* [How can I estimate the {{site.data.keyword.blockchainfull_notm}} Platform sizing requirements for my development, test, and production environments?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-sizing)
-
-* [Is it possible to deploy blockchain nodes to multiple clouds from a single blockchain console?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-multicloud)
-
-* [How can I find what version of the {{site.data.keyword.blockchainfull_notm}} Platform that I am running?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-version)
-
-* [How do I get the latest Fabric version and Fabric functionalities on my {{site.data.keyword.blockchainfull_notm}} Platform network?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-fabric-upgrade)
-
-* [I am currently using Hyperledger Fabric v1.4.x and want to move to {{site.data.keyword.blockchainfull_notm}} Platform v2.1.x or 2.5.x. Can I continue to use Raft?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-migrate-raft)
-
-* [What database do the peers use for their ledger?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-IBP-Overview-1-3)
-
-* [What types of off-chain databases are supported with the {{site.data.keyword.blockchainfull_notm}} Platform?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-offchain-db)
-
-* [If service discovery is on, will an endorsement request be routed to any peer on the network?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-service-discovery)
-
-* [Do ordering service Raft nodes use Transport Layer Security (TLS) for communication?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-raft-tls)
-
-* [How can I back up and restore components and networks?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-backup-restore)
-
-* [What benefits are available with the new smart contract lifecycle available on nodes and channels running on Fabric v2.x?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-new-lifecycle)
-
-* [How can I check and interpret the status of my components through the Kubernetes command line?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibm-v2-faq-cr-status)
-
-* [Do you support using certificates from non-IBM Certificate Authorities?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-external-certs)
-
-* [What is the recommended way to manage private keys?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-hsm)
-
-* [Can I integrate my corporate LDAP server with the Certificate Authority (CA) in the {{site.data.keyword.blockchainfull_notm}} Platform?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-ldap)
-
-* [What is the process for rotating certificates on a periodic basis?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-cert-mgmt)
-
-* [What languages are supported for smart contracts?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-IBP-Overview-1-4)
-
-* [What version of the {{site.data.keyword.blockchainfull_notm}} Platform works with the Ansible collection?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-ansible-version)
-
-* [How do I get support for running the {{site.data.keyword.blockchainfull_notm}} Platform Ansible playbook?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-ansible-support)
-
-* [How can I find the examples and tutorials within the VSCode extension?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-vscode-tutorials)
-
-* [Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-mon-client-app)
-
-* [Where does {{site.data.keyword.IBM_notm}} store the customer's logs and how long does {{site.data.keyword.IBM_notm}} keep the audit logs for the blockchain platform service?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-customer-logs)
-
-* [Do we have access to logging services and what logs are available to me?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-Logging-and-Monitoring-11-6)
-
-* [Is there a best practice for monitoring my blockchain resources?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-mon-res)
-
-
 ## Getting started
 {: #sitemap_getting_started}
 
@@ -461,19 +394,6 @@ subcollection: blockchain-sw-253
     * [Register and enroll identities against the intermediate CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-ica#ibp-ica-next-steps-reg-enroll)
     * [Create organization MSPs using the intermediate CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-ica#ibp-ica-next-steps-msp)
     * [Scale down the root CA](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-ica#ibp-ica-next-steps-scale)
-
-[Using certificates from an external Certificate Authority](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca)
-* [Objectives](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-objectives)
-* [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-prereqs)
-* [Gather certificates](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-gather-certs)
-    * [Consideration when using an external CA to generate certificates](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-gather-certs-pkcs1)
-* [Build MSP definition](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-build-msp)
-* [Import MSP into the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-import-msp)
-* [Create and import the organization admin identity to the wallet](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-import-admin)
-* [Deploy a blockchain node](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-deploy-node)
-    * [Deploy peer](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-deploy-peer)
-    * [Deploy ordering service](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-deploy-orderer)
-* [Next steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-tutorial-extca#ibp-tutorial-extca-next-steps)
 
 
 ## Hardware Security Module (HSM)
@@ -1351,85 +1271,6 @@ subcollection: blockchain-sw-253
 
 
 [Known issues](/docs/blockchain-sw-253?topic=blockchain-sw-253-sw-known-issues)
-
-
-## Troubleshooting
-{: #sitemap_troubleshooting}
-
-
-[Troubleshooting](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting)
-
-* [My deployment fails when I try apply the security and access policies to my namespace](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-policies)
-
-* [My deployment fails when I try apply the custom resource definition of the console or operator](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-cr)
-
-* [Extracting the TLS certificate from the Kubernetes webhook fails](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-wh-extract)
-
-* [Why is my cluster deployed from the Red Hat Marketplace `fail to pull image cp.icr.io/ibp-init@sha256` during setup?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-pull-image-fails)
-
-* [Why is my console upgrade from 2.5 to 2.5.x failing?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshootingconsole-upgrade-fails)
-
-* [Why is my {{site.data.keyword.blockchainfull_notm}} Platform user interface unable to connect to cluster after deployment (Ingress issue)?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-ingress-issue)
-
-* [Why are my console actions failing in my Chrome browser Version 77.0.3865.90 (Official Build) (64-bit)?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-chrome-v77)
-
-* [Why am I not able to log in to the console from my Chrome browser on Mac OS Catalina?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-console-catalina)
-
-* [Why is my channel creation failing or I am unable to add a new organization to my ordering service with the error "Unable to get system channel"?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-accept-tls)
-
-* [When I hover over my node, the status is `Status unavailable` or `Status unknown`, what does this mean?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-status-unavailable)
-
-* [When I hover over my node, the status is `Status undetectable`, what does this mean?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-status-undetectable)
-
-* [Why did my smart contract installation, instantiation or upgrade fail?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-smart-contracts-troubleshoot-entry1)
-
-* [Why is my smart contract fail to install with an error on my peer?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-sc-install)
-
-* [Why is my Node.js smart contract fail to instantiate?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-nodejs-instantiate)
-
-* [Why is my Node.js smart contract fail to endorse?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-nodejs-endorsement)
-
-* [Why is the smart contract that I installed on the peer not listed in the UI?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-build-network-troubleshoot-missing-sc)
-
-* [My nodes, channels, smart contracts, and identities have disappeared from the console. How can I get them back?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-browser-storage)
-
-* [Why am I getting the error `Unable to authenticate with the enroll ID and secret you provided` when I create a new organization MSP definition?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-create-msp)
-
-* [Why am I getting the error `An error occurred when updating channel` when I try to add an organization to my channel?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-update-channel)
-
-* [When I log in to my console, why am I getting a 401 Unauthorized error?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-console-401)
-
-* [Why am I getting an error “all SubConns are in TransientFailure” on the console?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-transientfailure)
-
-* [Why is my first invoke of a smart contract returns the following error: no suitable peers available to initialize from?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-smart-contract-anchor-peers)
-
-* [Why are my node operations fail to operate after I create my peer or ordering service?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-build-network-troubleshoot-entry1)
-
-* [Why does my peer or ordering node fail to start?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-build-network-troubleshoot-entry2)
-
-* [What is the proper way to clean up a failed node deployment?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-cleanup)
-
-* [How can I view my smart contract container logs?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-console-smart-contracts-troubleshoot-entry2)
-
-* [Why is my CA, peer, or ordering node that is configured to use HSM not working?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-hsm-proxy)
-
-* [My CA failed to upgrade, how can I fix it?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-ca-upgrade-fails)
-
-* [Why are my transactions returning an endorsement policy error: signature set did not satisfy policy?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-endorsement-sig-failure)
-
-* [Why are the transactions I submit from VS Code failing with a No endorsement plan available error?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-anchor-peer)
-
-* [Why are the transactions I submit from VS Code failing with an endorsement failure?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-endorsement)
-
-* [Why is my peer unable to communicate with my ordering node?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-peer-bad-connection)
-
-* [When I hover over my node, the status is red, what does this mean?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-status-error)
-
-* [How do I disable the network policies in my namespace?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-disable-network-policies)
-
-* [How do I delete a peer pod?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-troubleshooting-delete-peer)
-
-* [How can I recover a contract after a failed upgrade of the smart contract container?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-troubleshooting-contract-fail)
 
 
 ## Getting support
