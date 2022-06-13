@@ -74,6 +74,7 @@
     * [API reference](https://cloud.ibm.com/apidocs/blockchain)
     * [Hyperledger Fabric](reference/v10_fabric.md)
     * [Kubernetes](reference/k8s.md)
+    * [Signed images](code-sign.md)
     * [IBM Developer](https://developer.ibm.com/technologies/blockchain/)
     * [Tracking license consumption](reference/metering.md)
     * [Glossary](glossary.md)
@@ -82,5 +83,4 @@
     * [Known issues](known-issues.md)
     * [Troubleshooting](ibp-v2-troubleshooting.md)
     * [Getting support](ibmblockchain_support.md)
-    * [Signed images](code-sign.md)
     * [Site map](sitemap.md)
