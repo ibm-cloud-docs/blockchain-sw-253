@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-09"
+lastupdated: "2022-06-19"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -1458,3 +1458,10 @@ subcollection: blockchain-sw-253
 * [Resources and support forums](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-resources)
 
 * [Submitting support cases](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-cases)
+
+
+## Signed images
+{: #sitemap_signed_images}
+
+
+[Signed images](/docs/blockchain-sw-253?topic=blockchain-sw-253-signed-images)
