@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-22"
 
 keywords: code signing, signed images
 
@@ -93,3 +93,5 @@ Response verify OK
 
 This output goes to `stderr`. The command status return value does not indicate validity.
 {: important}
+
+
