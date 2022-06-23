@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-23"
 
 keywords: release note, latest changes, Hyperledger Fabric, multicloud
 
@@ -25,14 +25,25 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
-## 01 June 2022
-{: #06-01-2022}
+## 22 June 2022
+{: #06-22-2022}
 
-**Certificate Authority (CA) patch 1.5.3.2, Peer and ordering node patch 1.4.12-13, 2.2.5-5, 2.4.3-2.**
+**Certificate Authority (CA) patch 1.5.3-3, Peer and ordering node patch 1.4.12-14, 2.2.5-6, 2.4.3-3.**
 
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
+
+## 01 June 2022
+{: #06-01-2022}
+
+**Certificate Authority (CA) patch 1.5.3-2, Peer and ordering node patch 1.4.12-13, 2.2.5-5, 2.4.3-2.**
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
+
 
 ## 03 May 2022
 {: #05-03-2022}
@@ -45,6 +56,7 @@ Miscellaneous bug fixes and security patches.
 
 Severity: medium
 
+
 ## 05 Apr 2022
 {: #05-04-2022}
 
@@ -53,6 +65,7 @@ Severity: medium
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
 
 ## 08 Mar 2022
 {: #08-03-2022}
@@ -63,6 +76,7 @@ Miscellaneous bug fixes and security patches.
 
 Severity: medium
 
+
 ## 08 Feb 2022
 {: #08-02-2022}
 
@@ -71,6 +85,7 @@ Severity: medium
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
 
 ## 11 Jan 2022
 {: #11-01-2022}
@@ -94,6 +109,7 @@ Miscellaneous bug fixes and security patches.
 **Certificate Authority (CA) patch 1.5.2-3, Peer and ordering node patch 1.4.12-6, 2.2.4-3.**
 
 Miscellaneous bug fixes and security patches.
+
 
 
 
