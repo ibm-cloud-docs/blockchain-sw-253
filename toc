@@ -123,5 +123,6 @@ IBM Blockchain Platform 2.5.3
 	known-issues.md
 	ibp-v2-troubleshooting.md
 	ibmblockchain_support.md
+	code-sign.md
 	sitemap.md
 	{: .navgroup-end}

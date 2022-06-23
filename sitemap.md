@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-23"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -294,6 +294,19 @@ subcollection: blockchain-sw-253
 * [Do we have access to logging services and what logs are available to me?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-v2-Logging-and-Monitoring-11-6)
 
 * [Is there a best practice for monitoring my blockchain resources?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-mon-res)
+
+
+## Disclaimer
+{: #sitemap_disclaimer}
+
+
+[Disclaimer](/docs/blockchain-sw-253?topic=blockchain-sw-253-disclaimer)
+
+* [{{site.data.keyword.IBM_notm}} support statement](/docs/blockchain-sw-253?topic=blockchain-sw-253-disclaimer#disclaimer-support-statement)
+
+* [Open-source statement](/docs/blockchain-sw-253?topic=blockchain-sw-253-disclaimer#disclaimer-open-source-statement)
+
+* [Chaincode support statement](/docs/blockchain-sw-253?topic=blockchain-sw-253-disclaimer#disclaimer-chaincode-support-statement)
 
 
 ## Getting started
@@ -1037,6 +1050,14 @@ subcollection: blockchain-sw-253
     * [Step four: Update capabilities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-four-rolling-upgrade)
 * [Deleting components](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-delete)
 
+[Operating nodes with operations service](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service)
+* [Considerations and limitations](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_consideration_limitation)
+* [Before you begin](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_before_you_begin)
+* [Checking node health](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_health_check)
+* [Viewing the metrics](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_view_metrics)
+* [Viewing logging levels](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_log_level_view)
+* [Setting logging levels](/docs/blockchain-sw-253?topic=blockchain-sw-253-operations_service#operations_service_log_level_set)
+
 
 ## Developing smart contracts and applications
 {: #sitemap_developing_smart_contracts_and_applications}
@@ -1291,6 +1312,8 @@ subcollection: blockchain-sw-253
 
 [Release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253)
 
+* [22 June 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#06-22-2022)
+
 * [01 June 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#06-01-2022)
 
 * [03 May 2022](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-sw-253#05-03-2022)
@@ -1437,3 +1460,10 @@ subcollection: blockchain-sw-253
 * [Resources and support forums](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-resources)
 
 * [Submitting support cases](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-cases)
+
+
+## Signed images
+{: #sitemap_signed_images}
+
+
+[Signed images](/docs/blockchain-sw-253?topic=blockchain-sw-253-signed-images)
