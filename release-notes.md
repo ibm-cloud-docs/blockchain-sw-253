@@ -17,14 +17,15 @@ subcollection: blockchain-sw-253
 # Release notes
 {: #release-notes-sw-253}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
+
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 for  built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.3.6](https://github.com/hyperledger/fabric/releases/tag/v2.3.4).
+
 {: shortdesc}
 
 
 [Installing the 2.5.3 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack) provides instructions on how to apply the latest fix pack to your blockchain instance.  
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
-
 
 ## 22 June 2022
 {: #06-22-2022}
@@ -49,7 +50,7 @@ Severity: medium
 ## 03 May 2022
 {: #05-03-2022}
 
-**Certificate Authority (CA) patch 1.5.3.1, Peer and ordering node patch 1.4.12-12, 2.2.5-4, 2.4.3-1.**
+**Certificate Authority (CA) patch 1.5.3-1, Peer and ordering node patch 1.4.12-12, 2.2.5-4, 2.4.3-1.**
 
 v2.5.3 release updates listed in [What's new](/docs/blockchain-sw-253?topic=blockchain-sw-253-whats-new) for May 03, 2022.
 
