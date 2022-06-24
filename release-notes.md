@@ -17,7 +17,7 @@ subcollection: blockchain-sw-253
 # Release notes
 {: #release-notes-sw-253}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12) and [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
 {: shortdesc}
 
 
