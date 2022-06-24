@@ -2,7 +2,7 @@
 
 * [Get started](get-started.md)
   * [Getting started with IBM Blockchain Platform 2.5.3](index_blockchain_sw.md)
-  * [About IBM Blockchain Platform 2.5.3](console-ocp-about.md)
+  * [About IBM Blockchain Platform 2.5.2](console-ocp-about.md)
     * [What is blockchain?](https://www.ibm.com/topics/what-is-blockchain)
     * [What's new](whats_new.md)
     * [Pricing](howto/pricing-sw.md)
