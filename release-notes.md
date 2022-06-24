@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: release note, latest changes, Hyperledger Fabric, multicloud
 
@@ -17,13 +17,14 @@ subcollection: blockchain-sw-253
 # Release notes
 {: #release-notes-sw-253}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12) and [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
 {: shortdesc}
 
 
 [Installing the 2.5.3 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack) provides instructions on how to apply the latest fix pack to your blockchain instance.  
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
 
 ## 22 June 2022
 {: #06-22-2022}
