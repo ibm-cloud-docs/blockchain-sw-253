@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-28"
 
 keywords: IBM Blockchain Platform, images, multicloud
 
@@ -133,7 +133,7 @@ If you are using the open source configuration files, you need to make the follo
 
 1. For each component, you need to alter the `image` field to use the {{site.data.keyword.blockchainfull_notm}} image instead of the open source image.
 
-2. You need add the `LICENSE` field to accept the {{site.data.keyword.IBM_notm}} license:
+2. Add the `LICENSE` field to accept the {{site.data.keyword.IBM_notm}} license:
     ```
     LICENSE=accept
     ```
