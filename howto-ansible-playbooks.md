@@ -23,6 +23,6 @@ You can choose to use Ansible playbooks to deploy an instance of IBM Blockchain 
 deploying and configuring an IBM Blockchain Platform 2.5.3 network.
 
 Use the Ansible playbooks topics to learn about using Ansible to deploy a network:
-- [Getting started with Ansible playbooks on the IBM Blockchain Platform](ansible.md)
+- [Getting started with Ansible playbooks on the IBM Blockchain Platform](howto/ansible.md)
 - [Deploy the service from an Ansible playbook](howto/ansible-install-ibp.md)
-- [Building an IBM Blockchain Platform network using Ansible playbooks](ansible-build-network.md).
+- [Building an IBM Blockchain Platform network using Ansible playbooks](howto/ansible-build-network.md)
