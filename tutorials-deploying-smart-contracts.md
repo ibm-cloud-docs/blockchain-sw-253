@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-16"
 
 keywords: tutorials, how-to, deploy smart contracts
 
