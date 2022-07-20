@@ -25,7 +25,7 @@
     * [Configure smart contracts](ibp-console-smart-contracts.md)
     * [Deploy smart contracts on Fabric v2.x](ibp-console-smart-contracts-v2.md)
     * [Deploy smart contracts on Fabric v1.4](ibp-console-smart-contracts-v14.md)
-  * [Creating applications](ibp-console-create-app.md)
+  * [Developing applications](ibp-console-create-app.md)
   * [Certificate Authority options](tutorials-certificate-authority-options.md)
     * [Creating an intermediate Certificate Authority](ibp-console-int-ca.md)
     * [Using certificates from an external Certificate Authority](ibp-v2-tutorial-extca.md)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-20-04"
+lastupdated: "2022-07-16"
 
 keywords: tutorials, how-to, learn
 
@@ -53,7 +53,7 @@ learn how to deploy a smart contract on Hyperledger [Fabric v2.x](ibp-console-sm
 {: #ibp-tutorials-creating-applications}
 
 Use the [creating applications](ibp-console-create-app.md) tutorial to learn about the developer APIs and SDKs, 
-network consideratons, connectivity, and related application development topics on {{site.data.keyword.blockchainfull_notm}} 2.5.3.
+network considerations, connectivity, and related application development topics on {{site.data.keyword.blockchainfull_notm}} 2.5.3.
 
 
 ## Certificate Authority (CA) options 

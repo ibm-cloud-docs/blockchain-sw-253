@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-07-16"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -331,7 +331,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220622-amd64"
+          image: "cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220719-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1198,7 +1198,7 @@ spec:
         - name: ibm-entitlement-key
       containers:
         - name: ibp-operator
-          image: cp.icr.io/cp/ibp-operator:2.5.3-20220622-amd64
+          image: cp.icr.io/cp/ibp-operator:2.5.3-20220719-amd64
           command:
             - ibp-operator
           imagePullPolicy: Always

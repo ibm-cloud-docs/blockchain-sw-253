@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-20-04"
+lastupdated: "2022-07-16"
 
 keywords: tutorials, how-to, getting started, network
 
@@ -33,6 +33,6 @@ for planning, configuring, and developing applications for {{site.data.keyword.b
 Use the getting started tutorials to investigate how to [build a network](ibp-console-build-network.md) 
 and [join a network](ibp-console-join-network.md) on {{site.data.keyword.blockchainfull_notm}} 2.5.3.
 
-You can also watch the [video series](reference/videos.md) to learn how to deploy a peer, deploy an ordering service, 
+You can also watch the [video series](videos.md) to learn how to deploy a peer, deploy an ordering service, 
 and create and join a channel. 
 

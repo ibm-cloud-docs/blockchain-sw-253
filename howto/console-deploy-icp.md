@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-20"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -196,7 +196,7 @@ for file in images/*; do docker load < $file; done
 
 Execute the following command to tag the webhook image:
 ```
-docker tag icr.io/cp/ibp-crdwebhook:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220622-amd64
+docker tag icr.io/cp/ibp-crdwebhook:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220719-amd64
 ```
 {: codeblock}
 
@@ -224,13 +224,13 @@ docker tag icr.io/cp/ibp-goenv:1.4.12-20220601-amd64 <cluster_CA_domain>:8500/<N
 docker tag icr.io/cp/ibp-dind:1.4.12-20220601-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20220601-amd64
 docker tag icr.io/cp/ibp-utilities:1.4.12-20220601-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20220601-amd64
 docker tag icr.io/cp/ibp-ccenv:1.4.12-20220601-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20220601-amd64
-docker tag icr.io/cp/ibp-enroller:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-init:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-fluentd:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-grpcweb:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-console:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-deployer:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220622-amd64
-docker tag icr.io/cp/ibp-operator:2.5.3-20220622-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220622-amd64
+docker tag icr.io/cp/ibp-enroller:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-init:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-fluentd:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-grpcweb:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-console:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-deployer:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220719-amd64
+docker tag icr.io/cp/ibp-operator:2.5.3-20220719-amd64 <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220719-amd64
 ```
 {: codeblock}
 
@@ -241,7 +241,7 @@ Replace `<NAMESPACE>` with the name of your {{site.data.keyword.blockchainfull_n
 
 Execute the following command to push the webhook image to the private image repository:
 ```
-docker push <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220622-amd64
+docker push <cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220719-amd64
 ```
 {: codeblock}
 
@@ -271,13 +271,13 @@ docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-goenv:1.4.12-20220601-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-dind:1.4.12-20220601-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-utilities:1.4.12-20220601-amd64
 docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-ccenv:1.4.12-20220601-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220622-amd64
-docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220622-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-enroller:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-init:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-fluentd:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-grpcweb:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-console:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-deployer:2.5.3-20220719-amd64
+docker push <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220719-amd64
 ```
 {: codeblock}
 
@@ -431,7 +431,7 @@ spec:
         fsGroup: 2000
       containers:
         - name: "ibp-webhook"
-          image: "<cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220622-amd64"
+          image: "<cluster_CA_domain>:8500/ibpinfra/ibp-crdwebhook:2.5.3-20220719-amd64"
           imagePullPolicy: Always
           securityContext:
             privileged: false
@@ -1122,7 +1122,7 @@ spec:
         - name: docker-key-secret
       containers:
         - name: ibp-operator
-          image: <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220622-amd64
+          image: <cluster_CA_domain>:8500/<NAMESPACE>/ibp-operator:2.5.3-20220719-amd64
           command:
           - ibp-operator
           imagePullPolicy: Always
@@ -1221,12 +1221,12 @@ spec:
     configtxlatorTag: 2.4.3-20220601
     consoleImage: ibp-console
     consoleInitImage: ibp-init
-    consoleInitTag: 2.5.3-20220622
-    consoleTag: 2.5.3-20220622
+    consoleInitTag: 2.5.3-20220719
+    consoleTag: 2.5.3-20220719
     couchdbImage: ibp-couchdb
     couchdbTag: 3.1.2-20220601
     deployerImage: ibp-deployer
-    deployerTag: 2.5.3-20220622
+    deployerTag: 2.5.3-20220719
   imagePullSecrets:
     - docker-key-secret
   networkinfo:
@@ -1244,34 +1244,34 @@ spec:
         image:
           caImage: ibp-ca
           caInitImage: ibp-init
-          caInitTag: 2.5.3-20220622
+          caInitTag: 2.5.3-20220719
           caTag: 1.5.3-20220601
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220622
+          enrollerTag: 2.5.3-20220719
         version: 1.5.3-1
     orderer:
       1.4.12-12:
         default: false
         image:
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220622
+          enrollerTag: 2.5.3-20220719
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.3-20220622
+          grpcwebTag: 2.5.3-20220719
           ordererImage: ibp-orderer
           ordererInitImage: ibp-init
-          ordererInitTag: 2.5.3-20220622
+          ordererInitTag: 2.5.3-20220719
           ordererTag: 1.4.12-20220601
         version: 1.4.12-12
       2.4.3-1:
         default: true
         image:
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220622
+          enrollerTag: 2.5.3-20220719
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.3-20220622
+          grpcwebTag: 2.5.3-20220719
           ordererImage: ibp-orderer
           ordererInitImage: ibp-init
-          ordererInitTag: 2.5.3-20220622
+          ordererInitTag: 2.5.3-20220719
           ordererTag: 2.4.3-20220601
         version: 2.4.3-1
     peer:
@@ -1283,11 +1283,11 @@ spec:
           dindImage: ibp-dind
           dindTag: 1.4.12-20220601
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220622
+          enrollerTag: 2.5.3-20220719
           fluentdImage:ibp-fluentd
-          fluentdTag: 2.5.3-20220622
+          fluentdTag: 2.5.3-20220719
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.3-20220622
+          grpcwebTag: 2.5.3-20220719
           goEnvImage: ibp-goenv
           goEnvTag: 1.4.12-20220601
           javaEnvImage: ibp-javaenv
@@ -1296,7 +1296,7 @@ spec:
           nodeEnvTag: 1.4.12-20220601
           peerImage: ibp-peer
           peerInitImage: ibp-init
-          peerInitTag: 2.5.3-20220622
+          peerInitTag: 2.5.3-20220719
           peerTag: 1.4.12-20220601
         version: 1.4.12-12
       2.4.3-1:
@@ -1309,20 +1309,20 @@ spec:
           couchdbImage: ibp-couchdb
           couchdbTag: 3.1.2-20220601
           enrollerImage: ibp-enroller
-          enrollerTag: 2.5.3-20220622
+          enrollerTag: 2.5.3-20220719
           fluentdImage: ibp-fluentd
-          fluentdTag: 2.5.3-20220622
+          fluentdTag: 2.5.3-20220719
           goEnvImage: ibp-goenv
           goEnvTag: 2.4.3-20220601
           grpcwebImage: ibp-grpcweb
-          grpcwebTag: 2.5.3-20220622
+          grpcwebTag: 2.5.3-20220719
           javaEnvImage: ibp-javaenv
           javaEnvTag: 2.4.3-20220601
           nodeEnvImage: ibp-nodeenv
           nodeEnvTag: 2.4.3-20220601
           peerImage: ibp-peer
           peerInitImage: ibp-init
-          peerInitTag: 2.5.3-20220622
+          peerInitTag: 2.5.3-20220719
           peerTag: 2.4.3-20220601
         version: 2.4.3-1
 ```
