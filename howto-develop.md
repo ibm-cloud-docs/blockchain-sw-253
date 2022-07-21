@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-22-04"
+lastupdated: "2022-07-21"
 
 keywords: tutorials, how-to, learn
 
@@ -20,6 +20,11 @@ subcollection: blockchain-sw-253
 {:term: .term}
 {:pre: .pre}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto-develop.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto-develop.html){: external}. Update your bookmarks.
+{: important}
 
 # Developing smart contracts and applications
 {: #ibp-howto-develop-contracts-applications}

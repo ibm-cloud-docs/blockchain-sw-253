@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-07-21"
 
 keywords: intermediate CA, root CA, parent server, Certificate Authority, multicloud
 
@@ -13,6 +13,11 @@ subcollection: blockchain-sw-253
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-int-ca.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-int-ca.html){: external}. Update your bookmarks.
+{: important}
 
 # Creating an intermediate Certificate Authority (CA)
 {: #ibp-ica}

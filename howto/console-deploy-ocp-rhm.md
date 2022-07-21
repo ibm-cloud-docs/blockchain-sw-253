@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-07-07"
+lastupdated: "2022-07-21"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -12,6 +12,11 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/console-deploy-ocp-rhm.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/console-deploy-ocp-rhm.html){: external}. Update your bookmarks.
+{: important}
 
 # Deploy from Red Hat Marketplace
 {: #deploy-ocp-rhm}

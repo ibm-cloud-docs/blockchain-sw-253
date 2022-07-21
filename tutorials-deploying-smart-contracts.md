@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-16"
+lastupdated: "2022-07-21"
 
 keywords: tutorials, how-to, deploy smart contracts
 
@@ -20,6 +20,11 @@ subcollection: blockchain-sw-253
 {:term: .term}
 {:pre: .pre}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/tutorials-deploying-smart-contracts.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/tutorials-deploying-smart-contracts.html){: external}. Update your bookmarks.
+{: important}
 
 # Deploying smart contracts
 {: #ibp-tutorials-deploying-smart-contracts}

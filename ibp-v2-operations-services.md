@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2019-09-24"
+lastupdated: "2022-07-21"
 
 keywords: logging levels, metrics, health check, peer, orderer
 
@@ -18,6 +18,11 @@ subcollection: blockchain
 {:important: .important}
 {:tip: .tip}
 {:pre: .pre}
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/ibp-v2-operations-services.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/ibp-v2-operations-services.html){: external}. Update your bookmarks.
+{: important}
 
 # Operating nodes with operations service
 {: #operations_service}

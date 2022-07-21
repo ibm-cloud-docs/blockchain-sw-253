@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-06-09"
+lastupdated: "2022-07-21"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -15,15 +15,15 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-troubleshooting.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-troubleshooting.html){: external}. Update your bookmarks.
+{: important}
+
 # Troubleshooting
 {: #ibp-v2-troubleshooting}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-ibp-v2-troubleshooting">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-v2-troubleshooting">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-v2-troubleshooting">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-v2-troubleshooting">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-troubleshooting">2.5.2</a>.
+
 
 General problems can occur when you use the console to manage nodes, channels, or smart contracts. In many cases, you can recover from these problems by following a few simple steps.
 {: shortdesc}

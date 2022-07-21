@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-07-21"
 
 keywords: smart contract, lifecycle, package, definition
 
@@ -13,6 +13,11 @@ subcollection: blockchain-sw-253
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/write-powerful-smart-contracts.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/write-powerful-smart-contracts.html){: external}. Update your bookmarks.
+{: important}
 
 # Writing powerful smart contracts
 {: #write-powerful-smart-contracts}

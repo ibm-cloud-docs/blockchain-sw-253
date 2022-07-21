@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-07-21"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
@@ -14,15 +14,15 @@ subcollection: blockchain-sw-253
 
 
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/ibp-v2-apis.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/ibp-v2-apis.html){: external}. Update your bookmarks.
+{: important}
+
 # Using the {{site.data.keyword.blockchainfull_notm}} Platform APIs
 {: #ibp-v2-apis}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-ibp-v2-apis">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-v2-apis">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-v2-apis">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-v2-apis">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-apis">2.5.2</a>.
+
 
 
 The {{site.data.keyword.blockchainfull}} Platform exposes RESTful APIs for you to create, import, edit, and delete your blockchain components, as well as to manage logging, notifications, and console settings. You can use the APIs, and the corresponding SDKs, to develop applications that interact with your blockchain network.

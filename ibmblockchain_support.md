@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-07-21"
 
 keywords: IBM Blockchain Platform, support case, Hyperledger Fabric Community, Cloud tickets, Rocket Chat, dWAnswers, multicloud
 
@@ -14,15 +14,15 @@ subcollection: blockchain-sw-253
 
 
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/ibmblockchain_support.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/ibmblockchain_support.html){: external}. Update your bookmarks.
+{: important}
+
 # Getting support
 {: #blockchain-support}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-blockchain-support">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-blockchain-support">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-blockchain-support">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-blockchain-support">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support">2.5.2</a>.
+
 
 
 {{site.data.keyword.blockchainfull}} Platform 2.5.3 provides several avenues for troubleshooting problems and getting support, which depend on your   {{site.data.keyword.blockchainfull_notm}} Platform product, support plan and

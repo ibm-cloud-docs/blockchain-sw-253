@@ -14,6 +14,11 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/release-notes.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/release-notes.html){: external}. Update your bookmarks.
+{: important}
+
 # Release notes
 {: #release-notes-sw-253}
 

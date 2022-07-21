@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-07-21"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -14,6 +14,11 @@ content-type: tutorial
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-ha-os.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-ha-os.html){: external}. Update your bookmarks.
+{: important}
 
 # Setting up multiregion High Availability (HA) deployments for the ordering service
 {: #ibp-console-hadr-mr-os}

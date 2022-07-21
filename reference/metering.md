@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-07-21"
 
 keywords: metering, licensing service, license consumption, license tracking
 
@@ -15,6 +15,11 @@ subcollection: blockchain-sw-253
 {:table:.aria-labeledby="caption"}
 
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/reference/metering.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/reference/metering.html){: external}. Update your bookmarks.
+{: important}
 
 # Tracking license consumption
 {: #metering}

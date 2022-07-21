@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-07-21"
 
 keywords: IBM Blockchain Platform, Data residency, world state, channels, multicloud
 
@@ -14,15 +14,15 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/data-residency.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/data-residency.html){: external}. Update your bookmarks.
+{: important}
+
 # Data residency
 {: #console-icp-about-data-residency}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-console-icp-about-data-residency">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-console-icp-about-data-residency">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-console-icp-about-data-residency">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-console-icp-about-data-residency">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-about-data-residency">2.5.2</a>.
+
 
 Because blockchain networks are oblivious to the type of data that is processed, extra steps must sometimes be taken to keep certain kinds of data secure. The most common requirement on data residency is associated with laws within certain countries, which mandate that all data that is processed and stored in an IT system must remain within a specific country’s borders. Similarly, some companies in highly regulated industries, such as government, healthcare, and financial services, require that data must be stored entirely behind their firewall.
 {: shortdesc}
