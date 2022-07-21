@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-21"
 
 keywords: Kubernetes, IBM Cloud Private, OCP, OpenShift Container Platform, IBM Blockchain Platform, multicloud
 
@@ -11,6 +11,7 @@ subcollection: blockchain-sw-253
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
 {: #get-started-console-ocp}
