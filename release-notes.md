@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-21"
 
 keywords: release note, latest changes, Hyperledger Fabric, multicloud
 
@@ -18,7 +18,7 @@ subcollection: blockchain-sw-253
 {: #release-notes-sw-253}
 
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 for  built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform v2.5.3 for  built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.7](https://github.com/hyperledger/fabric/releases/tag/v2.2.7), and [v2.4.5](https://github.com/hyperledger/fabric/releases/tag/v2.4.5).
 
 {: shortdesc}
 
