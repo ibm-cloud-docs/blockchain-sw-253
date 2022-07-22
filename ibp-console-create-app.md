@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-07-22"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract
 
@@ -14,15 +14,15 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-create-app.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-create-app.html){: external}. Update your bookmarks.
+{: important}
+
 # Developing applications
 {: #ibp-console-app}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-ibp-console-app">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-ibp-console-app">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-console-app">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-ibp-console-app">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app">2.5.2</a>.
+
 
 After you install smart contracts (chaincode) and deploy your peer and ordering nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this page to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}

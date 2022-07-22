@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-16"
+lastupdated: "2022-07-22"
 
 keywords: code signing, signed images
 
@@ -14,6 +14,11 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/code-sign.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/code-sign.html){: external}. Update your bookmarks.
+{: important}
 
 # Signed images
 {: #signed-images}

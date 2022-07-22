@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, multicloud
 
@@ -12,6 +12,11 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-deploy-icp.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-deploy-icp.html){: external}. Update your bookmarks.
+{: important}
 
 # Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 for {{site.data.keyword.cloud_notm}} Private
 {: #deploy-icp}

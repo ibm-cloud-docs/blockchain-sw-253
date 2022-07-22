@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, firewall, on-premises, air-gapped, on-prem, multicloud, on-prem
 
@@ -14,15 +14,15 @@ subcollection: blockchain-sw-253
 
 
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-deploy-k8-firewall.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-deploy-k8-firewall.html){: external}. Update your bookmarks.
+{: important}
+
 # Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 behind a firewall
 {: #deploy-k8-firewall}
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-deploy-k8-firewall">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-deploy-k8-firewall">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-deploy-k8-firewall">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-deploy-k8-firewall">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-k8-firewall">2.5.2</a>.
+
 
 
 You can use these instructions to deploy {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 behind a firewall without internet connectivity. If you are deploying the platform on a cluster with access to the external internet, use the main instructions for [Deploying {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8).

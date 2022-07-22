@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-16"
+lastupdated: "2022-07-22"
 
 keywords: tutorials, how-to, learn, reference
 
@@ -20,6 +20,11 @@ subcollection: blockchain-sw-253
 {:term: .term}
 {:pre: .pre}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reference.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reference.html){: external}. Update your bookmarks.
+{: important}
 
 # Reference
 {: #ibp-reference}

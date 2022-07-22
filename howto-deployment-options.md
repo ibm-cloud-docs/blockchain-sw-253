@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-05"
+lastupdated: "2022-07-22"
 
 keywords: Kubernetes, IBM Cloud Private, OCP, OpenShift Container Platform, IBM Blockchain Platform, multicloud
 
@@ -12,6 +12,11 @@ subcollection: blockchain-sw-253
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto-deployment-options.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto-deployment-options.html){: external}. Update your bookmarks.
+{: important}
 
 # Deployment options 
 {: #deployment-options-ocp}

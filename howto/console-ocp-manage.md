@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform, administrate, add user, remove user, password, APIs, authentication, view logs
 
@@ -14,16 +14,16 @@ subcollection: blockchain-sw-253
 
 
 
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-ocp-manage.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-ocp-manage.html){: external}. Update your bookmarks.
+{: important}
+
 # Administering your console
 {: #console-icp-manage}
 
 
-Running a different version of IBM Blockchain Platform? Switch to version
-<a href="/docs/blockchain-sw?topic=blockchain-sw-console-icp-manage">2.1.2</a>,
-<a href="/docs/blockchain-sw-213?topic=blockchain-sw-213-console-icp-manage">2.1.3</a>,
-<a href="/docs/blockchain-sw-25?topic=blockchain-sw-25-console-icp-manage">2.5</a>,
-<a href="/docs/blockchain-sw-251?topic=blockchain-sw-251-console-icp-manage">2.5.1</a>,
-<a href="/docs/blockchain-sw-252?topic=blockchain-sw-252-console-icp-manage">2.5.2</a>.
+
 
 After you install the console on your cluster, you can use the console to add or remove console users and access APIs that allow you to operate your network and govern your console. You can also access and customize the logs of your console.
 {: shortdesc}

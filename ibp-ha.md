@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-07"
+lastupdated: "2022-07-22"
 
 keywords: high availability
 
@@ -20,6 +20,11 @@ subcollection: blockchain-sw-253
 {:term: .term}
 {:pre: .pre}
 
+
+
+
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-ha.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-ha.html){: external}. Update your bookmarks.
+{: important}
 
 # High Availability (HA)
 {: #ibp-high-availability}
