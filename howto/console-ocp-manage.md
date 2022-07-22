@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform, administrate, add user, remove user, password, APIs, authentication, view logs
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/console-ocp-manage.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/howto/console-ocp-manage.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-ocp-manage.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/howto/console-ocp-manage.html){: external}. Update your bookmarks.
 {: important}
 
 # Administering your console

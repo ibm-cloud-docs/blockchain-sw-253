@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: site map
 subcollection: blockchain-sw-253
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/sitemap.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/sitemap.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/sitemap.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/sitemap.html){: external}. Update your bookmarks.
 {: important}
 
 # Site map

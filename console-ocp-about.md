@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform, system requirements, Kubernetes, behind a firewall, azure, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/console-ocp-about.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/console-ocp-about.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/console-ocp-about.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/console-ocp-about.html){: external}. Update your bookmarks.
 {: important}
 
 # About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3

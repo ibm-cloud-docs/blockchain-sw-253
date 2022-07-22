@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 
 keywords: IBM Blockchain offerings, Linux Foundation, Hyperledger Fabric, open source, community contribution
@@ -16,7 +16,7 @@ subcollection: blockchain
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/need-to-know.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain-sw-253/need-to-know.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/need-to-know.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/need-to-know.html){: external}. Update your bookmarks.
 {: important}
 
 # Disclaimer
