@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-organizations.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-organizations.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-organizations.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-organizations.html){: external}. Update your bookmarks.
 {: important}
 
 # Managing organizations

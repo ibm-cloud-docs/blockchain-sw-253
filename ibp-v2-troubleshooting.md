@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-troubleshooting.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-troubleshooting.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-v2-troubleshooting.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-v2-troubleshooting.html){: external}. Update your bookmarks.
 {: important}
 
 # Troubleshooting

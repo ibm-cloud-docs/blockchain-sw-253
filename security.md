@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: security, encryption, storage, tls, iam, roles, keys, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/security.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/security.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/security.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/security.html){: external}. Update your bookmarks.
 {: important}
 
 # Security

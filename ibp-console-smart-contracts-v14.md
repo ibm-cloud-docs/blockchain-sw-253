@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: smart contract, private data, private data collection, anchor peer, instantiation, install smart contract
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-smart-contracts-v14.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-console-smart-contracts-v14.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-smart-contracts-v14.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-console-smart-contracts-v14.html){: external}. Update your bookmarks.
 {: important}
 
 # Deploy a smart contract using Fabric v1.4 (Deprecated)

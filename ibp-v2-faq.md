@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions, multicloud
 
@@ -17,7 +17,7 @@ content-type: faq
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-faq.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/ibp-v2-faq.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-v2-faq.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/ibp-v2-faq.html){: external}. Update your bookmarks.
 {: important}
 
 # FAQs

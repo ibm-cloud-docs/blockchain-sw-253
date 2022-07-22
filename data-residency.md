@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: IBM Blockchain Platform, Data residency, world state, channels, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/data-residency.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/data-residency.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/data-residency.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/data-residency.html){: external}. Update your bookmarks.
 {: important}
 
 # Data residency

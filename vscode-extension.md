@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: vs code extension, Visual Studio Code extension, smart contract, development tools, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/vscode-extension.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/vscode-extension.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/vscode-extension.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/vscode-extension.html){: external}. Update your bookmarks.
 {: important}
 
 # Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools

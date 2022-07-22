@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: blockchain components, ca, certificate authorities, peer, ordering service, orderer, channel, smart contract, applications, multicloud
 
@@ -16,7 +16,7 @@ subcollection: blockchain-sw-253
 
 
 
-Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/blockchain_component_overview.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/reuse-pages/blockchain_component_overview.html){: external}. Update your bookmarks.
+Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain_component_overview.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/blockchain_component_overview.html){: external}. Update your bookmarks.
 {: important}
 
 # Blockchain component overview
